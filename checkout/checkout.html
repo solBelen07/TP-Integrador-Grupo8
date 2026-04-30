@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-checkout.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>CHECKOUT</h1>
+            <section class="seccion-datos-personales">
+                <h2>Datos del Pasajero</h2>
+                <form action="">
+                    <label for="nombre">Nombre:</label><br>
+                    <input id="nombre" type="text" required><br>
+                    
+                    <label for="documento">Documento de Identidad:</label><br>
+                    <input id="documento" type="number" pattern="[0-9]{8}" maxlength="8" required><br>
+                    
+                    <label for="email">Correo Electronico:</label><br>
+                    <input id="email" type="email" required><br>
+                    
+                    <label for="telefono">Telefono:</label><br>
+                    <input id="telefono" type="number" required><br>
+                </form>
+            </section>
+            <section class="seccion-metodos-de-pago">
+                <h2>Metodos de Pago</h2>
+                    <input class="opcion-tarjeta" id="opcion-tarjeta" name="metodo-pago" type="radio" >
+                    <label for="opcion-tarjeta">Tarjeta de Crédito/Debito</label>
+
+                    <input class="opcion-transferencia" id="opcion-transferencia" name="metodo-pago" type="radio" >
+                    <label for="opcion-transferencia">Transferencia</label>
+
+                    <input class="opcion-paypal" id="opcion-paypal" name="metodo-pago" type="radio" >
+                    <label for="opcion-paypal">PayPal</label><br>
+                    
+                    <div class="seccion-metodos">
+                    <!--DIV METODO TARJETA-->
+                    <div class="seccion-metodos-de-pago-tarjeta">
+                        <label for="tarjeta">Numero de Tarjeta:</label><br>
+                        <input id="tarjeta" type="number" placeholder="xxxx-xxxx-xxxx-xxxx"
+                         pattern="[0-9]{8}" maxlength="16" required><br>
+                        
+                        <label for="cuotas">Cuotas Disponibles:</label><br>
+                        <select id="cuotas" name="cuotas">
+                          <option value="una-cuota">Una Cuota - $9999999</option>
+                          <option value="tres-cuota">3 Cuotas - $9999999 (5% recargo)</option>
+                          <option value="seis-cuota">6 Cuotas - $9999999 (10% recargo)</option>
+                          <option value="nueve-cuota">9 Cuotas - $9999999 (15% recargo) </option>
+                        </select> <br>
+
+                        <label for="nombre-tarjeta">Nombre y Apellido como figura en la Tarjeta:</label><br>
+                        <input id="nombre-tarjeta" type="text" required><br>
+
+                        <label for="fecha-vencimiento">Fecha de Vencimiento:</label><br>
+                        <input id="mes" type="number" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])"  required><br>
+                        <input id="anio" type="number" placeholder="AA" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
+
+                        <label for="codigo-seguridad">Codigo de Seguridad:</label><br>
+                        <input id="codigo-seguridad" type="number" maxlength="3" pattern="(0[1-9]|1[0-2])" required><br>
+
+                        <label for="documento-titular">Documento del Titular:</label><br>
+                        <input id="documento-titular" type="number" pattern="[0-9]{8}" maxlength="8" required><br>
+                    </div>
+
+                    <!--DIV METODO TRANSFERENCIA-->
+                    <div class="seccion-metodos-de-pago-transferencia">
+                        <label for="email">Correo Electronico:</label><br>
+                        <input id="email" type="email" required><br>
+
+                        <label for="documento">Documento del Titular:</label><br>
+                        <input id="documento" type="number" pattern="[0-9]{8}" maxlength="8" required><br>
+                        
+                        <p>Una vez finalizada tu compra, recibirás un correo electrónico con los datos necesarios (CBU/alias, titular y monto) y los pasos a seguir para realizar la transferencia. <br>
+                        Dispondrás de un plazo de 8 horas desde la confirmación del pedido para efectuar el pago. Pasado ese tiempo, si no se registra la transferencia, la compra será cancelada automáticamente.
+                        </p>
+
+                    </div>
+
+                    <!--DIV METODO PAYPAL-->
+                    <div class="seccion-metodos-de-pago-paypal">
+                        <p>Escanea el QR con la app de PayPal para realizar el pago de tu Vuelo.</p>
+                        <img src="" alt="">
+                    </div>
+                    </div>
+            </section>
+            <section>
+                <h2>RESUMEN</h2>
+                <h3>Buenos Aires - Madrid</h3>
+                <p>24/04/2026 Viernes</p>
+                <p>8.00 - 20.40</p>
+                <p>1 Escala en Lima, Peru</p>
+                <p>Cod. Vuelo: FBK6778</p>
+                <input placeholder="Ingrese Cupon" id="cupom" type="text" required><br>
+                <input class="boton" value="Aplicar" type="submit">
+                <h2>TOTAL 1.115.000</h2>
+            </section>
+    </main>
+</body>
+</html>
