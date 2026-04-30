@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.seccion-metodos-de-pago-transferencia{
+    display: none;
+}
+
+.seccion-metodos-de-pago-paypal{
+    display: none;
+}
+
+.opcion-transferencia:checked  ~ .seccion-metodos .seccion-metodos-de-pago-transferencia{
+    display: block;
+}
+
+.opcion-transferencia:checked  ~ .seccion-metodos .seccion-metodos-de-pago-tarjeta{
+    display: none;
+}
+
+.opcion-paypal:checked  ~ .seccion-metodos .seccion-metodos-de-pago-paypal{
+    display: block;
+}
+
+.opcion-paypal:checked  ~ .seccion-metodos .seccion-metodos-de-pago-tarjeta{
+    display: none;
+}
