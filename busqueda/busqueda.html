@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de busqueda</title>
+    <link rel="stylesheet" href="../css/style-busqueda.css">
+</head>
+<body>
+
+     <header>
+        <div class="logo">
+            <h1> NOMBRE AEROLINA </h1> 
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="vuelos.html">Vuelos</a></li>
+                <li><a href="busqueda.html">Búsqueda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+     <main class="contenedor-busqueda">
+
+        <aside class="filtros">
+
+            <h2>Filtrar vuelos</h2>
+
+            <section class="filtro">
+                <h3>Precio</h3>
+
+                <label for="precio">
+                    Hasta $1500
+                </label>
+
+                <input type="range" id="precio" min="100" max="1500">
+            </section>
+
+            <section class="filtro">
+                <h3>Tipo de vuelo</h3>
+
+                <div>
+                    <input type="radio" name="vuelo" id="directo">
+                    <label for="directo">Directo</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="vuelo" id="escala">
+                    <label for="escala">Con escalas</label>
+                </div>
+            </section>
+
+            <!-- AEROLINEAS -->
+            <section class="filtro">
+                <h3>Aerolíneas</h3>
+
+                <div>
+                    <input type="checkbox" id="aerolinea1">
+                    <label for="aerolinea1">Aerolineas Argentinas</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="aerolinea2">
+                    <label for="aerolinea2">LATAM</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="aerolinea3">
+                    <label for="aerolinea3">Flybondi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="aerolinea4">
+                    <label for="aerolinea4">Jetsmart</label>
+                </div>
+            </section>
+
+        </aside>
+
+        <!--  Resultados -->
+        <section class="resultados">
+
+            <h2>Resultados de búsqueda</h2>
+
+            <!-- TARJETA  agregar + tartejas -->
+            <article class="tarjeta-vuelo">
+
+                <div class="info-vuelo">
+                    <h3>Aerolíneas Argentinas</h3>
+                    <p>Buenos Aires → Córdoba</p>
+                    <p>Salida: 08:30 hs</p>
+                    <p>Duración: 1h 25m</p>
+                </div>
+
+                <div class="precio">
+                    <p>$320.000</p>
+                    <button>Seleccionar</button>
+                </div>
+
+            </article>
+
+             <aside class="extras">
+
+            <!-- EQUIPAJE -->
+            <section class="equipaje">
+                <h2>Equipaje</h2>
+
+                <div>
+                    <input type="checkbox" id="mano">
+                    <label for="mano">Equipaje de mano</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="bodega">
+                    <label for="bodega">Equipaje en bodega</label>
+                </div>
+            </section>
+
+            <!-- POLITICAS -->
+            <section class="politicas">
+                <h2>Políticas</h2>
+
+                <p>
+                    Cancelación gratuita dentro de las primeras 24 horas.
+                </p>
+
+                <p>
+                    Cambios sujetos a disponibilidad de la aerolínea.
+                </p>
+            </section>
+
+        </aside>
+
+    </main>
+
+     <footer>
+        <p>  NOMBRE AEROLINA. Todos los derechos reservados.</p>
+</body>
+</html>
