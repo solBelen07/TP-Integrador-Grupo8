@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.seccion-asientos{
+    width: 50em;
+    height: 30em ;
+}
+
+.seccion-div-asientos{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr) ;
+    grid-template-rows: repeat(9, 1fr) ;
+}
+
+.seccion-div-asientos > div {
+    border: 0.01em solid;
+    border-color: #ccc ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1em 0em 0.1em 0em;
+}
+
+/* ocultar radio real */
+input[type="radio"] {
+  display: none;
+}
+
+/* estilo base del asiento */
+.asiento {
+  width: 2em;
+  height: 2em;
+  background-color: #ccc; /* gris = disponible */
+  border-radius: 10px;
+  cursor: pointer;  /* muestra el mouse */
+  display: inline-block;
+  
+}
+
+/* ocupado */
+input:disabled + .asiento {
+  background-color: #6c63ff; /* azul */
+  cursor: not-allowed;
+}
+
+/* seleccionado */
+input:checked + .asiento {
+  background-color: orange;
+}
