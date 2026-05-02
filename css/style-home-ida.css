@@ -36,12 +36,12 @@
     display: block;
 }
 
-.boton-ida{
+.boton-ida-vuelta {
     display: block;
     width: 100%;
     padding: 12px 24px;
-    border-radius: 0em 1em 0em 0em;
-    border: 0.1em solid; 
+    border-radius: 1em 0em 0em 0em;
+    border: 0.1em solid;
     border-color: #6c5ce7 ;
     background: none;
     color: #6c5ce7; 
@@ -53,11 +53,11 @@
     box-sizing: border-box;
 }
 
-.boton-ida-vuelta {
+.boton-ida{
     display: block;
     width: 100%;
     padding: 12px 24px;
-    border-radius: 1em 0em 0em 0em;
+    border-radius: 0em 1em 0em 0em;
     border: 0.1em solid; 
     border-color: #6c5ce7 ;
     background: #6c5ce7;
