@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+}
+
+.header-ul{
+    display: flex;
+    list-style: none;
+}
+
+.header-li{
+    display: inline;
+    margin: 0em 1em 0em 1em;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+}   
+
+.footer-div-redes img{
+    width: 2em;
+    height: 2em;
+}
+
+.section-copyright{
+    display: flex;
+    align-items: flex-end;
+}
+
+section{
+    margin-left: 2em;
+    margin-right: 2em;
+}
