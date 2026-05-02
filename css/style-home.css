@@ -27,8 +27,8 @@
 .botones {
     display: flex;
     gap: 0;
-    border-radius: 0.2em; /* Bordes redondeados en el grupo completo */
-    background-color: white; /* Fondo base blanco */
+    border-radius: 0.2em;
+    background-color: white; 
 }
 
 .botones a {
@@ -122,12 +122,13 @@
 
 }
 
-.div-grid-boton a{
+.div-grid-boton a, a{
     text-decoration: none; 
     display: block;
 }
 
-.boton-buscar{
+.boton-buscar, 
+.boton-ofertas{
     display: block;
     width: 100%;
     padding: 12px 24px;
@@ -144,10 +145,22 @@
     box-sizing: border-box;
 }
 
-.seccion-ofertas-div{
-    display: flex;
-    flex-direction: row;
-    gap: 10em;
+.boton-buscar:hover,
+.boton-ofertas:hover{
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border: 0.1em solid; 
+    border-color: orange;
+    background: orange;
+    color: #ffffff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 700; 
+    text-transform: uppercase; 
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .seccion-ofertas{
@@ -158,22 +171,31 @@
     padding: 2em;
 }
 
+.seccion-ofertas-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3em;
+}
+
 .card {
   width: 300px;
   background: #f0f0f0;
-  border: 2px solid #bfc7ce;
+  border: 0.01em solid #4b5c6b;
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
 .card-img {
   width: 300px;
   height: 180px;
-  background: #bfc7ce;
   position: relative;
+  border: none;
 }
 
 img {
-  width: 300px;
+  width: 299px;
   height: 180px;
+  border-radius: 0.5em 0.5em 0em 0em;
   object-fit: cover;
 }
 
@@ -181,11 +203,12 @@ img {
   position: absolute;
   bottom: -15px;
   left: 10px;
-  background: #bfc7ce;
-  border: 2px solid #7c8a96;
+  background: #ffffff;
+  border: 0.01em solid #4b5c6b;
   padding: 8px 12px;
   font-size: 12px;
   font-weight: bold;
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
 .card-body {
@@ -228,4 +251,8 @@ h2 {
 .detalle {
   font-size: 14px;
   color: #555;
+}
+
+.boton-ofertas{
+
 }
