@@ -2,6 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
@@ -9,7 +10,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1em;
+    padding: 1em;
 }
 
 .header-ul{
@@ -27,6 +28,8 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     padding: 2em;
+    background-color: #62626a;
+    color: #cdcdcd;
 }   
 
 .footer-div-redes img{

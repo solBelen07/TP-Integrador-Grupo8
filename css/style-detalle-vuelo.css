@@ -2,11 +2,13 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 main{
     display: flex;
     flex-direction: row;
+
 }
 
 .seccion-asientos{
