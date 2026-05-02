@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="../css/style-contacto.css">
+    <link rel="stylesheet" href="../css/layout/header-footer.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>TicketExpress</h1>
+
+        <ul class="header-ul">
+            <li class="header-li">Inicio</li>
+            <li class="header-li">Vuelos</li>
+            <li class="header-li">Ofertas</li>
+            <li class="header-li">Contacto</li>
+        </ul>
+
+        <div>
+            <a href="">
+                <img src="" alt="usuario">
+            </a>
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+    <main class="contenedor-contacto">
+
+        <section class="formulario-contacto">
+
+            <h2>Contáctanos</h2>
+
+            <p class="texto-contacto">
+                Completá tu información
+            </p>
+
+            <form>
+
+                <!-- NOMBRE Y APELLIDO -->
+                <div class="fila-formulario">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            placeholder="Por ejemplo, Juan"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+
+                        <input 
+                            type="text" 
+                            id="apellido" 
+                            placeholder="Por ejemplo, Pérez"
+                        >
+                    </div>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="campo">
+                    <label for="email">Email</label>
+
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="ejemplo@email.com"
+                    >
+                </div>
+
+                <!-- TELEFONO -->
+                <div class="fila-formulario">
+
+                    <div class="campo">
+                        <label for="codigo">Código</label>
+
+                        <select id="codigo">
+
+                            <option>+54</option>
+                            <option>+1</option>
+                            <option>+34</option>
+                            <option>+55</option>
+
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            placeholder="11-5555-5555"
+                        >
+                    </div>
+
+                </div>
+
+                <!-- MENSAJE -->
+                <div class="campo">
+
+                    <label for="mensaje">
+                        Mensaje
+                    </label>
+
+                    <textarea 
+                        id="mensaje" 
+                        placeholder="Escribí tu mensaje"
+                    ></textarea>
+
+                </div>
+
+                <button type="submit">
+                    Enviar
+                </button>
+
+            </form>
+
+            <p class="texto-final">
+                Gracias por contactarte con TicketExpress
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section>
+            <h3>Nosotros</h3>
+
+            <ul>
+                <li>Sobre TicketExpress</li>
+                <li>Preguntas frecuentes</li>
+            </ul>
+        </section>
+
+        <section class="section-copyright">
+            <p>
+                ©2026 TicketExpress. Todos los derechos reservados
+            </p>
+        </section>
+
+        <section>
+
+            <h3>Redes Sociales</h3>
+
+            <div class="footer-div-redes">
+
+                <img src="../img/icon-X.png" alt="icono-twitter">
+
+                <img src="../img/icon-instagram.png" alt="icono-instagram">
+
+                <img src="../img/icon-facebook.png" alt="icono-facebook">
+
+                <img src="../img/icon-linkedin.png" alt="icono-linkedin">
+
+            </div>
+
+        </section>
+
+    </footer>
+
+</body>
+</html>
