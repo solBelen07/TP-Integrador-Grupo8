@@ -1,0 +1,182 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+.contenedor-busqueda{
+    width: 90%;
+    margin: 3em auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2em;
+}
+
+/* tarjetas */
+
+.filtros,
+.resultados,
+.extras{
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.08);
+}
+
+
+h2{
+    font-size: 2.4rem;
+    color: #6c63ff;
+    margin-bottom: 1em;
+}
+
+h3{
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 0.8em;
+}
+
+
+.filtro{
+    margin-bottom: 2.5em;
+}
+
+.filtro div{
+    margin-bottom: 1em;
+}
+
+.filtro label{
+    font-size: 1.5rem;
+}
+
+input[type="range"]{
+    width: 100%;
+    margin-top: 1em;
+    accent-color: #6c63ff;
+}
+
+/* Resultados de vuelo */
+
+.tarjeta-vuelo{
+    border: 0.1em solid #dddddd;
+    border-radius: 1em;
+
+    padding: 2em;
+    margin-bottom: 2em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+
+    transition: 0.3s;
+}
+
+.tarjeta-vuelo:hover{
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+.info-vuelo h3{
+    color: #6c63ff;
+}
+
+.info-vuelo p{
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+
+.precio{
+    text-align: center;
+}
+
+.precio p{
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 1em;
+}
+
+
+button{
+    border: none;
+    background-color: #6c63ff;
+    color: white;
+
+    padding: 0.8em 1.6em;
+    border-radius: 0.6em;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #584ff0;
+}
+
+
+.equipaje{
+    margin-bottom: 3em;
+}
+
+.equipaje div{
+    margin-bottom: 1em;
+}
+
+.equipaje label,
+.politicas p{
+    font-size: 1.5rem;
+}
+
+.politicas p{
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+
+input[type="checkbox"],
+input[type="radio"]{
+    accent-color: orange;
+}
+
+summary{
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1em;
+    color: #6c63ff;
+}
+
+details{
+    margin-bottom: 2em;
+}
+
+/* detalles para agrandar letras header */
+.header-ul{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.header-li{
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -26,54 +26,58 @@
 
             <h2>Filtrar vuelos</h2>
 
-            <section class="filtro">
-                <h3>Precio</h3>
+            <details class="filtro" open>  <!-- Details para abrir un  desplegable -->
 
-                <label for="precio">
-                    Hasta $1500
-                </label>
 
-                <input type="range" id="precio" min="100" max="1500">
-            </section>
+    <summary>Precio</summary> 
+    <!--Es el título visible Cuando el usuario hace click sobre él,
+se despliega o se oculta el contenido del details.-->
 
-            <section class="filtro">
-                <h3>Tipo de vuelo</h3>
+    <label for="precio">
+        Hasta $1500
+    </label>
 
-                <div>
-                    <input type="radio" name="vuelo" id="directo">
-                    <label for="directo">Directo</label>
-                </div>
+    <input type="range" id="precio" min="100" max="1500">
 
-                <div>
-                    <input type="radio" name="vuelo" id="escala">
-                    <label for="escala">Con escalas</label>
-                </div>
-            </section>
+</details>
+
+            <details class="filtro">
+
+    <summary>Tipo de vuelo</summary>
+
+    <div>
+        <input type="radio" name="vuelo" id="directo">
+        <label for="directo">Directo</label>
+    </div>
+
+    <div>
+        <input type="radio" name="vuelo" id="escala">
+        <label for="escala">Con escalas</label>
+    </div>
+
+</details>
 
             <!-- AEROLINEAS -->
-            <section class="filtro">
-                <h3>Aerolíneas</h3>
+           <details class="filtro">
 
-                <div>
-                    <input type="checkbox" id="aerolinea1">
-                    <label for="aerolinea1">Aerolineas Argentinas</label>
-                </div>
+    <summary>Aerolíneas</summary>
 
-                <div>
-                    <input type="checkbox" id="aerolinea2">
-                    <label for="aerolinea2">LATAM</label>
-                </div>
+    <div>
+        <input type="checkbox" id="a1">
+        <label for="a1">Aerolíneas Argentinas</label>
+    </div>
 
-                <div>
-                    <input type="checkbox" id="aerolinea3">
-                    <label for="aerolinea3">Flybondi</label>
-                </div>
+    <div>
+        <input type="checkbox" id="a2">
+        <label for="a2">LATAM</label>
+    </div>
 
-                <div>
-                    <input type="checkbox" id="aerolinea4">
-                    <label for="aerolinea4">Jetsmart</label>
-                </div>
-            </section>
+    <div>
+        <input type="checkbox" id="a3">
+        <label for="a3">Flybondi</label>
+    </div>
+
+</details>
 
         </aside>
 
