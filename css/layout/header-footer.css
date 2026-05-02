@@ -9,7 +9,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1em;
+    padding: 1em;
 }
 
 .header-ul{
@@ -27,6 +27,8 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     padding: 2em;
+    background-color: #ced8e0;
+    color: #4b5c6b;
 }   
 
 .footer-div-redes img{

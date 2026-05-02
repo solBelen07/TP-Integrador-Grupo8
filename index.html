@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-home.css">
     <link rel="stylesheet" href="./css/layout/header-footer.css">
     <title>Document</title>
 </head>
@@ -20,7 +21,116 @@
         </div>
     </header>
     <main>
+        <div class="div-hero-image">
+            <img class="div-hero-image-img" src="./img/bariloche-image-hero.jpg" alt="imagen-inicio-bariloche">
+        </div>
         
+        <section>
+            <h2>RESERVA TU PROXIMO VUELO</h2>
+            <div class="botones">
+                <a href="../pages/busqueda.html"><input class="boton-volver" value="Ida y Vuelta" type="button"></a>
+                <a href="../pages/busqueda.html"><input class="boton-continuar" value="Solo Ida" type="button"></a>
+            </div>
+            <div>
+                <label for="origen">Origen:</label><br>
+                <input id="origen" type="text" required><br>
+                
+                <label for="fecha-ida">Ida:</label><br>
+                <input id="fecha-ida" type="date" required>
+
+                <label for="pasajero">Pasajero:</label><br>
+                <input id="pasajero" type="number" required><br>
+                
+                <label for="cuotas">Clase:</label><br>
+                        <select id="cuotas" name="cuotas">
+                          <option value="una-cuota">Clase Económica (Turista)</option>
+                          <option value="tres-cuota">Clase Económica Premium</option>
+                          <option value="seis-cuota">Clase Ejecutiva (Business)</option>
+                          <option value="nueve-cuota">Primera Clase</option>
+                        </select> <br>
+
+                <label for="origen">Destino:</label><br>
+                <input id="origen" type="text" required><br>
+                
+                <label for="fecha-ida">Vuelta:</label><br>
+                <input id="fecha-ida" type="date" required>
+            </div>
+        </section>
+        <section>  
+            <h2>Nuestras Mejores Ofertas</h2>
+
+            <div class="seccion-ofertas-div">
+                <div>
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./img/bariloche-patagonia.jpg" alt="foto-bariloche-card">
+                        <span class="badge">3 DIAS Y 2 NOCHES</span>
+                      </div>
+                  
+                      <div class="card-body">
+                        <p class="sub">Paquete</p>
+                        <h2>BARILOCHE</h2>
+                    
+                        <div class="stars">
+                          ★ ★ ★ ★ <span>★</span>
+                        </div>
+                    
+                        <p class="desc">hotel + vuelo</p>
+                    
+                        <p class="precio">$555.555</p>
+                        <p class="detalle">precio final por persona</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./img/bariloche-patagonia.jpg" alt="foto-bariloche-card">
+                        <span class="badge">3 DIAS Y 2 NOCHES</span>
+                      </div>
+                  
+                      <div class="card-body">
+                        <p class="sub">Paquete</p>
+                        <h2>BARILOCHE</h2>
+                    
+                        <div class="stars">
+                          ★ ★ ★ ★ <span>★</span>
+                        </div>
+                    
+                        <p class="desc">hotel + vuelo</p>
+                    
+                        <p class="precio">$555.555</p>
+                        <p class="detalle">precio final por persona</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./img/bariloche-patagonia.jpg" alt="foto-bariloche-card">
+                        <span class="badge">3 DIAS Y 2 NOCHES</span>
+                      </div>
+                  
+                      <div class="card-body">
+                        <p class="sub">Paquete</p>
+                        <h2>BARILOCHE</h2>
+                    
+                        <div class="stars">
+                          ★ ★ ★ ★ <span>★</span>
+                        </div>
+                    
+                        <p class="desc">hotel + vuelo</p>
+                    
+                        <p class="precio">$555.555</p>
+                        <p class="detalle">precio final por persona</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <a href="../pages/busqueda.html"><input class="boton-ofertas" value="Ir a Ofertas" type="button"></a>
+        </section>
     </main>
     <footer>    
         <section>
