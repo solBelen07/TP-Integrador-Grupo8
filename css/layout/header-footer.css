@@ -11,6 +11,13 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    box-shadow: 0em 0em 0.5em 0em #cdcdcd;
+}
+
+header a{
+    text-decoration: none; 
+    display: block;
+    color: black;
 }
 
 .header-ul{
@@ -21,6 +28,26 @@ header{
 .header-li{
     display: inline;
     margin: 0em 1em 0em 1em;
+    padding: 0.5em;
+    gap: 1em;
+    border-radius: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 550; 
+    text-transform: uppercase; 
+}
+
+.header-li:hover{
+    border: 0.1em solid orange; 
+    color: orange;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 550; 
+}
+
+header img{
+    width: 3em;
+    height: 3em;
 }
 
 footer{
@@ -31,6 +58,12 @@ footer{
     background-color: #62626a;
     color: #cdcdcd;
 }   
+
+.footer-div-redes{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
 
 .footer-div-redes img{
     width: 2em;
@@ -45,4 +78,8 @@ footer{
 section{
     margin-left: 2em;
     margin-right: 2em;
+}
+
+a{
+    cursor: pointer;
 }
