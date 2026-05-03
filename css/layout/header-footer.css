@@ -12,6 +12,7 @@ header{
     align-items: center;
     padding: 1em;
     box-shadow: 0em 0em 0.5em 0em #cdcdcd;
+    color: #6c5ce7;
 }
 
 header a{
@@ -23,6 +24,7 @@ header a{
 .header-ul{
     display: flex;
     list-style: none;
+    
 }
 
 .header-li{
@@ -35,7 +37,9 @@ header a{
     font-size: 14px;
     font-weight: 550; 
     text-transform: uppercase; 
+    color: #6c5ce7 ;
 }
+
 
 .header-li:hover{
     border: 0.1em solid orange; 
