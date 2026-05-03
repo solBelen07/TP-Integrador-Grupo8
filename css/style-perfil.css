@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+main{
+    width: 90%;
+    margin: 4em auto;
+}
+
+
+main section:first-child{
+    background-color: white;
+    border-radius: 1em;
+    padding: 3em;
+
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+
+
+
+h1{
+    font-size: 3rem;
+    color: #6c63ff;
+    margin-bottom: 1em;
+}
+
+h2{
+    font-size: 2.2rem;
+    color: #6c63ff;
+    margin-bottom: 1em;
+}
+
+h3{
+    font-size: 1.8rem;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+
+aside{
+    width: 25%;
+    float: left;
+
+    padding-right: 3em;
+}
+
+
+aside img{
+    width: 10em;
+    height: 10em;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 0.3em solid #6c63ff;
+}
+
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    margin-bottom: 1.5em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.6rem;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: orange;
+}
+
+
+hr{
+    margin: 2em 0;
+    border: 0.1em solid #dddddd;
+}
+
+
+form{
+    width: 70%;
+    float: right;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+label{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+input{
+    padding: 1em;
+
+    border: 0.1em solid #cccccc;
+    border-radius: 0.6em;
+
+    font-size: 1.5rem;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus{
+    border-color: #6c63ff;
+    box-shadow: 0 0 0.5em rgba(108, 99, 255, 0.4);
+}
+
+
+button{
+    border: none;
+
+    padding: 1em;
+
+    border-radius: 0.6em;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button[type="reset"]{
+    background-color: #dddddd;
+    color: #333;
+}
+
+button[type="reset"]:hover{
+    background-color: #c7c7c7;
+}
+
+
+button[type="submit"]{
+    background-color: #6c63ff;
+    color: white;
+}
+
+button[type="submit"]:hover{
+    background-color: orange;
+}
