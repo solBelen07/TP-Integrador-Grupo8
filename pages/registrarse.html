@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <main>
+        <h1> Registrarse </h1>
+
+        <form action="index.html" method="post">
+
+            <label for="pais">País:</label>
+            <!-- select hace que el usuario seleccione un país de una lista desplegable -->
+            <select id="pais" name="pais" required>
+                <!-- option son las opciones que el usuario puede elegir, value es el valor que se enviará 
+             al "servidor" cuando se seleccione esa opción -->
+
+
+                <option value="">Seleccioná un país</option>
+                <!-- en value "" selecciona un pais esta porque obliga al uisuario a elegir un pais,
+              si no se selecciona un pais el formulario no se enviará -->
+                <option value="ar">Argentina</option>
+                <option value="br">Brasil</option>
+                <option value="cl">Chile</option>
+                <option value="uy">Uruguay</option>
+                <option value="mx">México</option>
+            </select>
+            <label for="dni">DNI</label>
+            <input type="number" placeholder="12345678" id="dni" name="dni" required>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido">
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Ingresa tu email" id="email" name="email" required>
+            <!-- placeholder es para que el usuario sepa qué información debe ingresar -->
+            <label for="contraseña">Contraseña</label>
+            <input type="password" placeholder="Ingresa tu contraseña" id="contraseña" name="contraseña" required>
+            <button type="submit">Registrarse</button>
+            <button type="reset">Cancelar</button>
+
+        </form>
+    </main>
+</body>
+
+</html>
