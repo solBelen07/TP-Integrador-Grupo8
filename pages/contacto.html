@@ -13,22 +13,35 @@
 
     <header>
 
-        <h1>TicketExpress</h1>
+    <h1>TicketExpress</h1>
 
-        <ul class="header-ul">
-            <li class="header-li">Inicio</li>
-            <li class="header-li">Vuelos</li>
-            <li class="header-li">Ofertas</li>
-            <li class="header-li">Contacto</li>
-        </ul>
+    <ul class="header-ul">
 
-        <div>
-            <a href="">
-                <img src="" alt="usuario">
-            </a>
-        </div>
+        <li class="header-li">
+            <a href="../index.html">Inicio</a>
+        </li>
 
-    </header>
+        <li class="header-li">
+            <a href="vuelos.html">Vuelos</a>
+        </li>
+
+        <li class="header-li">
+            <a href="ofertas.html">Ofertas</a>
+        </li>
+
+        <li class="header-li">
+            <a href="contacto.html">Contacto</a>
+        </li>
+
+    </ul>
+
+    <div>
+        <a href="">
+            <img src="" alt="usuario">
+        </a>
+    </div>
+
+</header>
 
     <!-- MAIN -->
     <main class="contenedor-contacto">
@@ -53,6 +66,8 @@
                             type="text" 
                             id="nombre" 
                             placeholder="Por ejemplo, Juan"
+                                required
+
                         >
                     </div>
 
@@ -63,6 +78,7 @@
                             type="text" 
                             id="apellido" 
                             placeholder="Por ejemplo, Pérez"
+                            required
                         >
                     </div>
 
@@ -76,6 +92,7 @@
                         type="email" 
                         id="email" 
                         placeholder="ejemplo@email.com"
+                        required
                     >
                 </div>
 
@@ -102,6 +119,7 @@
                             type="tel" 
                             id="telefono" 
                             placeholder="11-5555-5555"
+                            required
                         >
                     </div>
 
@@ -117,6 +135,7 @@
                     <textarea 
                         id="mensaje" 
                         placeholder="Escribí tu mensaje"
+                        required
                     ></textarea>
 
                 </div>
