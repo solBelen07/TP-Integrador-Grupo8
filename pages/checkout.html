@@ -9,20 +9,21 @@
 </head>
 <body>
     <header>
-        <h1>TicketExpress</h1>
-        <ul class="header-ul">
-            <li class="header-li">Inicio</li>
-            <li class="header-li">Vuelos</li>
-            <li class="header-li">Ofertas</li>
-            <li class="header-li">Contacto</li>
-        </ul>
-        <div>
-            <a href="./perfil.html"><img src="" alt="usuario"></a>
-        </div>
+      <h1>TicketExpress</h1>
+      <ul class="header-ul">
+          <li class="header-li"><a href="../index.html">Inicio</a></li>
+          <li class="header-li"><a href="vuelos.html">Vuelos</a></li>
+          <li class="header-li"><a href="ofertas.html">Ofertas</a></li>
+          <li class="header-li"><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div>
+          <a href=""><img src="./img/usuario.png" alt="usuario"></a>
+      </div>
     </header>
     <main>
         <h1>CHECKOUT</h1>
-            <section class="seccion-datos-personales">
+        <section class="seccion-contenidos">
+            <div class="seccion-datos-personales">
                 <h2>Datos del Pasajero</h2>
                 <form action="">
                     <label for="nombre">Nombre:</label><br>
@@ -37,8 +38,8 @@
                     <label for="telefono">Telefono:</label><br>
                     <input id="telefono" type="number" required><br>
                 </form>
-            </section>
-            <section class="seccion-metodos-de-pago">
+            </div>
+            <div class="seccion-metodos-de-pago">
                 <h2>Metodos de Pago</h2>
                     <input class="opcion-tarjeta" id="opcion-tarjeta" name="metodo-pago" type="radio" >
                     <label for="opcion-tarjeta">Tarjeta de Crédito/Debito</label>
@@ -67,10 +68,12 @@
                         <label for="nombre-tarjeta">Nombre y Apellido como figura en la Tarjeta:</label><br>
                         <input id="nombre-tarjeta" type="text" required><br>
 
-                        <label for="fecha-vencimiento">Fecha de Vencimiento:</label><br>
-                        <input id="mes" type="number" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])"  required><br>
-                        <input id="anio" type="number" placeholder="AA" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
-
+                        <div class="div-vencimiento">
+                            <label for="fecha-vencimiento">Fecha de Vencimiento:</label><br>
+                            <input id="mes" type="number" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])"  required><br>
+                            <input id="anio" type="number" placeholder="AA" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
+                        </div>
+                        
                         <label for="codigo-seguridad">Codigo de Seguridad:</label><br>
                         <input id="codigo-seguridad" type="number" maxlength="3" pattern="(0[1-9]|1[0-2])" required><br>
 
@@ -98,8 +101,8 @@
                         <img src="" alt="">
                     </div>
                     </div>
-            </section>
-            <section>
+            </div>
+            <div class="seccion-resumen">
                 <h2>RESUMEN</h2>
                 <h3>Buenos Aires - Madrid</h3>
                 <p>24/04/2026 Viernes</p>
@@ -109,7 +112,12 @@
                 <input placeholder="Ingrese Cupon" id="cupom" type="text" required><br>
                 <input class="boton" value="Aplicar" type="submit">
                 <h2>TOTAL 1.115.000</h2>
-            </section>
+            </div>
+        </section>
+        <section class="seccion-botones">
+            <a href="../pages/detalle-vuelo.html"><input class="boton-volver" value="Volver" type="button"></a>
+            <a href=""><input class="boton-continuar" value="Pagar" type="button"></a>
+        </section>
     </main>
     <footer>    
         <section>
