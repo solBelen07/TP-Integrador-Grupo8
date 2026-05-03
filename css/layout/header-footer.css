@@ -2,7 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -20,6 +20,14 @@ header a{
     display: block;
     color: black;
     color: #6c5ce7 ;
+    object-fit: cover;
+}
+
+header a:hover{
+    text-decoration: none; 
+    display: block;
+    color: black;
+    color: orange ;
 }
 
 .header-ul{
@@ -34,18 +42,17 @@ header a{
     padding: 0.5em;
     gap: 1em;
     border-radius: 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 550; 
-    text-transform: uppercase; 
-    color: #6c5ce7 ;
+    text-transform: uppercase;
 }
 
 
 .header-li:hover{
     border: 0.1em solid orange; 
     color: orange;  
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 550; 
 }
