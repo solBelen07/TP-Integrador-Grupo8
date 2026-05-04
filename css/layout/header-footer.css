@@ -50,11 +50,11 @@ header a:hover{
 
 
 .header-li:hover{
-    border: 0.1em solid orange; 
-    color: orange;  
+    border: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 550; 
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
 header img{

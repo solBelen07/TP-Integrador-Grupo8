@@ -34,7 +34,8 @@ body{
     display: flex;
     gap: 0;
     border-radius: 0.2em;
-    background-color: white; 
+    background-color: white;
+    border-radius: 1em 1em 0em 0em;
 }
 
 .botones a {
@@ -47,8 +48,7 @@ body{
     width: 100%;
     padding: 12px 24px;
     border-radius: 0em 1em 0em 0em;
-    border: 0.1em solid; 
-    border-color: #6c5ce7 ;
+    border: none; 
     background: none;
     color: #6c5ce7; 
     font-family: Arial, Helvetica, sans-serif;
@@ -57,6 +57,7 @@ body{
     text-transform: uppercase; 
     cursor: pointer;
     box-sizing: border-box;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
 .boton-ida-vuelta {
@@ -64,8 +65,6 @@ body{
     width: 100%;
     padding: 12px 24px;
     border-radius: 1em 0em 0em 0em;
-    border: 0.1em solid; 
-    border-color: #6c5ce7 ;
     background: #6c5ce7;
     color: #ffffff; 
     font-family: Arial, Helvetica, sans-serif;
@@ -74,13 +73,9 @@ body{
     text-transform: uppercase; 
     cursor: pointer;
     box-sizing: border-box;
-}
-
-
-/*input[type="button"]:hover {
-    background-color: rgba(108, 92, 231, 0.05);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     border: none;
-}*/
+}
 
 /*div grid*/
 .seccion-busqueda-div{
@@ -88,12 +83,12 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     grid-template-rows: repeat(2, 1fr) ;
-    border: 0.01em solid;
-    border-color: #4b5c6b;
     font-size: 1em;
     padding: 1em;
     gap: 0.5em;
     border-radius: 0em 1em 1em 1em;
+    background-color: #ffffff;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
 /*div grid, individuales*/
@@ -139,11 +134,9 @@ body{
     width: 100%;
     padding: 12px 24px;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
-    border: 0.1em solid; 
-    border-color: orange;
+    border: 0.1em solid orange; 
     background: none;
     color: orange; 
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700; 
     text-transform: uppercase; 
@@ -157,11 +150,9 @@ body{
     width: 100%;
     padding: 12px 24px;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
-    border: 0.1em solid; 
-    border-color: orange;
+    border: none; 
     background: orange;
     color: #ffffff; 
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700; 
     text-transform: uppercase; 
@@ -187,7 +178,7 @@ body{
 .card {
   width: 300px;
   background: #f0f0f0;
-  border: 0.01em solid #4b5c6b;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
   border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
@@ -219,6 +210,8 @@ body{
 
 .card-body {
   padding: 25px 20px 20px;
+  background-color: #ffffff;
+  border-radius: 0em 0em 0.5em 0.5em;
 }
 
 .sub {
