@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     scrollbar-width: none;
-    background-color: #f5f5f5;
 }
 
 body{
@@ -15,7 +14,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin: 0.5em 2em 2em 2em;
 }
 
 main h1{
@@ -23,11 +22,12 @@ main h1{
 }
 
 .seccion-contenidos{
+    width: 90%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 2em;
-    margin: 2em;
 }
 
 .seccion-datos-personales, .seccion-metodos-de-pago, .seccion-resumen{
@@ -36,8 +36,12 @@ main h1{
     padding: 2em;
 }
 
+.seccion-datos-personales, .seccion-resumen{
+    width: 25em;
+}
+
 .seccion-metodos-de-pago{
-    width: 31em;
+    width: 50em;
 }
 
 .seccion-metodos label{
