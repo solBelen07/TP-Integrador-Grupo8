@@ -57,11 +57,24 @@ h3{
 }
 
 
+main section:first-child{
+    background-color: white;
+    border-radius: 1em;
+    padding: 3em;
+
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    gap: 4em;
+    align-items: flex-start;
+}
+
 aside{
     width: 25%;
-    float: left;
+}
 
-    padding-right: 3em;
+.perfil-info{
+    width: 75%;
 }
 
 
@@ -104,7 +117,7 @@ hr{
 
 
 form{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
