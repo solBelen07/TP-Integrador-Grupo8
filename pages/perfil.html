@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuario</title>
+    <link rel="stylesheet" href="../css/layout/header-footer.css">
     <link rel="stylesheet" href="../css/style-perfil.css">
 </head>
 <body>
@@ -19,42 +20,33 @@
           <a href=""><img src="../img/usuario.png" alt="usuario"></a>
       </div>
     </header>
-     <main>
-
-    <!--  PERFIL -->
-    <section>
-
-      <h1>Perfil de Usuario</h1>
-
-  
-      <aside>
-    <!-- hacer la imagen redondeada -->
-        <img src="../img/perfil.png" alt="Foto de perfil" width="100">
-        <h3>Nombre Cliente</h3>
-
-        <nav>
-          <ul>
-            <li><a href="#">Información Personal</a></li>
-            <li><a href="#">Mis Vuelos</a></li>
-            <!-- el historial de viajes es para que el usuario pueda ver 
-             los vuelos que ha realizado en el pasado, para ver si lo dejamos o no-->
-             <li><a href="#">Historial de viajes </a></li>
-            <li><a href="#">Medios de pago</a></li>
-           
-          </ul>
-        </nav>
-      </aside>
-
-      <hr>
-
-      <!-- Formulario para actualizar información personal seria ver si aca 
-       usamos br u otra cosa para el salto de linea-->
+    <main>
+      <!--  PERFIL -->
       <section>
-
-        <h2>Información Personal</h2>
-
-        <form>
+        <h1>Perfil de Usuario</h1>
+        <aside>
+          <!-- hacer la imagen redondeada -->
+          <img src="../img/perfil.png" alt="Foto de perfil" width="100">
+          <h3>Nombre Cliente</h3>
+          <nav>
+            <ul>
+              <li><a href="#">Información Personal</a></li>
+              <li><a href="#">Mis Vuelos</a></li>
+              <!-- el historial de viajes es para que el usuario pueda ver 
+               los vuelos que ha realizado en el pasado, para ver si lo dejamos o no-->
+               <li><a href="#">Historial de viajes </a></li>
+              <li><a href="#">Medios de pago</a></li>
             
+            </ul>
+          </nav>
+        </aside>
+        <hr>
+        <!-- Formulario para actualizar información personal seria ver si aca 
+        usamos br u otra cosa para el salto de linea-->
+      </section>
+      <section>
+        <h2>Información Personal</h2>
+        <form>  
           <label>Nombre</label>
           <input type="text" required>
 
@@ -81,13 +73,8 @@
 
           <button type="reset">Descartar cambios</button>
           <button type="submit">Guardar cambios</button>
-
         </form>
-
       </section>
-
-    </section>
-
   </main>
   <footer>    
         <section>
@@ -109,6 +96,6 @@
                 <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><img src="../img/iconizer-linkedin.png" alt="icono-linkedin"></a>
             </div>
         </section>
-    </footer>
+  </footer>
 </body>
 </html>
