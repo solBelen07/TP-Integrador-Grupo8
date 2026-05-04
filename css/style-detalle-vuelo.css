@@ -12,6 +12,7 @@ body{
 }
 
 main{
+    margin: 0.5em 2em 2em 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +24,8 @@ main h1{
 }
 
 .seccion-detalle-vuelo{
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
@@ -63,12 +66,20 @@ main h1{
 }
 
 .seccion-div-asientos{
-    width: 50em;
+    width: 70em;
     height: 30em ;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     padding: 2em;
     margin-left: 2em;
+}
+
+.disponibilidad{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em;
+    gap: 1em;
+    align-items: center;
 }
 
 .div-asientos{

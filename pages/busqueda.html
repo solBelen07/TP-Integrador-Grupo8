@@ -20,96 +20,121 @@
           <a href="./perfil.html"><img src="../img/usuario.png" alt="usuario"></a>
       </div>
     </header>
-    <main class="contenedor-busqueda">
+    <main>
+        <h1>Resultados de Busqueda</h1>
+        <section class="contenedor-busqueda">
+            <aside class="filtros">
+                <h2>Filtrar vuelos</h2>
+                <details class="filtro" open>  <!-- Details para abrir un  desplegable -->
+                    <summary>Precio</summary> 
+                    <!--Es el título visible Cuando el usuario hace click sobre él,
+                    se despliega o se oculta el contenido del details.-->
 
-        <aside class="filtros">
-            <h2>Filtrar vuelos</h2>
-            <details class="filtro" open>  <!-- Details para abrir un  desplegable -->
-                <summary>Precio</summary> 
-                <!--Es el título visible Cuando el usuario hace click sobre él,
-                se despliega o se oculta el contenido del details.-->
+                    <label for="precio">
+                        Hasta $1500
+                    </label>
+                    <input type="range" id="precio" min="100" max="1500">
+                </details>
 
-                <label for="precio">
-                    Hasta $1500
-                </label>
-                <input type="range" id="precio" min="100" max="1500">
-            </details>
-
-            <details class="filtro">
-                <summary>Tipo de vuelo</summary>
+                <details class="filtro">
+                    <summary>Tipo de vuelo</summary>
+                        <div>
+                            <input type="radio" name="vuelo" id="directo">
+                            <label for="directo">Directo</label>
+                        </div>
+                    
+                        <div>
+                            <input type="radio" name="vuelo" id="escala">
+                            <label for="escala">Con escalas</label>
+                        </div>
+                </details>
+                <!-- AEROLINEAS -->
+                <details class="filtro">
+                    <summary>Aerolíneas</summary>
                     <div>
-                        <input type="radio" name="vuelo" id="directo">
-                        <label for="directo">Directo</label>
+                        <input type="checkbox" id="a1">
+                        <label for="a1">Aerolíneas Argentinas</label>
                     </div>
-                
                     <div>
-                        <input type="radio" name="vuelo" id="escala">
-                        <label for="escala">Con escalas</label>
+                        <input type="checkbox" id="a2">
+                        <label for="a2">LATAM</label>
                     </div>
-            </details>
-
-            <!-- AEROLINEAS -->
-           <details class="filtro">
-                <summary>Aerolíneas</summary>
-                <div>
-                    <input type="checkbox" id="a1">
-                    <label for="a1">Aerolíneas Argentinas</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="a2">
-                    <label for="a2">LATAM</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="a3">
-                    <label for="a3">Flybondi</label>
-                </div>
-            </details>
-        </aside>
-         <!--  Resultados -->
-        <section class="resultados">
-            <h2>Resultados de búsqueda</h2>
-            <!-- TARJETA  agregar + tartejas -->
-            <article class="tarjeta-vuelo">
-                <div class="info-vuelo">
-                    <h3>Aerolíneas Argentinas</h3>
-                    <p>Buenos Aires → Córdoba</p>
-                    <p>Salida: 08:30 hs</p>
-                    <p>Duración: 1h 25m</p>
-                </div>
-                <div class="precio">
-                    <p>$320.000</p>
-                    <button>Seleccionar</button>
-                </div>
-            </article>
+                    <div>
+                        <input type="checkbox" id="a3">
+                        <label for="a3">Flybondi</label>
+                    </div>
+                </details>
+            </aside>
+         <!-- Resultados -->
+            <section class="resultados">
+                <!-- TARJETA  agregar + tartejas -->
+                <article class="tarjeta-vuelo">
+                    <div class="info-vuelo">
+                        <h3>Aerolíneas Argentinas</h3>
+                        <p>Buenos Aires → Córdoba</p>
+                        <p>Salida: 08:30 hs</p>
+                        <p>Duración: 1h 25m</p>
+                    </div>
+                    <div class="precio">
+                        <p>$320.000</p>
+                        <input type="radio" name="vuelo" id="vuelo1" class="seleccionar">
+                        <label for="vuelo1" class="boton">Seleccionar</label>
+                    </div>
+                </article>
+                <article class="tarjeta-vuelo">
+                    <div class="info-vuelo">
+                        <h3>LATAM</h3>
+                        <p>Buenos Aires → Córdoba</p>
+                        <p>Salida: 9:30 hs</p>
+                        <p>Duración: 1h 40m</p>
+                    </div>
+                    <div class="precio">
+                        <p>$300.000</p>
+                        <input type="radio" name="vuelo" id="vuelo2" class="seleccionar">
+                        <label for="vuelo2" class="boton">Seleccionar</label>
+                    </div>
+                </article>
+                <article class="tarjeta-vuelo">
+                    <div class="info-vuelo">
+                        <h3>FlyBondi</h3>
+                        <p>Buenos Aires → Córdoba</p>
+                        <p>Salida: 08:00 hs</p>
+                        <p>Duración: 1h 15m</p>
+                    </div>
+                    <div class="precio">
+                        <p>$400.000</p>
+                        <input type="radio" name="vuelo" id="vuelo3" class="seleccionar">
+                        <label for="vuelo3" class="boton">Seleccionar</label>
+                    </div>
+                </article>
+            </section>
             <aside class="extras">
-            <!-- EQUIPAJE -->
-            <section class="equipaje">
-                <h2>Equipaje</h2>
-                <div>
-                    <input type="checkbox" id="mano">
-                    <label for="mano">Equipaje de mano</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="bodega">
-                    <label for="bodega">Equipaje en bodega</label>
-                </div>
-            </section>
-            <!-- POLITICAS -->
-            <section class="politicas">
-                <h2>Políticas</h2>
-                <p>
-                    Cancelación gratuita dentro de las primeras 24 horas.
-                </p>
-                <p>
-                    Cambios sujetos a disponibilidad de la aerolínea.
-                </p>
-            </section>
+                <!-- EQUIPAJE -->
+                <section class="equipaje">
+                    <h2>Equipaje</h2>
+                    <div>
+                        <input type="checkbox" id="mano">
+                        <label for="mano">Equipaje de mano</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="bodega">
+                        <label for="bodega">Equipaje en bodega</label>
+                    </div>
+                </section>
+                <!-- POLITICAS -->
+                <section class="politicas">
+                    <h2>Políticas</h2>
+                    <p>Cancelación gratuita dentro de las primeras 24 horas.</p>
+                    <p>Politica de equipaje detallada y disponible en el resumen del vuelo.</p>
+                    <p>Flexibilidad de fechas (opcional)</p>
+                </section>
+            </aside>
+            
         </section>
         <section class="seccion-botones">
             <a href="../index.html"><input class="boton-volver" value="Volver" type="button"></a>
             <a href="../pages/detalle-vuelo.html"><input class="boton-continuar" value="Continuar" type="button"></a>
         </section>
-
     </main>
     <footer>    
         <section>
