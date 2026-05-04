@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+        <link rel="stylesheet" href="../css/layout/header-footer.css">
+    <link rel="stylesheet" href="../css/style-contacto.css">
+    <link rel="stylesheet" href="../css/style-inicio-sesion.css">
 </head>
 
 <body>
-    <main>
-        <h1> Inicio de Sesion </h1>
 
-        <form action="index.html" method="post">
 
+
+    <main class="main-login">
+
+        <form class="estilo-form" action="../index.html" method="post">
+
+            <h1> Inicio de Sesion </h1>
 
             <label for="email">E-mail</label>
             <input type="email" placeholder="Ingresa tu email" id="email" name="email" required>
@@ -22,9 +28,30 @@
             <button type="submit">Iniciar Sesion</button>
             <button type="reset">Cancelar</button>
 
-            <a href="registrarse.html">Registrarse </a>
+            <a class= "registrarse" href="registrarse.html">Registrarse </a>
         </form>
     </main>
+     <footer>    
+        <section>
+            <h3>Nosotros</h3>
+            <ul>
+                <li>Sobre TicketExpress</li>
+                <li>Preguntas</li>
+            </ul>
+        </section>
+        <section class="section-copyright">
+            <p>©2026 TicketExpress. Todos los derechos reservados</p>
+        </section>
+        <section>
+            <h3>Redes Sociales</h3>
+            <div class="footer-div-redes">
+                <img src="../img/iconizer-gorjeo.png " alt="icono-gorjeo">
+                <img src="../img/iconizer-instagram.png" alt="icono-instagram">
+                <img src="../img/iconizer-facebook.png" alt="icono-facebook">
+                <img src="../img/iconizer-linkedin.png" alt="icono-linkedin">
+            </div>
+        </section>
+    </footer>
 
 </body>
 
