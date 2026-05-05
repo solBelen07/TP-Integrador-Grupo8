@@ -22,7 +22,7 @@
     </header>
     <main>
         <h1>Checkout</h1>
-        <form action="">
+        <form action="../index.html">
             <section class="seccion-contenidos">
                 <div class="seccion-datos-personales">
                 <h2>Datos del Pasajero</h2>
@@ -33,7 +33,7 @@
                         </div>
                         <div>
                         <label for="documento">Documento de Identidad:</label><br>
-                        <input id="documento" type="number" pattern="[0-9]{8}" maxlength="8" required><br>
+                        <input id="documento" type="text" pattern="[0-9]{8}" maxlength="8" required><br>
                         </div>
                         <div>
                         <label for="email">Correo Electronico:</label><br>
@@ -61,7 +61,7 @@
                         <div class="seccion-metodos-de-pago-tarjeta">
                             <div class="caja1">
                                 <label for="tarjeta">Numero de Tarjeta:</label><br>
-                                <input id="tarjeta" type="number" placeholder="xxxx-xxxx-xxxx-xxxx"
+                                <input id="tarjeta" type="text" placeholder="xxxx-xxxx-xxxx-xxxx"
                                  pattern="[0-9]{8}" maxlength="16" required><br>
                             </div>
                             <div class="caja2">
@@ -81,18 +81,18 @@
                                 <label for="fecha-vencimiento">Fecha de Vencimiento:</label><br>
                             </div>
                             <div class="caja5">
-                                <input id="mes" type="number" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])"  required><br>
+                                <input id="mes" type="text" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])"  required><br>
                             </div>
                             <div class="caja6">
-                                <input id="anio" type="number" placeholder="AA" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
+                                <input id="anio" type="text" placeholder="AA" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
                             </div> 
                             <div class="caja7">
                                 <label for="codigo-seguridad">Codigo de Seguridad:</label><br>
-                                <input id="codigo-seguridad" type="number" maxlength="3" pattern="(0[1-9]|1[0-2])" required><br>
+                                <input id="codigo-seguridad" type="text" maxlength="3" pattern="(0[1-9]|1[0-2])" required><br>
                             </div>  
                             <div class="caja8">
                                 <label for="documento-titular">Documento del Titular:</label><br>
-                                <input id="documento-titular" type="number" pattern="[0-9]{8}" maxlength="8" required><br>
+                                <input id="documento-titular" type="text" pattern="[0-9]{8}" maxlength="8" required><br>
                             </div> 
                         </div>
 
@@ -129,10 +129,8 @@
                         <p>Cod. Vuelo: FBK6778</p>
                     </div>
                     <div class="seccion-resumen-grid-descuento">
-                        <form action="">
                             <input placeholder="Ingrese Cupon" id="cupon" type="text" required><br>
-                            <input class="boton" value="Aplicar" type="reset">
-                        </form>
+                            <button type="reset" class="boton-aplicar">Aplicar</button>
                     </div>
                     <div class="seccion-resumen-grid-total">
                         <h2>TOTAL 1.115.000</h2>
