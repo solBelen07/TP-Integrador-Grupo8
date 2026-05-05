@@ -22,7 +22,6 @@
     </header>
     <main>
         <h1>Checkout</h1>
-        <form action="./popup.html">
             <section class="seccion-contenidos">
                 <div class="seccion-datos-personales">
                 <h2>Datos del Pasajero</h2>
@@ -47,13 +46,13 @@
                 </div>
                 <div class="seccion-metodos-de-pago">
                 <h2>Metodos de Pago</h2>
-                    <input class="opcion-tarjeta" id="opcion-tarjeta" name="metodo-pago" type="radio" required>
+                    <input class="opcion-tarjeta" id="opcion-tarjeta" name="metodo-pago" type="radio" >
                     <label for="opcion-tarjeta">Tarjeta de Crédito/Debito</label>
 
-                    <input class="opcion-transferencia" id="opcion-transferencia" name="metodo-pago" type="radio" required>
+                    <input class="opcion-transferencia" id="opcion-transferencia" name="metodo-pago" type="radio" >
                     <label for="opcion-transferencia">Transferencia</label>
 
-                    <input class="opcion-paypal" id="opcion-paypal" name="metodo-pago" type="radio" required>
+                    <input class="opcion-paypal" id="opcion-paypal" name="metodo-pago" type="radio" >
                     <label for="opcion-paypal">PayPal</label><br>
                     
                     <div class="seccion-metodos">
@@ -61,8 +60,8 @@
                         <div class="seccion-metodos-de-pago-tarjeta">
                             <div class="caja1">
                                 <label for="tarjeta">Numero de Tarjeta:</label><br>
-                                <input id="tarjeta" type="text" placeholder="xxxx xxxx xxxx xxxx"
-                                 pattern="[0-9]{16}" maxlength="16" required><br>
+                                <input id="tarjeta" type="text" placeholder="xxxx-xxxx-xxxx-xxxx"
+                                 pattern="[0-9]{8}" maxlength="16" required><br>
                             </div>
                             <div class="caja2">
                                 <label for="cuotas">Cuotas Disponibles:</label><br>
@@ -81,14 +80,14 @@
                                 <label for="fecha-vencimiento">Fecha de Vencimiento:</label><br>
                             </div>
                             <div class="caja5">
-                                <input id="mes" type="text" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
+                                <input id="mes" type="text" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])"  required><br>
                             </div>
                             <div class="caja6">
-                                <input id="anio" type="text" placeholder="AA" maxlength="2" pattern="[0-9]{2}" required><br>
+                                <input id="anio" type="text" placeholder="AA" maxlength="2" pattern="(0[1-9]|1[0-2])" required><br>
                             </div> 
                             <div class="caja7">
                                 <label for="codigo-seguridad">Codigo de Seguridad:</label><br>
-                                <input id="codigo-seguridad" type="text" maxlength="3" pattern="[0-9]{3}" required><br>
+                                <input id="codigo-seguridad" type="text" maxlength="3" pattern="(0[1-9]|1[0-2])" required><br>
                             </div>  
                             <div class="caja8">
                                 <label for="documento-titular">Documento del Titular:</label><br>
@@ -98,27 +97,22 @@
 
                         <!--DIV METODO TRANSFERENCIA-->
                         <div class="seccion-metodos-de-pago-transferencia">
-                            <div class="div-metodos-de-pago-transferencia">
-                                <div>
-                                <label for="email">Correo Electronico:</label><br>
-                                <input id="email" type="email"><br>
-                                </div>
-                                <div>
-                                <label for="documento">Documento del Titular:</label><br>
-                                <input id="documento" type="number" pattern="[0-9]{8}" maxlength="8"><br>
-                                </div>
-                                <p>Una vez finalizada tu compra, recibirás un correo electrónico con los datos necesarios (CBU/alias, titular y monto) y los pasos a seguir para realizar la transferencia. <br>
-                                Dispondrás de un plazo de 8 horas desde la confirmación del pedido para efectuar el pago. Pasado ese tiempo, si no se registra la transferencia, la compra será cancelada automáticamente.
-                                </p>
-                            </div>
+                            <label for="email">Correo Electronico:</label><br>
+                            <input id="email" type="email" required><br>
+
+                            <label for="documento">Documento del Titular:</label><br>
+                            <input id="documento" type="number" pattern="[0-9]{8}" maxlength="8" required><br>
+
+                            <p>Una vez finalizada tu compra, recibirás un correo electrónico con los datos necesarios (CBU/alias, titular y monto) y los pasos a seguir para realizar la transferencia. <br>
+                            Dispondrás de un plazo de 8 horas desde la confirmación del pedido para efectuar el pago. Pasado ese tiempo, si no se registra la transferencia, la compra será cancelada automáticamente.
+                            </p>
+
                         </div>
 
                         <!--DIV METODO PAYPAL-->
                         <div class="seccion-metodos-de-pago-paypal">
-                            <div>
                             <p>Escanea el QR con la app de PayPal para realizar el pago de tu Vuelo.</p>
-                            <img src="../img/qr_unlam_edu_ar_.jpg" alt="">
-                            </div>
+                            <img src="" alt="">
                         </div>
                     </div>
                 </div>
@@ -129,13 +123,13 @@
                     </div>
                     <div class="seccion-resumen-grid-resumen-viaje">
                         <p>24/05/2026 Viernes</p>
-                        <p>8.00hs - 20.40hs</p>
+                        <p>8.00 - 20.40</p>
                         <p>Sin Escala</p>
                         <p>Cod. Vuelo: FBK6778</p>
                     </div>
                     <div class="seccion-resumen-grid-descuento">
-                            <input placeholder="Ingrese Cupon" id="cupon" type="text"><br>
-                            <button type="button" class="boton-aplicar">Aplicar</button>
+                            <input placeholder="Ingrese Cupon" id="cupon" type="text" required><br>
+                            <button type="reset" class="boton-aplicar">Aplicar</button>
                     </div>
                     <div class="seccion-resumen-grid-total">
                         <h2>TOTAL 1.115.000</h2>
@@ -146,7 +140,9 @@
                 <a href="../pages/detalle-vuelo.html"><input class="boton-volver" value="Volver" type="button"></a>
                 <button type="submit" class="boton-continuar">Pagar</button>
             </section>
-        </form>
+            <section class="seccion-popup">
+
+            </section>
     </main>
     <footer>    
         <section>
