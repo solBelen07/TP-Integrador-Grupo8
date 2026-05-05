@@ -46,3 +46,182 @@ nav a{
 nav a:hover{
     color: #6c63ff;
 }
+.principal{
+    min-height: 10rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem;
+
+    text-align: center;
+
+    background: linear-gradient(
+    rgba(108, 99, 255, 0.9),
+    rgba(108, 99, 255, 0.9)
+    );
+
+    color: white;
+}
+
+.principal-texto{
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.principal-texto h2{
+    font-size: 3rem;
+}
+
+.principal-texto p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.preguntas-container{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 5rem 4rem;
+}
+
+.preguntas{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+.pregunta{
+    background-color: white;
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.pregunta:hover{
+    transform: translateY(-0.5rem);
+}
+
+.pregunta h3{
+    color: #6c63ff;
+
+    margin-bottom: 1rem;
+
+    font-size: 1.3rem;
+}
+
+.pregunta p{
+    color: #555;
+
+    line-height: 1.8rem;
+}
+.contacto-ayuda{
+    background-color: white;
+
+    margin: 0 4rem 5rem 4rem;
+    padding: 4rem;
+
+    border-radius: 1rem;
+
+    text-align: center;
+
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contacto-ayuda h2{
+    font-size: 2rem;
+    color: #6c63ff;
+}
+
+.contacto-ayuda p{
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.contacto-ayuda a{
+    text-decoration: none;
+
+    background-color: #6c63ff;
+    color: white;
+
+    padding: 1rem 2rem;
+
+    border-radius: 0.6rem;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.contacto-ayuda a:hover{
+    background-color: orange;
+}
+footer{
+    background-color: rgb(255, 255, 255);
+
+    padding: 3rem 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 3rem;
+}
+
+footer h3{
+    color: #6c63ff;
+    margin-bottom: 1rem;
+}
+
+footer ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: #555;
+
+    transition: 0.3s;
+}
+
+footer a:hover{
+    color: orange;
+}
+
+.footer-copy{
+    display: flex;
+    align-items: center;
+}
+
+.footer-copy p{
+    color: #666;
+}
+
+.iconos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}

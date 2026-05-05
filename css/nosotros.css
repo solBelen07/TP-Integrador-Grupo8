@@ -37,7 +37,7 @@ nav ul{
 
 nav a{
     text-decoration: none;
-    color: #333;
+    color: #0e0d0d;
     font-size: 1rem;
     font-weight: bold;
     transition: 0.3s;
@@ -51,7 +51,7 @@ nav a:hover{
 
 .principal{
     width: 100%;
-    min-height: 32rem;
+    min-height: 22rem;
 
     display: flex;
     justify-content: center;
@@ -87,7 +87,7 @@ nav a:hover{
 
     margin: auto;
 
-    background-color: #6c63ff;
+    background-color: #636dff;
     color: white;
 
     text-decoration: none;
