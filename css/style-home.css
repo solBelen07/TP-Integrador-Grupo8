@@ -252,3 +252,11 @@ h2 {
   font-size: 14px;
   color: #555;
 }
+
+.inicio-sesion{
+
+  display: flex;
+  gap: 10px;
+  margin-left: 700px; /* empuja todo a la derecha */
+
+}

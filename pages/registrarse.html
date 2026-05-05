@@ -7,15 +7,18 @@
     <title>Registrarse</title>
     <link rel="stylesheet" href="../css/style-contacto.css">
         <link rel="stylesheet" href="../css/style-registrarse.css">
-     
+             <link rel="stylesheet" href="../css/layout/header-footer.css">
+
 </head>
 
 <body>
-    <main class="registro">
-        <h1> Registrarse </h1>
+    <main class="contenedor">
+        <div class ="lado-izquierdo"></div>
+        <div class="registro">
+      
 
-        <form action="index.html" method="post">
-
+        <form action="../index.html" method="post">
+            <h1> Registrarse </h1>
             <label for="pais">País:</label>
             <!-- select hace que el usuario seleccione un país de una lista desplegable -->
             <select id="pais" name="pais" required>
@@ -53,7 +56,30 @@
             <button type="reset">Cancelar</button>
 
         </form>
+        </div>
+    
     </main>
+        <footer>
+        <section>
+            <h3>Nosotros</h3>
+            <ul>
+                <li>Sobre TicketExpress</li>
+                <li>Preguntas</li>
+            </ul>
+        </section>
+        <section class="section-copyright">
+            <p>©2026 TicketExpress. Todos los derechos reservados</p>
+        </section>
+        <section>
+            <h3>Redes Sociales</h3>
+            <div class="footer-div-redes">
+                <a href="https://x.com/UnlamOficial" target="_blank"><img src="../img/iconizer-gorjeo.png" alt="icono-twitter"></a>
+                <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><img src="../img/iconizer-instagram.png" alt="icono-instagram"></a>
+                <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><img src="../img/iconizer-facebook.png" alt="icono-facebook"></a>
+                <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><img src="../img/iconizer-linkedin.png" alt="icono-linkedin"></a>
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>

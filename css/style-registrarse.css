@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 h1{
     font-size: 3em;
@@ -13,7 +13,7 @@ h1{
     align-items: flex-start;
     padding-left: 18%;
     margin: 0;
-    background-image: url("../img/registarse.jpeg");
+  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,8 +50,40 @@ button {
 
 
 }
-main{
-      min-height: 100vh;
-       background: linear-gradient(to left, rgb(0, 183, 255), rgba(117, 79, 207, 0.267));
 
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  width: 100 vh;
+ min-height: calc(100vh - 122px); /* si tu footer mide ~80px */
+   
+}
+
+/* Imagen izquierda */
+.lado-izquierdo {
+    background-image: url("../img/registarse.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Formulario derecha */
+.registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+       background: linear-gradient(
+        135deg,
+        rgba(0, 183, 255, 0.9),
+        rgba(104, 107, 235, 0.9)
+    );
+
+}
+form {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 1em;
 }

@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .main-login {
     display: flex;
@@ -14,7 +14,8 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+
+ min-height: calc(100vh - 122px); /* si tu footer mide ~80px */
 }
 
 .estilo-form {
@@ -57,12 +58,13 @@ form label {
 .estilo-form {
     backdrop-filter: blur(6px);
 }
-.registrarse{
-    font-size: 2em;
-    color: white;
+
+.registrarse {
     text-align: center;
-    margin-top: 1em;
-    margin: 10px;
-      background: linear-gradient(45deg, #ffcc00, #ff8800);
-   
+    display: inline-block;
+    padding: 10px 20px;
+    background: #faae3bce;
+    color: rgb(221, 243, 247);
+    text-decoration: none;
+    border-radius: 5px;
 }
