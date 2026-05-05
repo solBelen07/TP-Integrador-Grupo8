@@ -31,6 +31,11 @@ body{
     margin: 1em auto;
 }
 
+.seccion-busqueda form{
+  width: 100%;
+  align-self: center;
+}
+
 .botones {
     display: flex;
     gap: 0;
@@ -122,11 +127,6 @@ body{
     justify-self: center;
     align-self: center;
 
-}
-
-.div-grid-boton a, a{
-    text-decoration: none; 
-    display: block;
 }
 
 .boton-buscar, 

@@ -32,44 +32,48 @@
                 <a href="./index.html"><input class="boton-ida-vuelta" value="Ida y Vuelta" type="button"></a>
                 <a href="./pages/home-solo-ida.html"><input class="boton-ida" value="Solo Ida" type="button"></a>
             </div>
-            <div  class="seccion-busqueda-div">
-                <div>
-                    <label for="origen">Origen:</label>
-                    <input id="origen" type="text" required>
-                </div>
-                <div>
-                    <label for="fecha-ida">Ida:</label>
-                    <input id="fecha-ida" type="date" required>
-                </div>
-                <div>
-                    <label for="pasajero">Pasajero:</label>
-                    <input id="pasajero" type="number" required>
-                </div>
-                <div>
-                <label for="cuotas">Clase:</label>
-                        <select id="cuotas" name="cuotas">
-                          <option value="una-cuota">Clase Económica (Turista)</option>
-                          <option value="tres-cuota">Clase Económica Premium</option>
-                          <option value="seis-cuota">Clase Ejecutiva (Business)</option>
-                          <option value="nueve-cuota">Primera Clase</option>
-                        </select> 
-                </div>
-                <div>
-                    <label for="origen">Destino:</label>
-                    <input id="origen" type="text" required>
-                </div>
-                <div>
-                    <label for="fecha-ida">Vuelta:</label>
-                    <input id="fecha-ida" type="date" required>
-                </div>
-                <div class="div-grid-boton">
-                    <a href="./pages/busqueda.html"><input class="boton-buscar" value="Buscar Vuelos" type="button"></a>
-                </div>
-            </div>
+            <form action="./pages/busqueda.html">
+              <div  class="seccion-busqueda-div">
+                  <div>
+                      <label for="origen">Origen:</label>
+                      <input id="origen" type="text" required>
+                  </div>
+                  <div>
+                      <label for="fecha-ida">Ida:</label>
+                      <input id="fecha-ida" type="date" required>
+                  </div>
+                  <div>
+                      <label for="pasajero">Pasajero:</label>
+                      <input id="pasajero" type="number" required>
+                  </div>
+                  <div>
+                  <label for="cuotas">Clase:</label>
+                          <select id="cuotas" name="cuotas">
+                            <option value="una-cuota">Clase Económica (Turista)</option>
+                            <option value="tres-cuota">Clase Económica Premium</option>
+                            <option value="seis-cuota">Clase Ejecutiva (Business)</option>
+                            <option value="nueve-cuota">Primera Clase</option>
+                          </select> 
+                  </div>
+                  <div>
+                      <label for="origen">Destino:</label>
+                      <input id="origen" type="text" required>
+                  </div>
+                  <div>
+                      <label for="fecha-ida">Vuelta:</label>
+                      <input id="fecha-ida" type="date" required>
+                  </div>
+                  
+                  <div class="div-grid-boton">
+                    <button type="submit" class="boton-buscar">
+                    Buscar Vuelos
+                    </button>
+                  </div>
+              </div>
+            </form>
         </section>
         <section class="seccion-ofertas">  
             <h2>Nuestras Mejores Ofertas</h2>
-
             <div class="seccion-ofertas-div">
                 <div>
                     <div class="card">
@@ -161,9 +165,7 @@
                       </div>
                     </div>
                 </div>
-            </div>
-
-            
+            </div> 
             <a href="./pages/ofertas.html"><input class="boton-ofertas" value="Ir a Ofertas" type="button"></a>
         </section>
     </main>
