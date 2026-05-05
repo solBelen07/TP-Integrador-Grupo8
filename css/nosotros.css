@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: none;
+}
+
+body{
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+
+header{
+    background-color: white;
+    padding: 1.5rem 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+}
+
+header h1{
+    color: #6c63ff;
+    font-size: 2rem;
+}
+
+nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #6c63ff;
+}
+
+
+
+.principal{
+    width: 100%;
+    min-height: 32rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem;
+    background: linear-gradient(rgba(0,0,0,0.5), /*degrade de color en linea recta */
+    rgba(0,0,0,0.5));
+
+    color: white;
+    text-align: center;
+}
+
+.principal-texto{
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.principal-texto h2{
+    font-size: 3rem;
+}
+
+.principal-texto p{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.principal-texto a{
+    width: fit-content;
+
+    margin: auto;
+
+    background-color: #6c63ff;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.principal-texto a:hover{
+    background-color: orange;
+}
+
+
+
+.sobre-nosotros{
+    width: 100%;
+
+    padding: 5rem 8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sobre-nosotros h2{
+    font-size: 2.5rem;
+    color: #6c63ff;
+}
+
+.sobre-nosotros p{
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #555;
+}
+
+
+
+.mision{
+    width: 100%;
+
+    padding: 2rem 8rem 5rem 8rem;
+
+    display: flex;
+    gap: 2rem;
+}
+
+.card{
+    flex: 1;
+
+    background-color: white;
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-0.5rem);
+}
+
+.card h3{
+    color: #6c63ff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card p{
+    color: #555;
+    line-height: 1.8rem;
+}
+
+
+
+.estadisticas{
+    background-color: #4b45be;
+
+    padding: 4rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+
+    text-align: center;
+
+    color: white;
+}
+
+.dato h3{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.dato p{
+    font-size: 1.1rem;
+}
+
+
+
+footer{
+    background-color: white;
+
+    padding: 3rem 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 3rem;
+}
+
+footer h3{
+    color: #6c63ff;
+    margin-bottom: 1rem;
+}
+
+footer ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+footer a:hover{
+    color: orange;
+}
+
+.footer-copy{
+    display: flex;
+    align-items: center;
+}
+
+.footer-copy p{
+    color: #666;
+}
+
+.iconos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+
+
