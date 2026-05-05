@@ -176,6 +176,11 @@ body{
     gap: 3em;
 }
 
+.seccion-ofertas a{
+    text-decoration: none; 
+    display: block;
+}
+
 .card {
   width: 300px;
   background: #f0f0f0;
@@ -206,7 +211,7 @@ body{
   padding: 8px 12px;
   font-size: 12px;
   font-weight: bold;
-  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  border-radius: 0.5em;
 }
 
 .card-body {
@@ -254,9 +259,7 @@ h2 {
 }
 
 .inicio-sesion{
-
   display: flex;
   gap: 10px;
-  margin-left: 700px; /* empuja todo a la derecha */
-
+  margin-left: 700px;
 }
