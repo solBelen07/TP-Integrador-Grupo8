@@ -35,13 +35,93 @@ main h1{
     border-radius: 1em;
     padding: 2em;
 }
-
 .seccion-datos-personales, .seccion-resumen{
     width: 25em;
 }
 
+.seccion-datos-personales-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) ;
+    grid-template-rows: repeat(4, 1fr) ;
+    margin-top: 1em;
+    gap: 3em;
+}
+
 .seccion-metodos-de-pago{
     width: 50em;
+}
+
+.seccion-resumen{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) ;
+    grid-template-rows: repeat(4, 1fr) ;
+    gap: 1em;
+}
+
+.seccion-resumen-grid-resumen-viaje{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.seccion-resumen-grid-descuento{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-resumen-grid-total{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.seccion-metodos-de-pago-tarjeta{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(6, 1fr) ;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.caja1{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.caja2{
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.caja3{
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
+
+.caja4{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.caja5{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.caja6{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.caja7{
+    grid-column: 1/4;
+    grid-row: 5/6;
+}
+
+.caja8{
+    grid-column: 1/4;
+    grid-row: 6/7;
 }
 
 .seccion-metodos label{

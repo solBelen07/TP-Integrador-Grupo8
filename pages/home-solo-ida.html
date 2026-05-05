@@ -59,12 +59,13 @@
         </div>
 
         <section class="seccion-busqueda">
-            <h2>RESERVA TU PROXIMO VUELO</h2>
-            <div class="botones">
-                <a href="../index.html"><input class="boton-ida-vuelta" value="Ida y Vuelta" type="button"></a>
-                <a href="./home-solo-ida.html"><input class="boton-ida" value="Solo Ida" type="button"></a>
-            </div>
-            <div class="seccion-busqueda-div">
+          <h2>RESERVA TU PROXIMO VUELO</h2>
+          <div class="botones">
+            <a href="../index.html"><input class="boton-ida-vuelta" value="Ida y Vuelta" type="button"></a>
+            <a href="./home-solo-ida.html"><input class="boton-ida" value="Solo Ida" type="button"></a>
+          </div>
+          <form action="./pages/busqueda.html">
+            <div  class="seccion-busqueda-div">
                 <div>
                     <label for="origen">Origen:</label>
                     <input id="origen" type="text" required>
@@ -91,10 +92,17 @@
                     <input id="origen" type="text" required>
                 </div>
                 <div class="div-grid-boton">
+<<<<<<< HEAD
                     <a href="../pages/busqueda.html"><input class="boton-buscar" value="Buscar Vuelos"
                             type="button"></a>
+=======
+                  <button type="submit" class="boton-buscar">
+                  Buscar Vuelos
+                  </button>
+>>>>>>> detalle-vuelo
                 </div>
             </div>
+          </form>
         </section>
         <section class="seccion-ofertas">
             <h2>Nuestras Mejores Ofertas</h2>
