@@ -35,14 +35,44 @@ main h1{
     border-radius: 1em;
     padding: 2em;
 }
-
 .seccion-datos-personales, .seccion-resumen{
     width: 25em;
 }
 
+.seccion-datos-personales-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) ;
+    grid-template-rows: repeat(4, 1fr) ;
+    margin-top: 1em;
+    gap: 3em;
+}
+
 .seccion-metodos-de-pago{
     width: 50em;
-    
+}
+
+.seccion-resumen{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) ;
+    grid-template-rows: repeat(4, 1fr) ;
+    gap: 1em;
+}
+
+.seccion-resumen-grid-resumen-viaje{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.seccion-resumen-grid-descuento{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-resumen-grid-total{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .seccion-metodos-de-pago-tarjeta{
