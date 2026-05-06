@@ -60,6 +60,40 @@ header img{
     height: 3em;
 }
 
+.botones-inicio-registro{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.boton-registro{
+    display: block;
+    padding: 12px 20px;
+    border-radius: 0.5em;
+    border: 0.1em solid; 
+    border-color: #6c5ce7;
+    background: none;
+    color: #6c5ce7; 
+    font-size: 12px;
+    font-weight: 500; 
+    text-transform: uppercase; 
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.boton-registro:hover{
+    display: block;
+    padding: 12px 24px;
+    border-radius: 0.5em;
+    background: #6c5ce7;
+    color: #ffffff; 
+    font-size: 12px;
+    font-weight: 500; 
+    text-transform: uppercase; 
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
 footer{
     display: flex;
     flex-direction: row;
