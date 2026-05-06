@@ -25,6 +25,12 @@ body{
     gap: 3em;
 }
 
+.seccion-vuelos-div a{
+  text-decoration: none; 
+  color: #333;
+}
+
+
 .card {
   width: 300px;
   background: #f0f0f0;
