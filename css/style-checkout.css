@@ -241,3 +241,29 @@ main h1{
     cursor: pointer;
     box-sizing: border-box;
 }
+
+.div-metodos-de-pago-transferencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    gap: 2em;
+}
+
+.div-metodos-de-pago-transferencia div{
+    width: 100%;
+}
+
+.seccion-metodos-de-pago-paypal div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    gap: 2em;
+}
+
+.seccion-metodos-de-pago-paypal img{
+    width: 15em;
+    height: 15em;
+}
+
