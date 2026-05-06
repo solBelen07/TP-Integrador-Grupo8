@@ -21,62 +21,69 @@
       </div>
     </header>
     <main>
+      
+      <h1>Perfil de Usuario</h1>
       <!--  PERFIL -->
-      <section>
-        <h1>Perfil de Usuario</h1>
-        <aside>
-          <!-- hacer la imagen redondeada -->
-          <img src="../img/perfil.png" alt="Foto de perfil" width="100">
-          <h3>Nombre Cliente</h3>
-          <nav>
-            <ul>
-              <li><a href="#">Información Personal</a></li>
-              <li><a href="#">Mis Vuelos</a></li>
-              <!-- el historial de viajes es para que el usuario pueda ver 
-               los vuelos que ha realizado en el pasado, para ver si lo dejamos o no-->
-               <li><a href="#">Historial de viajes </a></li>
-              <li><a href="#">Medios de pago</a></li>
-            
-            </ul>
-          </nav>
-        </aside>
-        <hr>
+      <section class="seccion-contenido">
+        <div class="div-perfil">
+            <!-- hacer la imagen redondeada -->
+            <img src="../img/perfil.png" alt="Foto de perfil" width="100">
+            <h3>Nombre Cliente</h3>
+            <nav>
+              <ul>
+                <li><a href="#">Información Personal</a></li>
+                <li><a href="./perfil-mis-vuelos.html">Mis Vuelos</a></li>
+              </ul>
+            </nav>
+        </div>
         <!-- Formulario para actualizar información personal seria ver si aca 
         usamos br u otra cosa para el salto de linea-->
-  <div class="perfil-info">
-
-  <h2>Información Personal</h2>
-
-  
-        <form>  
-          <label>Nombre</label>
-          <input type="text" required>
-
-          <label>Apellido</label>
-          <input type="text" required>
-
-          <label>Email</label>
-          <input type="email" required>
-
-          <label>Dirección</label>
-          <input type="text" required>
-
-          <label>Localidad</label>
-          <input type="text" required>
-
-          <label>Código Postal</label>
-          <input type="text" required>
-
-          <label>Número de Teléfono</label>
-          <input type="tel" required>
-
-          <label>Fecha de Nacimiento</label>
-          <input type="date"required>
-
-          <button type="reset">Descartar cambios</button>
-          <button type="submit">Guardar cambios</button>
-        </form>
-  </div>
+        <div class="perfil-info">
+          <h2>Información Personal</h2>
+          <form> 
+          <div class="perfil-info-grid">
+             
+              <div class="caja1">
+                <label>Nombre</label>
+                <input type="text" required>
+              </div>
+              <div class="caja2">
+                <label>Apellido</label>
+                <input type="text" required>
+              </div>
+              <div class="caja3">
+                <label>Email</label>
+                <input type="email" required>
+              </div>
+              <div class="caja4">
+                <label>Dirección</label>
+                <input type="text" required>
+              </div>
+              <div class="caja5">
+                <label>Localidad</label>
+                <input type="text" required>
+              </div>
+              <div class="caja6">
+                <label>Código Postal</label>
+                <input type="text" required>
+              </div> 
+              <div class="caja7">
+                <label>Número de Teléfono</label>
+                <input type="tel" required>
+              </div>
+              <div class="caja8">
+                <label>Fecha de Nacimiento</label>
+                <input type="date"required>
+              </div>
+              <div class="caja9">
+              <button type="reset">Descartar cambios</button>
+              </div>
+              <div class="caja10">
+              <button type="submit">Guardar cambios</button>
+              </div>
+          </div>
+          </form>
+        </div>
       </section>
   </main>
   <footer>    
