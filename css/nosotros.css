@@ -12,7 +12,6 @@ body{
 }
 
 .principal{
-    width: 100%;
     min-height: 22rem;
 
     display: flex;
