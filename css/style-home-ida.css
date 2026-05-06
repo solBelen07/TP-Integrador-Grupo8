@@ -267,7 +267,11 @@ h2 {
 
   display: flex;
   gap: 10px;
-  margin-left: 700px; /* empuja todo a la derecha */
+  margin-left: 700px; 
 
 }
 
+.seccion-ofertas-div a{
+  text-decoration: none; 
+  color: #333;
+}

@@ -22,7 +22,6 @@ body{
     object-fit: cover;
 }
 
-/*seccion contenedor*/
 .seccion-busqueda{
     width: 90%;
     display: flex;

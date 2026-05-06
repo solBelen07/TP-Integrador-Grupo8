@@ -55,18 +55,16 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
   width: 100 vh;
- min-height: calc(100vh - 122px); /* si tu footer mide ~80px */
+ min-height: calc(100vh - 122px);
    
 }
 
-/* Imagen izquierda */
 .lado-izquierdo {
     background-image: url("../img/registarse.jpeg");
     background-size: cover;
     background-position: center;
 }
 
-/* Formulario derecha */
 .registro {
     display: flex;
     flex-direction: column;

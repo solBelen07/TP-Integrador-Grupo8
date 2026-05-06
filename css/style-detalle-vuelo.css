@@ -97,12 +97,10 @@ main h1{
     padding: 0.1em 0em 0.1em 0em;
 }
 
-/* ocultar radio real */
 input[type="radio"] {
   display: none;
 }
 
-/* estilo base del asiento */
 .asiento {
   width: 2em;
   height: 2em;
@@ -113,13 +111,11 @@ input[type="radio"] {
   
 }
 
-/* ocupado */
 input:disabled + .asiento {
   background-color: #6c63ff; 
   cursor: not-allowed;
 }
 
-/* seleccionado */
 input:checked + .asiento {
   background-color: orange;
 }

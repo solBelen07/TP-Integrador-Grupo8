@@ -124,7 +124,6 @@ input[type="range"]{
     transition: 0.3s;
 }
 
-/* cuando está seleccionado */
 .seleccionar:checked + .boton {
   background-color: #6c63ff;
   color: white;

@@ -14,8 +14,7 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
- min-height: calc(100vh - 122px); /* si tu footer mide ~80px */
+    min-height: calc(100vh - 122px);
 }
 
 .estilo-form {
@@ -44,9 +43,6 @@ button {
     color: aliceblue;
     font-size: 26px;
     margin-bottom: 20px;
-
-
-
 }
 
 form label {
@@ -54,7 +50,7 @@ form label {
     font-size: 1.2em;
     color: aliceblue;
 }
-/*para agregar el desenfoque*/
+
 .estilo-form {
     backdrop-filter: blur(6px);
 }
