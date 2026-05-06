@@ -11,44 +11,6 @@ body{
     color: #333;
 }
 
-
-
-header{
-    background-color: white;
-    padding: 1.5rem 4rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
-}
-
-header h1{
-    color: #6c63ff;
-    font-size: 2rem;
-}
-
-nav ul{
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-nav a{
-    text-decoration: none;
-    color: #0e0d0d;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover{
-    color: #6c63ff;
-}
-
-
-
 .principal{
     width: 100%;
     min-height: 22rem;
@@ -191,58 +153,4 @@ nav a:hover{
 .dato p{
     font-size: 1.1rem;
 }
-
-
-
-footer{
-    background-color: white;
-
-    padding: 3rem 4rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    gap: 3rem;
-}
-
-footer h3{
-    color: #6c63ff;
-    margin-bottom: 1rem;
-}
-
-footer ul{
-    list-style: none;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-footer a{
-    text-decoration: none;
-    color: #555;
-    transition: 0.3s;
-}
-
-footer a:hover{
-    color: orange;
-}
-
-.footer-copy{
-    display: flex;
-    align-items: center;
-}
-
-.footer-copy p{
-    color: #666;
-}
-
-.iconos{
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-
 
