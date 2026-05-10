@@ -123,3 +123,100 @@ body{
     font-size: 1.1rem;
 }
 
+@media screen and (width < 900px){
+
+    .principal{
+        padding: 3rem 2rem;
+    }
+
+    .principal-texto{
+        width: 100%;
+    }
+
+    .principal-texto h2{
+        font-size: 2.2rem;
+    }
+
+    .principal-texto p{
+        font-size: 1rem;
+    }
+
+    .sobre-nosotros{
+        padding: 4rem 3rem;
+    }
+
+    .sobre-nosotros h2{
+        font-size: 2rem;
+    }
+
+    .mision{
+        padding: 2rem 3rem 4rem 3rem;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        min-width: 250px;
+    }
+
+    .estadisticas{
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding: 3rem 2rem;
+    }
+
+}
+@media screen and (width < 400px){
+
+    .principal{
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .principal-texto{
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .principal-texto h2{
+        font-size: 1.8rem;
+    }
+
+    .principal-texto p{
+        font-size: 0.95rem;
+        line-height: 1.5rem;
+    }
+
+    .principal-texto a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre-nosotros{
+        padding: 3rem 1.5rem;
+    }
+
+    .sobre-nosotros h2{
+        font-size: 1.8rem;
+    }
+
+    .sobre-nosotros p{
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+
+    .mision{
+        padding: 1rem 1.5rem 3rem 1.5rem;
+        flex-direction: column;
+    }
+
+    .estadisticas{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2.5rem 1rem;
+    }
+
+    .dato h3{
+        font-size: 2.2rem;
+    }
+
+}
