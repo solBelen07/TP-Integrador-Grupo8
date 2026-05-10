@@ -14,7 +14,6 @@ header{
     box-shadow: 0em 0em 0.5em 0em #cdcdcd;
     color: #6c5ce7;
     flex-wrap: wrap;
-    min-width: 400px;
 }
 
 #menu-toggle{
@@ -117,7 +116,6 @@ footer{
     background-color: #62626a;
     color: #cdcdcd;
     flex-wrap: wrap;
-    min-width: 400px;
 }   
 
 .footer-div-redes{

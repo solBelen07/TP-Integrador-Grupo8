@@ -26,7 +26,6 @@ main h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 400px;
     gap: 1em;
     justify-content: center;
 }
@@ -215,4 +214,38 @@ details{
     text-transform: uppercase; 
     cursor: pointer;
     box-sizing: border-box;
+}
+
+@media screen and (width < 850px){
+    main h1{
+    margin-left: 0.2em;
+    margin-bottom: 0.5em;
+    }
+
+    .contenedor-busqueda{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .filtros,
+    .resultados,
+    .extras{
+        width: 100%;
+        background-color: white;
+        padding: 2em;
+        border-radius: 1em;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.08);
+    }
+    .seccion-botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1em 0em 1em 0em;
+    }
+
 }
