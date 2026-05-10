@@ -18,8 +18,7 @@ body{
 }
 
 main{
-    width: 90%;
-    margin: 1em 4em 4em 4em;
+    margin: 1em 0em 2em 0em;
 }
 
 main h1{
@@ -38,6 +37,8 @@ main h3{
 }
 
 .seccion-contenido{
+    width: 95%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     border-radius: 1em;
@@ -52,7 +53,7 @@ main h3{
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    width: 20em;
+    width: 25%;
 }
 
 .div-perfil img{
@@ -83,7 +84,7 @@ main h3{
 }
 
 .perfil-info{
-    width: 100%;
+    width: 75%;
 }
 
 .perfil-info-grid{
@@ -288,3 +289,57 @@ summary {
   color: #555;
 }
 
+@media screen and (width < 850px){
+
+    main{
+        margin: 0.5em 0em 2em 0em;
+    }
+
+    main h1{
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .seccion-contenido{
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1em;
+        padding: 1em;
+        background-color: white;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+        gap: 1em;
+    }
+
+    .div-perfil{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .div-perfil img{
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 0.1em solid #6c63ff;
+    }
+
+    main h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .div-perfil nav ul li {
+        margin-bottom: 0em;
+        
+    }
+    
+    .perfil-info {
+        width: 100%;
+    }
+  
+}
