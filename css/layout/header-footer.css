@@ -116,6 +116,8 @@ footer{
     padding: 2em;
     background-color: #62626a;
     color: #cdcdcd;
+    flex-wrap: wrap;
+    min-width: 400px;
 }   
 
 .footer-div-redes{
