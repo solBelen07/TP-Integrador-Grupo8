@@ -193,9 +193,15 @@ main{
 
 .card {
   width: 300px;
-  background: #f0f0f0;
+  background: #faf9f9;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
   border-radius: 0.5em 0.5em 0.5em 0.5em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-0.5em);
+  box-shadow: 0 0.8em 1.5em rgba(0, 0, 0, 0.2);
 }
 
 .card-img {
