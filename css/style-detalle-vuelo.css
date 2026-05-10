@@ -20,18 +20,20 @@ main{
 }
 
 main h1{
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 .seccion-detalle-vuelo{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
+    flex-direction: row-reverse;
+    gap: 1em;
 }
 
 .seccion-div-resumen{
-    width: 20em;
+    width: 30%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
@@ -66,7 +68,7 @@ main h1{
 }
 
 .seccion-div-asientos{
-    width: 70em;
+    width: 70%;
     height: 30em ;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     border-radius: 1em;
@@ -164,4 +166,50 @@ input:checked + .asiento {
     text-transform: uppercase; 
     cursor: pointer;
     box-sizing: border-box;
+}
+
+@media screen and (width < 850px){
+
+    main{
+        margin: 0.5em 0em 2em 0em;
+    }
+
+    main h1{
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .seccion-detalle-vuelo{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 1em;
+        margin: auto;
+    }
+
+    .seccion-div-resumen{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+    }
+
+    .seccion-div-asientos{
+        width: 100%;
+        height: 30em ;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        padding: 2em;
+        margin-left: 0;
+    }
+
+    .seccion-botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1em 0em 1em 0em;
+    }
+
 }
