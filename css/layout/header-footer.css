@@ -136,7 +136,7 @@ footer{
     align-items: flex-end;
 }
 
-section{
+footer section{
     margin-left: 2em;
     margin-right: 2em;
 }
@@ -157,7 +157,7 @@ a{
     color: #cdcdcd;
 }
 
-@media (max-width:768px){
+@media screen and (width < 850px){
     .menu-hamburguesa{
         display: block;
     }

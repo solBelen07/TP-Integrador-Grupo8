@@ -172,7 +172,19 @@ button:hover{
     color: #666;
 }
 
-@media (max-width:768px){
+@media (max-width:1078px), screen and (width < 900px){
+
+    .formulario-contacto{
+    width: 70%;
+    background-color: white;
+    padding: 3em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+
 
     .contenedor-contacto{
         width: 100%;
@@ -235,4 +247,24 @@ button:hover{
         flex-direction: column;
     }
     
+}
+
+@media (max-width:490px), screen and (width < 400px){
+
+    .contenedor-contacto{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .formulario-contacto{
+        width: 90%;
+        background-color: white;
+        padding: 3em;
+        border-radius: 1em;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
