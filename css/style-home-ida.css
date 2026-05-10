@@ -177,14 +177,16 @@ body{
     display: block;
 }
 
+
+
 .seccion-ofertas-div{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 3em;
+    justify-content: center;
+    gap: 2em;
+    max-width: 1400px;
+    margin: auto;
 }
-
 .card {
   width: 300px;
   background: #f0f0f0;
