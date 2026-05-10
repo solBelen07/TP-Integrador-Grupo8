@@ -13,6 +13,20 @@ header{
     padding: 1em;
     box-shadow: 0em 0em 0.5em 0em #cdcdcd;
     color: #6c5ce7;
+    
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-hamburguesa{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    border: 0.01em solid #6c5ce7;
+    border-radius: 0.5em;
+    padding: 0px 10px;
 }
 
 header a{
@@ -138,4 +152,39 @@ a{
     text-decoration: none; 
     display: block;
     color: #cdcdcd;
+}
+
+@media (max-width:768px){
+
+    /* MOSTRAR HAMBURGUESA */
+
+    .menu-hamburguesa{
+        display: block;
+    }
+
+    /* OCULTAR MENU */
+
+    .header-ul{
+        display: none;
+
+        flex-direction: column;
+        position: absolute;
+
+        top: 80px;
+        right: 20px;
+
+        background-color: white;
+
+        padding: 20px;
+
+        border-radius: 10px;
+    }
+
+    /* MOSTRAR MENU CUANDO EL CHECKBOX ESTA ACTIVADO */
+
+    #menu-toggle:checked ~ .header-ul{
+        display: flex;
+    }
+
+
 }
