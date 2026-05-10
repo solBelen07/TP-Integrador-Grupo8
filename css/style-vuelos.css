@@ -23,6 +23,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     gap: 3em;
+    flex-wrap: wrap;
 }
 
 .seccion-vuelos-div a{
