@@ -158,36 +158,36 @@ a{
 }
 
 @media (max-width:768px){
-
-    /* MOSTRAR HAMBURGUESA */
-
     .menu-hamburguesa{
         display: block;
     }
 
-    /* OCULTAR MENU */
-
     .header-ul{
         display: none;
-
         flex-direction: column;
         position: absolute;
-
         top: 80px;
         right: 20px;
-
         background-color: white;
-
-        padding: 20px;
-
-        border-radius: 10px;
+        font-size: 1em;
+        padding: 2em 0em 2em 0em;
+        gap: 2em;
+        border-radius: 0.5em;
     }
-
-    /* MOSTRAR MENU CUANDO EL CHECKBOX ESTA ACTIVADO */
 
     #menu-toggle:checked ~ .header-ul{
         display: flex;
     }
 
-
+    footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: #62626a;
+    color: #cdcdcd;
+    flex-wrap: wrap;
+    min-width: 400px;
+    gap: 2em;
+    } 
 }
