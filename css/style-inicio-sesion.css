@@ -71,12 +71,26 @@ form label {
     text-align: center;
     display: inline-block;
     padding: 10px 20px;
-    background: #faae3bce;
+    background: #6c63ff;
     color: rgb(221, 243, 247);
     text-decoration: none;
     border-radius: 5px;
 }
-
+.cancelar {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background:#6c63ff;
+    color: rgb(221, 243, 247);
+    text-decoration: none;
+    border-radius: 5px;
+text-decoration:none;
+}
+.registrarse:hover,
+.cancelar:hover {
+    background: orange;
+    cursor: pointer;
+}
 @media screen and (width < 850px){
 
     .main-login {
@@ -92,5 +106,6 @@ form label {
         background-repeat: no-repeat;
         min-height: calc(100vh - 122px);
     }
+
 
 }

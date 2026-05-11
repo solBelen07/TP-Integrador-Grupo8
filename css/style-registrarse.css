@@ -80,6 +80,21 @@ button {
     border-radius: 1em;
     gap: 0.5em;
 }
+.cancelar {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background:#6c63ff;
+    color: rgb(221, 243, 247);
+    text-decoration: none;
+    border-radius: 5px;
+text-decoration:none;
+}
+
+.cancelar:hover {
+    background: orange;
+    cursor: pointer;
+}
 
 @media screen and (width < 850px){
 
