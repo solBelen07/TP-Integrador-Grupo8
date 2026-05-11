@@ -42,7 +42,7 @@ main h3{
     display: flex;
     flex-direction: row;
     border-radius: 1em;
-    padding: 1em;
+    padding: 2em;
     background-color: white;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     gap: 1em;
@@ -306,7 +306,7 @@ summary {
         display: flex;
         flex-direction: column;
         border-radius: 1em;
-        padding: 1em;
+        padding: 2em;
         background-color: white;
         box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
         gap: 1em;
@@ -433,5 +433,5 @@ summary {
         justify-content: center;
         align-items: center;
     }
-  
+
 }
