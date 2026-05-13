@@ -80,6 +80,7 @@ button {
     border-radius: 1em;
     gap: 0.5em;
 }
+
 .cancelar {
     text-align: center;
     display: inline-block;
