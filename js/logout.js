@@ -2,7 +2,7 @@ import { InicioRegistro } from "./InicioRegistro.js";
 
 const botonLogout = document.getElementById("boton-logout");
 
-document.addEventListener(
+botonLogout.addEventListener(
     "click", (funcion) =>  {
         InicioRegistro.logout();
 
