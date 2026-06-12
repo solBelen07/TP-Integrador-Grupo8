@@ -9,34 +9,39 @@
     <link rel="stylesheet" href="../css/style-perfil.css">
 </head>
 <body>
-  <header>
-      <h1>TicketExpress</h1>
+  <header> 
+      <h1><a href="../index.html">TicketExpress</a></h1>
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-hamburguesa">☰</label>
       <ul class="header-ul">
-          <li class="header-li"><a href="./home.html">Inicio</a></li>
-          <li class="header-li"><a href="vuelos.html">Vuelos</a></li>
-          <li class="header-li"><a href="ofertas.html">Ofertas</a></li>
-          <li class="header-li"><a href="contacto.html">Contacto</a></li>
+          <li class="header-li"><a href="../index.html">Inicio</a></li>
+          <li class="header-li"><a href="./vuelos.html">Vuelos</a></li>
+          <li class="header-li"><a href="./ofertas.html">Ofertas</a></li>
+          <li class="header-li"><a href="./contacto.html">Contacto</a></li>
       </ul>
-      <div>
-          <a href=""><img src="../img/usuario.png" alt="usuario"></a>
+      <div class="botones-inicio-registro" id="botones-registro">
+        <a href="./pages/login.html"><input class="boton-registro" value="Ingresar" type="button"></a>
+        <a href="./pages/registrarse.html"><input class="boton-registro" value="Registrarse" type="button"></a>
+      </div>
+      <div class="div-perfil-header">
+          <a href="./perfil.html" id="perfil-header" ><img src="../img/usuario.png" alt="usuario"></a>
       </div>
     </header>
     <main>
       <h1>Perfil de Usuario</h1>
       <!--  PERFIL -->
       <section class="seccion-contenido">
-        <div class="div-perfil">
+        <div class="div-perfil" id="div-perfil">
             <!-- hacer la imagen redondeada -->
             <img src="../img/perfil.png" alt="Foto de perfil" width="100">
             <h3>Nombre Cliente</h3>
             <nav>
               <ul>
-                <li><a href="#">Información Personal</a></li>
+                <li><a href="./perfil.html">Información Personal</a></li>
                 <li><a href="./perfil-mis-vuelos.html">Mis Vuelos</a></li>
               </ul>
             </nav>
+            <button type="button" id="boton-logout">Cerrar Sesion</button>
         </div>
         <!-- Formulario para actualizar información personal seria ver si aca 
         usamos br u otra cosa para el salto de linea-->
@@ -108,6 +113,7 @@
               <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           </div>
       </section>
-    </footer>
+  </footer>
 </body>
+<script type="module" src="../js/logout.js"></script>
 </html>
