@@ -12,18 +12,22 @@
 </head>
 
 <body>
-    <header>
-      <h1>TicketExpress</h1>
+    <header> 
+      <h1><a href="../index.html">TicketExpress</a></h1>
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-hamburguesa">☰</label>
       <ul class="header-ul">
-          <li class="header-li"><a href="./home.html">Inicio</a></li>
+          <li class="header-li"><a href="../index.html">Inicio</a></li>
           <li class="header-li"><a href="./vuelos.html">Vuelos</a></li>
           <li class="header-li"><a href="./ofertas.html">Ofertas</a></li>
           <li class="header-li"><a href="./contacto.html">Contacto</a></li>
       </ul>
-      <div>
-          <a href="./perfil.html"><img src="../img/usuario.png" alt="usuario"></a>
+      <div class="botones-inicio-registro" id="botones-registro">
+        <a href="./pages/login.html"><input class="boton-registro" value="Ingresar" type="button"></a>
+        <a href="./pages/registrarse.html"><input class="boton-registro" value="Registrarse" type="button"></a>
+      </div>
+      <div class="div-perfil-header">
+          <a href="./perfil.html" id="perfil-header" ><img src="../img/usuario.png" alt="usuario"></a>
       </div>
     </header>
     <main class="preguntas-container">
@@ -149,5 +153,5 @@
     </footer>
 
 </body>
-
+<script type="module" src="../js/index.js"></script>
 </html>
