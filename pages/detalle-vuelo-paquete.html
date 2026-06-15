@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style-detalle-vuelo.css">
+    <link rel="stylesheet" href="../css/layout/header-footer.css">
+    <title>TicketExpress</title>
+</head>
+<body>
+    <header> 
+      <h1><a href="../index.html">TicketExpress</a></h1>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-hamburguesa">☰</label>
+      <ul class="header-ul">
+          <li class="header-li"><a href="../index.html">Inicio</a></li>
+          <li class="header-li"><a href="./vuelos.html">Vuelos</a></li>
+          <li class="header-li"><a href="./ofertas.html">Ofertas</a></li>
+          <li class="header-li"><a href="./contacto.html">Contacto</a></li>
+      </ul>
+      <div class="botones-inicio-registro" id="botones-registro">
+        <a href="./pages/login.html"><input class="boton-registro" value="Ingresar" type="button"></a>
+        <a href="./pages/registrarse.html"><input class="boton-registro" value="Registrarse" type="button"></a>
+      </div>
+      <div class="div-perfil-header">
+          <a href="./perfil.html" id="perfil-header" ><img src="../img/usuario.png" alt="usuario"></a>
+      </div>
+    </header>
+    <main>
+        <h1>Detalle de Vuelo - Selecciona tu Asiento</h1>
+            <form action="../pages/checkout.html">
+                <section class="seccion-detalle-vuelo">
+                    <div class="seccion-div-resumen">
+                        <div class="div-resumen">
+                            <h2>RESUMEN</h2>
+                            <br>
+                        </div>
+                        <h3>Buenos Aires - </h3>
+                        <h3 id="div-resumen-destino"></h3>
+                        <p>24 JUL </p>
+                        <p>08:30hs - 09:55hs</p>
+                        <p>Viernes</p>
+                        <p>Cod. Vuelo: FBK6778</p>
+                        <div class="div-pasajero">
+                            <h3 id="div-pasajero-precio-final"></h3>
+                        </div>
+                        <div class="div-impuesto" id="div-impuesto">
+                            <h3>EQUIPAJE BODEGA $50.000</h3>
+                        </div>
+                        <div class="div-total">
+                            <h2 id="div-total-precio-final"></h2>
+                        </div>
+                    </div>  
+                    <div class="seccion-div-asientos">
+                        <h2>Seleccione su Asiento</h2>
+                        <div class="disponibilidad">
+                            <div><input type="radio" name="asiento" id="A0"><label for="A0" class="asiento"></label></div>    
+                            <h4>Disponible</h4>
+                            <div><input type="radio" name="asiento" id="B1" disabled><label for="B1" class="asiento ocupado"></label></div>
+                            <h4>Ocupado</h4>
+                        </div>
+                        <div class="div-asientos">
+                            <div>-</div>
+                            <div>A</div>
+                            <div>B</div>
+                            <div>C</div>
+                            <div>D</div>
+                            <div>E</div>
+                            <div>F</div>
+                            <div>G</div>
+                            <div>H</div>
+
+                            <div>1</div>
+                            <div><input type="radio" name="asiento" id="A1" required><label for="A1" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B1" disabled><label for="B1" class="asiento ocupado"></label></div>
+                            <div><input type="radio" name="asiento" id="C1" disabled><label for="C1" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D1" required><label for="D1" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E1" disabled><label for="E1" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F1" required><label for="F1" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G1" disabled><label for="G1" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H1" required><label for="H1" class="asiento"></label></div>
+                            <div>2</div>
+                            <div><input type="radio" name="asiento" id="A2" required><label for="A2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B2" required><label for="B2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C2" disabled><label for="C2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D2" required><label for="D2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E2" required><label for="E2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F2" disabled><label for="F2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G2" required><label for="G2" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H2" required><label for="H2" class="asiento"></label></div>
+                            <div>3</div>
+                            <div><input type="radio" name="asiento" id="A3" required><label for="A3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B3" disabled><label for="B3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C3" required><label for="C3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D3" required><label for="D3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E3" disabled><label for="E3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F3" required><label for="F3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G3" required><label for="G3" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H3" disabled><label for="H3" class="asiento"></label></div>
+                            <div>4</div>
+                            <div><input type="radio" name="asiento" id="A4" disabled><label for="A4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B4" required><label for="B4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C4" required><label for="C4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D4" disabled><label for="D4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E4" required><label for="E4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F4" required><label for="F4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G4" disabled><label for="G4" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H4" required><label for="H4" class="asiento"></label></div>
+                            <div>5</div>
+                            <div><input type="radio" name="asiento" id="A5" required><label for="A5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B5" required><label for="B5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C5" disabled><label for="C5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D5" required><label for="D5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E5" required><label for="E5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F5" required><label for="F5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G5" disabled><label for="G5" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H5" required><label for="H5" class="asiento"></label></div>
+                            <div>6</div>
+                            <div><input type="radio" name="asiento" id="A6" required><label for="A6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B6" disabled><label for="B6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C6" required><label for="C6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D6" required><label for="D6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E6" disabled><label for="E6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F6" required><label for="F6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G6" required><label for="G6" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H6" required><label for="H6" class="asiento"></label></div>
+                            <div>7</div>
+                            <div><input type="radio" name="asiento" id="A7" required><label for="A7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B7" required><label for="B7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C7" required><label for="C7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D7" disabled><label for="D7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E7" required><label for="E7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F7" disabled><label for="F7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G7" required><label for="G7" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H7" required><label for="H7" class="asiento"></label></div>
+                            <div>8</div>
+                            <div><input type="radio" name="asiento" id="A8" required><label for="A8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="B8" required><label for="B8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="C8" required><label for="C8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="D8" disabled><label for="D8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="E8" required><label for="E8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="F8" disabled><label for="F8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="G8" required><label for="G8" class="asiento"></label></div>
+                            <div><input type="radio" name="asiento" id="H8" required><label for="H8" class="asiento"></label></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="seccion-botones">
+                    <a href="./busqueda-paquete.html"><input class="boton-volver" value="Volver" type="button"></a>
+                    <a href="./checkout-paquete.html"><input class="boton-continuar" value="Continuar" type="button"></a>
+                </section>
+            </form>
+    </main>
+    <footer>    
+        <section class="footer-nosotros">
+            <h3>Nosotros</h3>
+            <ul>
+              <li><a href="./nosotros.html">Sobre TicketExpress</a></li>
+              <li><a href="./preguntas-frecuentes.html">Preguntas</a></li>
+            </ul>
+        </section>
+        <section class="section-copyright">
+            <p>©2026 TicketExpress. Todos los derechos reservados</p>
+        </section>
+        <section>
+            <h3>Redes Sociales</h3>
+            <div class="footer-div-redes">
+                <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </section>
+    </footer>
+</body>
+<script type="module" src="../js/index.js"></script>
+<script type="module" src="../js/detalleVueloPaquete.js"></script>
+</html>
