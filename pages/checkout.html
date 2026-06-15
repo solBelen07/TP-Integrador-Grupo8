@@ -40,12 +40,11 @@
                         </div>
                         <div>
                         <label for="documento">Documento de Identidad:</label><br>
-                        <input id="documento" type="text" pattern="[0-9]{8}" maxlength="8" required><br>
+                        <input id="documento-pasajero" type="text" pattern="[0-9]{8}" maxlength="8" required>
                         </div>
                         <div>
                         <label for="email">Correo Electronico:</label><br>
-                        <input id="email" type="email" required><br>
-                        </div>
+                        <input id="email-pasajero" type="email" required>                        </div>
                         <div>
                         <label for="telefono">Telefono:</label><br>
                         <input id="telefono" type="number" required><br>
@@ -108,12 +107,10 @@
                             <div class="div-metodos-de-pago-transferencia">
                                 <div>
                                 <label for="email">Correo Electronico:</label><br>
-                                <input id="email" type="email"><br>
-                                </div>
+                                <input id="email-transferencia" type="email">                                </div>
                                 <div>
                                 <label for="documento">Documento del Titular:</label><br>
-                                <input id="documento" type="number" pattern="[0-9]{8}" maxlength="8"><br>
-                                </div>
+                                <input id="documento-transferencia" type="number" pattern="[0-9]{8}" maxlength="8">                                </div>
                                 <p>Una vez finalizada tu compra, recibirás un correo electrónico con los datos necesarios (CBU/alias, titular y monto) y los pasos a seguir para realizar la transferencia. <br>
                                 Dispondrás de un plazo de 8 horas desde la confirmación del pedido para efectuar el pago. Pasado ese tiempo, si no se registra la transferencia, la compra será cancelada automáticamente.
                                 </p>
@@ -177,5 +174,5 @@
         </section>
     </footer>
 </body>
-<script type="module" src="../js/index.js"></script>
+<script type="module" src="../js/checkout.js"></script>
 </html>
