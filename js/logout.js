@@ -9,5 +9,4 @@ botonLogout.addEventListener(
         window.location.href =
             "../index.html";
     }
-
 )
