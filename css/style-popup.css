@@ -1,3 +1,7 @@
+#section-popup{
+  display: none;
+}
+
 .popup {
   position: fixed;
   top: 0;

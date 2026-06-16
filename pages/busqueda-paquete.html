@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de busqueda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style-busqueda.css">
+    <link rel="stylesheet" href="../css/layout/header-footer.css">
+</head>
+<body>
+    <header> 
+      <h1><a href="../index.html">TicketExpress</a></h1>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-hamburguesa">☰</label>
+      <ul class="header-ul">
+          <li class="header-li"><a href="../index.html">Inicio</a></li>
+          <li class="header-li"><a href="./vuelos.html">Vuelos</a></li>
+          <li class="header-li"><a href="./ofertas.html">Ofertas</a></li>
+          <li class="header-li"><a href="./contacto.html">Contacto</a></li>
+      </ul>
+      <div class="botones-inicio-registro" id="botones-registro">
+        <a href="./pages/login.html"><input class="boton-registro" value="Ingresar" type="button"></a>
+        <a href="./pages/registrarse.html"><input class="boton-registro" value="Registrarse" type="button"></a>
+      </div>
+      <div class="div-perfil-header">
+          <a href="./perfil.html" id="perfil-header" ><img src="../img/usuario.png" alt="usuario"></a>
+      </div>
+    </header>
+    <main>
+        <h1>Paquete Seleccionado</h1>
+        <form action="../pages/detalle-vuelo.html">
+            <section class="contenedor-busqueda">
+                <section class="resultados">
+                    <article class="tarjeta-vuelo">
+                        <div class="info-vuelo" id="info-vuelo">
+                            <h3 id="info-vuelo-arelinea"></h3>
+                            <p>Buenos Aires →</p><p id="info-vuelo-destino"></p>
+                            <br>
+                            <p id="info-vuelo-duracion"></p>
+                            <br>
+                            <p id="info-vuelo-hotel"></p>
+                            <br>
+                            <p>
+                                El paquete incluye alojamiento en hotel, desayuno buffet,
+                                cena, traslado desde y hacia el aeropuerto, Wi-Fi gratuito,
+                                servicio de limpieza diario, acceso a piscina y gimnasio,
+                                asistencia al viajero y atención las 24 horas.
+                            </p>
+                        </div>
+                        <div class="precio">
+                            <p id="precio-final"></p>
+                        </div>
+                        <p></p>
+                    </article>
+                </section>
+                <aside class="extras">
+                    <div class="equipaje">
+                        <h2>Equipaje Extra</h2>
+                        <br>
+                        <p>Añadir equipaje extra tiene un costo adicional de $50.000 pesos finales.</p>
+                        <br>
+                        <div>
+                            <input type="checkbox" name="equipaje" id="bodega">
+                            <label for="bodega">Equipaje en bodega</label>
+                        </div>
+                    </div>
+                    <div class="politicas">
+                        <h2>Políticas</h2>
+                        <br>
+                        <p>Cancelación gratuita dentro de las primeras 24 horas.</p>
+                        <p>Politica de equipaje detallada y disponible en el resumen del vuelo.</p>
+                        <p>Flexibilidad de fechas (opcional)</p>
+                    </div>
+                </aside>
+
+            </section>
+            <section class="seccion-botones">
+                <a href="./vuelos.html"><input class="boton-volver" value="Volver" type="button"></a>
+                <a href="./detalle-vuelo-paquete.html"><input class="boton-continuar" value="Continuar" type="button"></a>
+            </section>
+        </form>
+    </main>
+    <footer>    
+        <section class="footer-nosotros">
+            <h3>Nosotros</h3>
+            <ul>
+              <li><a href="./nosotros.html">Sobre TicketExpress</a></li>
+              <li><a href="./preguntas-frecuentes.html">Preguntas</a></li>
+            </ul>
+        </section>
+        <section class="section-copyright">
+            <p>©2026 TicketExpress. Todos los derechos reservados</p>
+        </section>
+        <section>
+            <h3>Redes Sociales</h3>
+            <div class="footer-div-redes">
+                <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </section>
+    </footer>
+</body>
+<script type="module" src="../js/busquedaPaquete.js"></script>
+<script type="module" src="../js/index.js"></script>
+</html>
