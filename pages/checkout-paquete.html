@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style-checkout.css">
     <link rel="stylesheet" href="../css/layout/header-footer.css">
+    <link rel="stylesheet" href="../css/style-popup.css">
     <title>Checkout</title>
 </head>
 <body>
@@ -29,7 +30,7 @@
     </header>
     <main>
         <h1>Checkout</h1>
-        <form action="./popup.html">
+        <form  id="form-checkout">
             <section class="seccion-contenidos">
                 <div class="seccion-datos-personales">
                 <h2>Datos del Pasajero</h2>
@@ -149,7 +150,18 @@
             </section>
             <section class="seccion-botones">
                 <a href="./detalle-vuelo-paquete.html"><input class="boton-volver" value="Volver" type="button"></a>
-                <a href="./checkout-paquete.html"><input class="boton-continuar" value="Continuar" type="button"></a>
+                <button type="submit" class="boton-continuar" id="boton-continuar">Continuar</button>
+            </section>
+            <section id="section-popup">
+                <div class="popup">
+                    <div class="popup-contenido">
+                      <h2>¡Compra exitosa!</h2><br>
+                      <p>Tu vuelo fue reservado correctamente ✈</p><br>
+                      <p>Te enviamos un correo electrónico con el detalle de tu compra y la factura correspondiente.
+                            Por favor, revisá tu bandeja de entrada (y spam).</p><br>
+                      <a href="../index.html" class="boton-cerrar">Ir al inicio</a>
+                    </div>
+                </div>
             </section>
         </form>
     </main>
@@ -176,4 +188,5 @@
     </footer>
 </body>
 <script type="module" src="../js/checkoutPaquete.js "></script>
+<script type="module" src="../js/index.js"></script>
 </html>

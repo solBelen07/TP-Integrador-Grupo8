@@ -27,3 +27,20 @@ if (paquete) {
     document.getElementById("div-total-precio-final").textContent =
         `TOTAL : $${precioFinal.toLocaleString("es-AR")}`;
 }
+
+const botonContinuar = document.getElementById("boton-continuar");
+
+botonContinuar.addEventListener("click", (e) => {
+
+    const asientoSeleccionado = document.querySelector(
+        'input[name="asiento"]:checked'
+    );
+
+    if (!asientoSeleccionado) {
+        e.preventDefault();
+        alert("Debes seleccionar un asiento antes de continuar.");
+        return;
+    }
+
+    window.location.href = "./checkout-paquete.html";
+});
