@@ -59,7 +59,7 @@ button {
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100 vh;
+    width: 100% ;
     min-height: calc(100vh - 122px);
 }
 
@@ -123,5 +123,34 @@ text-decoration:none;
         );
 
     }
+
+
+
+}@media screen and (width < 400px){
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .registro{
+        padding: 1.5em;
+    }
+
+    .registro h1{
+        text-align: center;
+    }
+
+    .registro form{
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .registro input,
+    .registro select,
+    .registro button{
+        width: 100%;
+    }
+
+
 
 }
