@@ -268,7 +268,6 @@ main h1{
     width: 15em;
     height: 15em;
 }
-
 @media screen and (width < 850px){
 
     main{
@@ -289,10 +288,10 @@ main h1{
         gap: 2em;
     }
 
-    .seccion-datos-personales, .seccion-metodos-de-pago, .seccion-resumen{
+    .seccion-datos-personales,
+    .seccion-metodos-de-pago,
+    .seccion-resumen{
         width: 100%;
-        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-        border-radius: 1em;
         padding: 2em;
     }
 
@@ -300,7 +299,75 @@ main h1{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin: 1em 0em 1em 0em;
+        margin: 1em 0em;
+    }
+
+}
+
+@media screen and (width < 400px){
+
+    main{
+        margin: 0.5rem;
+    }
+
+    main h1{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .seccion-contenidos{
+        width: 95%;
+    }
+
+    .seccion-datos-personales,
+    .seccion-metodos-de-pago,
+    .seccion-resumen{
+        padding: 1rem;
+    }
+
+    .seccion-datos-personales-grid{
+        gap: 1rem;
+    }
+
+    /* TARJETA RESPONSIVE */
+    .seccion-metodos-de-pago-tarjeta{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .caja1,
+    .caja2,
+    .caja3,
+    .caja4,
+    .caja5,
+    .caja6,
+    .caja7,
+    .caja8{
+        width: 100%;
+    }
+
+    /* QR PAYPAL */
+    .seccion-metodos-de-pago-paypal img{
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .div-metodos-de-pago-transferencia,
+    .seccion-metodos-de-pago-paypal div{
+        margin: 1rem 0;
+    }
+
+    /* BOTONES */
+    .seccion-botones{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .boton-volver,
+    .boton-continuar{
+        width: 90%;
     }
 
 }

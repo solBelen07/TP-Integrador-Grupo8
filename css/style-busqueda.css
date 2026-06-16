@@ -250,3 +250,25 @@ details{
     }
 
 }
+
+@media screen and (width < 400px){
+
+    .filtros,
+    .resultados,
+    .extras{
+        padding: 1rem;
+    }
+
+    .seccion-botones{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .seccion-botones button,
+    .seccion-botones input,
+    .seccion-botones a{
+        width: 100%;
+    }
+
+}
