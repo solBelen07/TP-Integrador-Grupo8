@@ -2,6 +2,7 @@ const paquete = JSON.parse(
     localStorage.getItem("paqueteSeleccionado")
 );
 
+let precioFinal = paquete.precio;
 const equipajeBodega =
     localStorage.getItem("equipajeBodega") === "true";
 
@@ -10,7 +11,7 @@ if (paquete) {
     document.getElementById("seccion-resumen-destino").textContent =
         paquete.destino;  
 
-    let precioFinal = paquete.precio;
+    
 
     const incluyeBodega = document.getElementById("seccion-resumen-bodega");
 
@@ -60,4 +61,28 @@ formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
     popup.style.display = "flex";
+});
+
+
+const cupon = document.getElementById("cupon");
+const btnCupon = document.querySelector(".boton-aplicar");
+
+btnCupon.addEventListener("click", () => {
+
+    const codigo = cupon.value.trim();
+
+    if (codigo === "123456") {
+
+        precioFinal = precioFinal * 0.90;
+
+        document.querySelector(
+            ".seccion-resumen-grid-total h2"
+        ).textContent =
+            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+
+        alert("Cupón aplicado correctamente");
+    }
+    else {
+        alert("Cupón inválido");
+    }
 });

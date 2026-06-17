@@ -1,77 +1,110 @@
-const vuelos = [
-    {
-        aerolinea: "Aerolíneas Argentinas",
-        ruta: "Buenos Aires  →  Cordoba",
-        salida: "08:30",
-        llegada: "1h 25m",
-        duracion: "1h 40m",
-        precio: 856000,
-        escalas: true
-    },
-     {
-        aerolinea: "Aerolíneas Argentinas",
-        ruta: "Buenos Aires  →  Cordoba",
-        salida: "08:30",
-        llegada: "9h 50m",
-        duracion: "1h 20m",
-        precio: 906000,
-        escalas: false
-    },
-    {
-        aerolinea: "LATAM",
-        ruta: "Buenos Aires → Córdoba",
-        salida: "09:30",
-        llegada: "11:10",
-        duracion: "1h 40m",
-        precio: 800000,
-        escalas: true
-    },
-    {
-        aerolinea: "FlyBondi",
-        ruta: "Buenos Aires → Córdoba",
-        salida: "08:00",
-        llegada: "09:15",
-        duracion: "1h 15m",
-        precio: 950000,
-        escalas: false
-    }
-];
+import { Vuelo } from "./Vuelo.js";
+
+const busqueda = JSON.parse(
+    localStorage.getItem("busqueda")
+);
+
+function crearVuelos() {
+
+    return [
+        new Vuelo(
+            "Aerolíneas Argentinas",
+            busqueda.origen,
+            busqueda.destino,
+            busqueda.fechaIda,
+            busqueda.fechaVuelta,
+            false,
+            busqueda.pasajero,
+            busqueda.clase, 
+            856000,
+        ),
+        new Vuelo(
+            "LATAM",
+            busqueda.origen,
+            busqueda.destino,
+            busqueda.fechaIda,
+            busqueda.fechaVuelta,
+            true,
+            busqueda.pasajero,
+            busqueda.clase, 
+            800000,
+        ),
+        new Vuelo(
+            "FlyBondi",
+            busqueda.origen,
+            busqueda.destino,
+            busqueda.fechaIda,
+            busqueda.fechaVuelta,
+            false,
+            busqueda.pasajero,
+            busqueda.clase,
+            900000,
+        )
+    ];
+}
+
+const vuelos = crearVuelos();
+
+console.log(vuelos);
+
 function mostrarVuelos(lista) {
 
-    const contenedor = document.getElementById("contenedor-vuelos");
+
+    const contenedor =
+        document.getElementById("contenedor-vuelos");
 
     contenedor.innerHTML = "";
 
-    lista.forEach(vuelo => {
+    lista.forEach((vuelo, index) => {
 
         contenedor.innerHTML += `
-            <article class="tarjeta-vuelo">
+        <article class="tarjeta-vuelo">
+            <div class="info-vuelo">
+                <h3>${vuelo.aerolinea}</h3>
+                <p>${vuelo.origen} → ${vuelo.destino}</p>
+                <p>Ida: ${vuelo.fechaIda}</p>
+                <p>Vuelta: ${vuelo.fechaVuelta}</p>
+                <p>Pasajeros: ${vuelo.pasajero}</p>
+                <p>Clase: ${vuelo.clase}</p>
+            </div>
 
-                <div class="info-vuelo">
-                    <h3>${vuelo.aerolinea}</h3>
-                    <p>${vuelo.ruta}</p>
+            <div class="precio">
+                <p>$${vuelo.precio.toLocaleString("es-AR")}</p>
+            </div>
 
-                    <p>Salida: ${vuelo.salida} hs
-                       Llegada: ${vuelo.llegada} hs</p>
-                    <p>Duración: ${vuelo.duracion}</p>
-                </div>
+            <input
+                type="radio"
+                name="vueloSeleccionado"
+                class="seleccionar"
+                id="vuelo${index}"
+                value="${index}"
+            >       
 
-                <div class="precio">
-                    <p>$${vuelo.precio.toLocaleString()}</p>
-
-                    <button class="boton">
-                        Seleccionar
-                    </button>
-                </div>
-
-            </article>
+            <label for="vuelo${index}" class="boton">
+                Seleccionar
+            </label>
+        </article>
         `;
     });
 }
+
 function aplicarFiltros() {
 
-    const precioMax =
-        Number(document.getElementById("precio").value) * 1000;
+    const sliderPrecio =
+    document.getElementById("precio");
+
+    const labelPrecio =
+    document.getElementById("label-precio");
+
+    sliderPrecio.addEventListener("input", () => {
+
+    labelPrecio.textContent =
+        `Hasta $${Number(sliderPrecio.value).toLocaleString("es-AR")}`;
+
+        aplicarFiltros();
+        });
+
+    const precioMax = Number(document.getElementById("precio").value);
 
     const directo =
         document.getElementById("directo").checked;
@@ -92,31 +125,31 @@ function aplicarFiltros() {
 
    const resultado = vuelos.filter(vuelo => {
 
-    const cumplePrecio =
-        vuelo.precio <= precioMax;
+       const cumplePrecio = vuelo.precio <= precioMax;
 
-    let cumpleEscalas = true;
+       let cumpleEscalas = true;
 
-    if (directo && !conEscalas) {
-        cumpleEscalas = !vuelo.escalas;
-    }
-    else if (conEscalas && !directo) {
-        cumpleEscalas = vuelo.escalas;
-    }
+       if (directo && !conEscalas) {
+           cumpleEscalas = !vuelo.escalas;
+       }
+       else if (conEscalas && !directo) {
+           cumpleEscalas = vuelo.escalas;
+       }
 
-    const cumpleAerolinea =
-        aerolineas.length === 0 ||
-        aerolineas.includes(vuelo.aerolinea);
+       const cumpleAerolinea =
+           aerolineas.length === 0 ||
+           aerolineas.includes(vuelo.aerolinea);
 
-    return (
-        cumplePrecio &&
-        cumpleEscalas &&
-        cumpleAerolinea
-    );
-});
+       return (
+           cumplePrecio &&
+           cumpleEscalas &&
+           cumpleAerolinea
+       );
+    });
 
     mostrarVuelos(resultado);
 }
+
 document.addEventListener("DOMContentLoaded", () => {
 
     mostrarVuelos(vuelos);
@@ -130,4 +163,28 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         });
 
+});
+
+const formulario = document.querySelector("form");
+
+formulario.addEventListener("submit", (e) => {
+
+    const seleccionado =
+        document.querySelector(
+            'input[name="vueloSeleccionado"]:checked'
+        );
+
+    if (!seleccionado) {
+        e.preventDefault();
+        alert("Seleccione un vuelo");
+        return;
+    }
+
+    const vueloElegido =
+        vuelos[seleccionado.value];
+
+    localStorage.setItem(
+        "vueloSeleccionado",
+        JSON.stringify(vueloElegido)
+    );
 });
