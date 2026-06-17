@@ -276,10 +276,95 @@ h2 {
   margin-left: 700px;
 }
 
-@media screen and (width < 900px) {
-    
+@media screen and (max-width: 900px) {
+
+    .seccion-busqueda-div{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .div-grid-boton{
+        grid-column: 1 / 3;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .inicio-sesion{
+        margin-left: 0;
+        justify-content: center;
+    }
 }
 
-@media screen and (width < 400px) {
-    
+
+@media screen and (max-width: 400px) {
+
+    .div-hero-image-img{
+        height: 12em;
+    }
+
+    .seccion-busqueda{
+        width: 95%;
+    }
+
+    .botones{
+        flex-direction: column;
+    }
+
+    .boton-ida,
+    .boton-ida-vuelta{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .boton-ida-vuelta{
+        border-radius: 1em 1em 0 0;
+    }
+
+    .seccion-busqueda-div{
+        grid-template-columns: 1fr;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .div-grid-boton{
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .boton-buscar,
+    .boton-ofertas{
+        width: 100%;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .card-img{
+        width: 100%;
+    }
+
+    .card-img img{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .precio{
+        font-size: 26px;
+    }
+
+    .inicio-sesion{
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .seccion-ofertas{
+        padding: 1em;
+    }
 }

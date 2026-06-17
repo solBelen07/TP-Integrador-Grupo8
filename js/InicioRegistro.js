@@ -2,6 +2,7 @@ export class InicioRegistro {
 
     static obtenerUsuarios() {
         return JSON.parse(localStorage.getItem("usuarios")) || [];
+        //TRAE EL DATO PERO VIENE COMO TEXTO ENTONCES LO CONVIERTE EN UN ARRAY DE OBJETOS, SI NO HAY NADA DEVUELVE UN ARRAY VACIO
     }
 
     static guardarUsuario(usuario) {
