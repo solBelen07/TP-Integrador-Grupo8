@@ -284,3 +284,80 @@ h2 {
   text-decoration: none; 
   color: #333;
 }
+.seccion-busqueda-div input,
+.seccion-busqueda-div select{
+    width: 100%;
+    min-width: 0;
+}
+
+@media screen and (width < 400px){
+
+    .hero-image{
+        height: auto;
+    }
+
+    .div-hero-image-img{
+        height: 10em;
+    }
+
+    .seccion-busqueda{
+        width: 95%;
+    }
+
+    .botones{
+        flex-direction: column;
+    }
+
+    .botones a{
+        width: 100%;
+    }
+
+    .boton-ida,
+    .boton-ida-vuelta{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .seccion-busqueda-div{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .seccion-busqueda-div div{
+        width: 100%;
+    }
+
+    .seccion-busqueda-div input,
+    .seccion-busqueda-div select{
+        width: 100%;
+        padding: 0.7em;
+    }
+
+    .div-grid-boton{
+        width: 100%;
+    }
+
+    .boton-buscar{
+        width: 100%;
+    }
+
+    .seccion-ofertas{
+        padding: 1rem;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card-img,
+    .card-img img{
+        width: 100%;
+    }
+
+    .inicio-sesion{
+        margin-left: 0;
+        justify-content: center;
+    }
+}

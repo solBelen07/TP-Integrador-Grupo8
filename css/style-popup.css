@@ -20,6 +20,7 @@
   border-radius: 1em;
   text-align: center;
   width: 25em;
+  max-width: 90%;
 }
 
 .boton-cerrar {
@@ -30,4 +31,25 @@
   color: white;
   text-decoration: none;
   border-radius: 0.5em;
+}
+
+@media screen and (width < 400px){
+
+  .popup-contenido{
+    padding: 1.5em;
+  }
+
+  .popup-contenido h2{
+    font-size: 1.3rem;
+  }
+
+  .popup-contenido p{
+    font-size: 0.9rem;
+  }
+
+  .boton-cerrar{
+    display: block;
+    width: 100%;
+  }
+
 }

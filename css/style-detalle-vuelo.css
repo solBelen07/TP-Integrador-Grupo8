@@ -213,3 +213,40 @@ input:checked + .asiento {
     }
 
 }
+@media screen and (width < 400px){
+
+    .seccion-detalle-vuelo{
+        width: 95%;
+    }
+
+    .seccion-div-asientos{
+        padding: 1rem;
+        height: auto;
+    }
+
+    .div-asientos{
+        gap: 0.1rem;
+    }
+
+    .asiento{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .disponibilidad{
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .seccion-botones{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .boton-volver,
+    .boton-continuar{
+        width: 90%;
+    }
+
+}

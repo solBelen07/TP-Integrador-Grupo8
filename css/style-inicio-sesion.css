@@ -109,3 +109,30 @@ text-decoration:none;
 
 
 }
+
+@media screen and (width < 400px){
+
+    .main-login{
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .main-login h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .estilo-form{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    input,
+    button,
+    .registrarse,
+    .cancelar{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
