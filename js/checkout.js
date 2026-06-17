@@ -2,6 +2,10 @@ const vueloSeleccionado = JSON.parse(
     localStorage.getItem("vueloSeleccionado")
 );
 
+const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
+
+console.log(reservas);
+
 const contenedor = document.getElementById("seccion-resumen");
 
 let precioFinal = vueloSeleccionado.precio + 259000;
@@ -88,13 +92,22 @@ opcionTransferencia.addEventListener("change", actualizarRequired);
 const formulario = document.getElementById("form-checkout");
 const popup = document.getElementById("section-popup");
 
-formulario.addEventListener("submit", (e) => {
-
-     console.log(popup);
-
+formulario.addEventListener("submit", (e) => {  
     if (!formulario.checkValidity()) {
         return;
     }
+
+    vueloSeleccionado.precio = precioFinal;
+
+    reservas.push(vueloSeleccionado);
+
+    console.log(reservas);
+    console.log(vueloSeleccionado)
+
+    localStorage.setItem(
+        "reservas",
+        JSON.stringify(reservas)
+    );
 
     e.preventDefault();
     popup.style.display = "flex";
