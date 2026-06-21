@@ -3,9 +3,7 @@ import { InicioRegistro } from "./InicioRegistro.js";
 const formulario =
     document.getElementById("login-form");
 
-formulario.addEventListener(
-    "submit",
-    (e) => {
+formulario.addEventListener("submit", (e) => {
 
         e.preventDefault();
 
