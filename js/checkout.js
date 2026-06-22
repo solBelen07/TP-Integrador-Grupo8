@@ -4,7 +4,7 @@ const vueloSeleccionado = JSON.parse(
     localStorage.getItem("vueloSeleccionado")
 );
 
-const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
+const reservas = JSON.parse(sessionStorage.getItem("reservas")) || [];
 
 console.log(reservas);
 
@@ -36,13 +36,23 @@ contenedor.innerHTML = `
 
 const cupon = document.getElementById("cupon");
 const btnCupon = document.querySelector(".boton-aplicar");
+const btnDeshacer = document.querySelector(".boton-deshacer");
+const errorCupon = document.getElementById("error-cupon");
+const cuponAplicado = document.getElementById("cupon-aplicado");
 
 btnCupon.addEventListener("click", () => {
+    aplicarCupon();
+});
 
+btnDeshacer.addEventListener("click", () => {
+    deshacerCupon();
+});
+
+function aplicarCupon(){
     const codigo = cupon.value.trim();
 
     if (codigo === "123456") {
-
+        console.log("Cupón válido");
         precioFinal = precioFinal * 0.90;
 
         document.querySelector(
@@ -50,12 +60,29 @@ btnCupon.addEventListener("click", () => {
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
-        alert("Cupón aplicado correctamente");
+        cuponAplicado.textContent = "Cupón aplicado correctamente";
     }
     else {
-        alert("Cupón inválido");
+        errorCupon.textContent = "Cupón inválido";
     }
-});
+}
+
+function deshacerCupon(){
+    
+    let numero = (precioFinal * 0.90);
+
+    if (numero === precioFinal) {
+
+        precioFinal = vueloSeleccionado.precio + 259000;
+
+        document.querySelector(
+            ".seccion-resumen-grid-total h2"
+        ).textContent =
+            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+
+    }
+}
+
 
 const opcionTarjeta = document.getElementById("opcion-tarjeta");
 const opcionTransferencia = document.getElementById("opcion-transferencia");

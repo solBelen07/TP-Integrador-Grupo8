@@ -1,5 +1,5 @@
 const vuelos =
-    JSON.parse(localStorage.getItem("reservas")) || [];
+    JSON.parse(sessionStorage.getItem("reservas")) || [];
 
 console.log(vuelos);
 
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-vuelos");
 
     vuelos.forEach(vuelo => {
-        contenedor.innerHTML += `
+        contenedor.innerHTML += `n  
             <div class="acordion">
                 <details>
                     <summary class="acordion-header">
