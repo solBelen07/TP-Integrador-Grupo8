@@ -30,16 +30,44 @@ contenedor.innerHTML = `
 
 const formulario = document.getElementById("form-detalle-vuelo");
 
+const cantidadPasajeros = Number(vueloSeleccionado.pasajero);
+const asientos = document.querySelectorAll('input[name=asiento]');
+const errorAsiento = document.getElementById("error-cantidad-asiento");
+
+asientos.forEach(asiento => {
+
+    asiento.addEventListener("change", () => {
+        const asientoSeleccionado = document.querySelectorAll('input[name=asiento]:checked');
+        if(asientoSeleccionado.length > cantidadPasajeros){
+            asiento.checked = false;
+            errorAsiento.textContent = "Ya seleccionó la cantidad de asientos totales."
+        }
+
+    })
+
+});
+
+function cantidadCorrectaAsientos(){
+
+    let cantidadAsientos = 0;
+
+    asientos.forEach(asiento => {
+
+        if(asiento.checked){
+            cantidadAsientos ++;
+        }
+
+    });
+
+    return cantidadAsientos === cantidadPasajeros;
+}
+
 formulario.addEventListener("submit", (e) => {
 
-    const asientoSeleccionado =
-        document.querySelector(
-            'input[name="asiento"]:checked'
-        );
-
-    if (!asientoSeleccionado) {
+    if (!cantidadCorrectaAsientos()) {
         e.preventDefault();
-        alert("Seleccione un asiento");
-        return;
-    }
-})
+        errorAsiento.textContent = "Falta seleccionar asiento/s."
+    }   
+    
+});
+
