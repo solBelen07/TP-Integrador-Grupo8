@@ -222,7 +222,8 @@ main h1{
     box-sizing: border-box;
 }
 
-.boton-aplicar{
+.boton-aplicar, .boton-deshacer{
+    margin-top: 0.1em;
     display: block;
     padding: 12px 20px;
     border-radius: 0.5em;
@@ -237,7 +238,7 @@ main h1{
     box-sizing: border-box;
 }
 
-.boton-aplicar:hover{
+.boton-aplicar:hover, .boton-deshacer:hover{
     display: block;
     padding: 12px 24px;
     border-radius: 0.5em;
@@ -249,6 +250,19 @@ main h1{
     cursor: pointer;
     box-sizing: border-box;
 }
+
+#cupon-aplicado{
+    display: none;
+    color: greenyellow;
+    margin: 1em;
+}
+
+#error-cupon{
+    display: none;
+    color: red;
+    margin: 1em;
+}
+
 
 .div-metodos-de-pago-transferencia{
     display: flex;

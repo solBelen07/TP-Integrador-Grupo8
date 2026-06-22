@@ -4,7 +4,7 @@ const vueloSeleccionado = JSON.parse(
     localStorage.getItem("vueloSeleccionado")
 );
 
-const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
+const reservas = JSON.parse(sessionStorage.getItem("reservas")) || [];
 
 console.log(reservas);
 
@@ -28,6 +28,9 @@ contenedor.innerHTML = `
     <div class="seccion-resumen-grid-descuento">
         <input placeholder="Ingrese Cupon" id="cupon" type="text"><br>
         <button type="button" class="boton-aplicar">Aplicar</button>
+        <button type="button" class="boton-deshacer">Deshacer</button>
+        <p id="error-cupon"></p>
+        <p id="cupon-aplicado"></p>
     </div>
     <div class="seccion-resumen-grid-total">
         <h2>TOTAL $${precioFinal.toLocaleString("es-AR")}</h2>
@@ -36,13 +39,23 @@ contenedor.innerHTML = `
 
 const cupon = document.getElementById("cupon");
 const btnCupon = document.querySelector(".boton-aplicar");
+const btnDeshacer = document.querySelector(".boton-deshacer");
+const errorCupon = document.getElementById("error-cupon");
+const cuponAplicado = document.getElementById("cupon-aplicado");
 
 btnCupon.addEventListener("click", () => {
+    aplicarCupon();
+});
 
+btnDeshacer.addEventListener("click", () => {
+    deshacerCupon();
+});
+
+function aplicarCupon(){
     const codigo = cupon.value.trim();
 
     if (codigo === "123456") {
-
+        console.log("Cupón válido");
         precioFinal = precioFinal * 0.90;
 
         document.querySelector(
@@ -50,12 +63,36 @@ btnCupon.addEventListener("click", () => {
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
-        alert("Cupón aplicado correctamente");
+        cuponAplicado.style.display = "flex";
+        cuponAplicado.textContent = "Cupón aplicado correctamente";
+        errorCupon.style.display = "none";
     }
     else {
-        alert("Cupón inválido");
+        errorCupon.style.display = "flex";
+        errorCupon.textContent = "Cupón inválido";
+        cuponAplicado.style.display = "none";
     }
-});
+}
+
+function deshacerCupon(){
+    cuponAplicado.style.display = "none";
+    errorCupon.style.display = "none";
+    let numero = precioFinal;
+
+    if (numero === precioFinal) {
+
+        
+
+        precioFinal = vueloSeleccionado.precio + 259000;
+
+        document.querySelector(
+            ".seccion-resumen-grid-total h2"
+        ).textContent =
+            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+        
+    }
+}
+
 
 const opcionTarjeta = document.getElementById("opcion-tarjeta");
 const opcionTransferencia = document.getElementById("opcion-transferencia");
