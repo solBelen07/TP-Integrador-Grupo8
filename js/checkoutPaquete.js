@@ -38,11 +38,21 @@ function actualizarRequired() {
         document.getElementById("anio").required = true;
         document.getElementById("codigo-seguridad").required = true;
         document.getElementById("documento-titular").required = true;
+
+        document.getElementById("email-transferencia").required = false;
+        document.getElementById("documento-transferencia").required = false;
     }
 
     if (opcionTransferencia.checked) {
         document.getElementById("email-transferencia").required = true;
         document.getElementById("documento-transferencia").required = true;
+
+        document.getElementById("tarjeta").required = false;
+        document.getElementById("nombre-tarjeta").required = false;
+        document.getElementById("mes").required = false;
+        document.getElementById("anio").required = false;
+        document.getElementById("codigo-seguridad").required = false;
+        document.getElementById("documento-titular").required = false;
     }
 
 }

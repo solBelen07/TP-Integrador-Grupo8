@@ -69,7 +69,7 @@ main h1{
 
 .seccion-div-asientos{
     width: 70%;
-    height: 30em ;
+    height: 31em ;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     padding: 2em;
@@ -99,7 +99,7 @@ main h1{
     padding: 0.1em 0em 0.1em 0em;
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -120,6 +120,11 @@ input:disabled + .asiento {
 
 input:checked + .asiento {
   background-color: orange;
+}
+
+.error-cantidad-asiento{
+    color: red;
+    margin: 1em;
 }
 
 .seccion-botones{
