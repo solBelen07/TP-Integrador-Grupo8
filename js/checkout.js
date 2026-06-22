@@ -28,6 +28,9 @@ contenedor.innerHTML = `
     <div class="seccion-resumen-grid-descuento">
         <input placeholder="Ingrese Cupon" id="cupon" type="text"><br>
         <button type="button" class="boton-aplicar">Aplicar</button>
+        <button type="button" class="boton-deshacer">Deshacer</button>
+        <p id="error-cupon"></p>
+        <p id="cupon-aplicado"></p>
     </div>
     <div class="seccion-resumen-grid-total">
         <h2>TOTAL $${precioFinal.toLocaleString("es-AR")}</h2>
@@ -60,18 +63,25 @@ function aplicarCupon(){
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
+        cuponAplicado.style.display = "flex";
         cuponAplicado.textContent = "Cupón aplicado correctamente";
+        errorCupon.style.display = "none";
     }
     else {
+        errorCupon.style.display = "flex";
         errorCupon.textContent = "Cupón inválido";
+        cuponAplicado.style.display = "none";
     }
 }
 
 function deshacerCupon(){
-    
-    let numero = (precioFinal * 0.90);
+    cuponAplicado.style.display = "none";
+    errorCupon.style.display = "none";
+    let numero = precioFinal;
 
     if (numero === precioFinal) {
+
+        
 
         precioFinal = vueloSeleccionado.precio + 259000;
 
@@ -79,7 +89,7 @@ function deshacerCupon(){
             ".seccion-resumen-grid-total h2"
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
-
+        
     }
 }
 

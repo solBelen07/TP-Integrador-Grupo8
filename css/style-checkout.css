@@ -252,11 +252,13 @@ main h1{
 }
 
 #cupon-aplicado{
+    display: none;
     color: greenyellow;
     margin: 1em;
 }
 
 #error-cupon{
+    display: none;
     color: red;
     margin: 1em;
 }
