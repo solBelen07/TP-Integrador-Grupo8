@@ -1,4 +1,8 @@
-#section-popup{
+#popup-fin-compra{
+  display: none;
+}
+
+#popup-login{
   display: none;
 }
 

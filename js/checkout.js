@@ -1,3 +1,5 @@
+import { InicioRegistro } from "./InicioRegistro.js";
+
 const vueloSeleccionado = JSON.parse(
     localStorage.getItem("vueloSeleccionado")
 );
@@ -90,10 +92,22 @@ opcionTarjeta.addEventListener("change", actualizarRequired);
 opcionTransferencia.addEventListener("change", actualizarRequired);
 
 const formulario = document.getElementById("form-checkout");
-const popup = document.getElementById("section-popup");
+const popupFin = document.getElementById("popup-fin-compra");
+const popupLogin = document.getElementById("popup-login");
+
 
 formulario.addEventListener("submit", (e) => {  
     if (!formulario.checkValidity()) {
+        return;
+    }
+
+    const usuarioLogueado = InicioRegistro.usuarioLogueado();
+
+    console.log(usuarioLogueado);
+
+    if(!usuarioLogueado){
+        popupLogin.style.display = "flex";
+        e.preventDefault();
         return;
     }
 
@@ -101,14 +115,11 @@ formulario.addEventListener("submit", (e) => {
 
     reservas.push(vueloSeleccionado);
 
-    console.log(reservas);
-    console.log(vueloSeleccionado)
-
-    localStorage.setItem(
+    sessionStorage.setItem(
         "reservas",
         JSON.stringify(reservas)
     );
 
     e.preventDefault();
-    popup.style.display = "flex";
+    popupFin.style.display = "flex";
 });
