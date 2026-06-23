@@ -1,5 +1,5 @@
 export class Paquete {
-    constructor(id, aerolinea, destino, dias, noches, hotel, precio) {
+    constructor(id, aerolinea, destino, dias, noches, hotel, precio, pasajero) {
         this.id = id;
         this.aerolinea = aerolinea;
         this.destino = destino;
@@ -7,5 +7,6 @@ export class Paquete {
         this.noches = noches;
         this.hotel = hotel;
         this.precio = precio;
+        this.pasajero = pasajero;
     }
 }
