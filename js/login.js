@@ -1,28 +1,43 @@
 import { InicioRegistro } from "./InicioRegistro.js";
 
-const formulario =
-    document.getElementById("login-form");
+const formulario = document.getElementById("login-form");
+
+const email = document.getElementById("email");
+const contraseña = document.getElementById("contraseña");
+const mensajeError = document.getElementById("mensaje-error");
 
 formulario.addEventListener("submit", (e) => {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        try {
+    mensajeError.textContent = "";
 
-            InicioRegistro.login(
-                email.value,
-                contraseña.value
-            ); 
-
-            alert("Sesión iniciada");
-
-            window.location.href =
-                "../index.html";
-
-        } catch(error) {
-
-            alert(error.message);
-
-        }
+    if (email.value.trim() === "") {
+        mensajeError.textContent = "Ingrese un email";
+        return;
     }
-);
+
+    if (contraseña.value.trim() === "") {
+        mensajeError.textContent = "Ingrese una contraseña";
+        return;
+    }
+
+    try {
+
+        InicioRegistro.login(
+            email.value,
+            contraseña.value
+        );
+
+        mensajeError.textContent = "Sesión iniciada";
+
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 1000);
+
+    } catch (error) {
+
+        mensajeError.textContent = error.message;
+
+    }
+});

@@ -136,3 +136,9 @@ text-decoration:none;
     }
 
 }
+#mensaje-error{
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
