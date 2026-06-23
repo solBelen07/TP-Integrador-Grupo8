@@ -1,6 +1,7 @@
-const paquete = JSON.parse(
-    localStorage.getItem("paqueteSeleccionado")
-);
+import { InicioRegistro } from "./InicioRegistro.js";
+
+
+const paquete = JSON.parse(localStorage.getItem("paqueteSeleccionado"));
 
 const reservasPaquetes = JSON.parse(sessionStorage.getItem("reservasPaquetes")) || [];
 
@@ -158,6 +159,8 @@ formulario.addEventListener("submit", (e) => {
         "reservasPaquetes",
         JSON.stringify(reservasPaquetes)
     );
+
+    console.log(reservasPaquetes);
 
     e.preventDefault();
     popupFin.style.display = "flex";
