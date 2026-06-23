@@ -3,24 +3,20 @@ const paquete = JSON.parse(
 );
 
 let precioFinal = paquete.precio;
-const equipajeBodega =
-    localStorage.getItem("equipajeBodega") === "true";
+const equipajeBodega = JSON.parse(localStorage.getItem("equipajeBodega"));
 
-if (paquete) {
-
-    document.getElementById("seccion-resumen-destino").textContent =
-        paquete.destino;  
-
-    
-
-    const incluyeBodega = document.getElementById("seccion-resumen-bodega");
+function aplicaBodega(){
 
     if (equipajeBodega) {
-        precioFinal += 50000;
-        incluyeBodega.style.display = "block";
-    } else {
-        incluyeBodega.style.display = "none";
+
+        return true;
     }
+
+}
+
+if(aplicaBodega){
+
+    precioFinal += 50000;
 
     document.getElementById("seccion-resumen-grid-total").textContent =
         `TOTAL : $${precioFinal.toLocaleString("es-AR")}`;
@@ -57,6 +53,71 @@ function actualizarRequired() {
 
 }
 
+const cupon = document.getElementById("cupon");
+const btnCupon = document.querySelector(".boton-aplicar");
+const btnDeshacer = document.querySelector(".boton-deshacer");
+const errorCupon = document.getElementById("error-cupon");
+const cuponAplicado = document.getElementById("cupon-aplicado");
+
+btnCupon.addEventListener("click", () => {
+    aplicarCupon();
+});
+
+btnDeshacer.addEventListener("click", () => {
+    deshacerCupon();
+});
+
+function aplicarCupon(){
+    const codigo = cupon.value.trim();
+
+    if (codigo === "123456") {
+        console.log("Cupón válido");
+        precioFinal = precioFinal * 0.90;
+
+        document.querySelector(
+            ".seccion-resumen-grid-total h2"
+        ).textContent =
+            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+
+        cuponAplicado.style.display = "flex";
+        cuponAplicado.textContent = "Cupón aplicado correctamente";
+        errorCupon.style.display = "none";
+    }
+    else {
+        errorCupon.style.display = "flex";
+        errorCupon.textContent = "Cupón inválido";
+        cuponAplicado.style.display = "none";
+    }
+}
+
+function deshacerCupon(){
+    cuponAplicado.style.display = "none";
+    errorCupon.style.display = "none";
+
+    console.log(precioFinal);
+    let numero = precioFinal;
+    console.log(numero);
+    if (numero === precioFinal) {
+
+        if(aplicaBodega){
+
+            precioFinal = (paquete.precio + 50000);            
+
+            document.querySelector(".seccion-resumen-grid-total h2").textContent =
+            `TOTAL: $${precioFinal.toLocaleString("es-AR")}`;
+            return;
+        }
+
+        precioFinal = paquete.precio;
+
+        document.querySelector(
+            ".seccion-resumen-grid-total h2"
+        ).textContent =
+            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+        
+    }
+}
+
 opcionTarjeta.addEventListener("change", actualizarRequired);
 opcionTransferencia.addEventListener("change", actualizarRequired);
 
@@ -69,30 +130,7 @@ formulario.addEventListener("submit", (e) => {
         return;
     }
 
+    
     e.preventDefault();
     popup.style.display = "flex";
-});
-
-
-const cupon = document.getElementById("cupon");
-const btnCupon = document.querySelector(".boton-aplicar");
-
-btnCupon.addEventListener("click", () => {
-
-    const codigo = cupon.value.trim();
-
-    if (codigo === "123456") {
-
-        precioFinal = precioFinal * 0.90;
-
-        document.querySelector(
-            ".seccion-resumen-grid-total h2"
-        ).textContent =
-            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
-
-        alert("Cupón aplicado correctamente");
-    }
-    else {
-        alert("Cupón inválido");
-    }
 });

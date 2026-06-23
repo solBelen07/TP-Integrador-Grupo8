@@ -2,8 +2,9 @@ const paquete = JSON.parse(
     localStorage.getItem("paqueteSeleccionado")
 );
 
-const equipajeBodega =
-    localStorage.getItem("equipajeBodega") === "true";
+console.log(paquete);
+
+const equipajeBodega = JSON.parse(localStorage.getItem("equipajeBodega"));
 
 if (paquete) {
 
@@ -28,19 +29,46 @@ if (paquete) {
         `TOTAL : $${precioFinal.toLocaleString("es-AR")}`;
 }
 
-const botonContinuar = document.getElementById("boton-continuar");
 
-botonContinuar.addEventListener("click", (e) => {
+const formulario = document.getElementById("form-detalle-vuelo");
 
-    const asientoSeleccionado = document.querySelector(
-        'input[name="asiento"]:checked'
-    );
+const cantidadPasajeros = Number(paquete.pasajero);
+const asientos = document.querySelectorAll('input[name=asiento]');
+const errorAsiento = document.getElementById("error-cantidad-asiento");
 
-    if (!asientoSeleccionado) {
+asientos.forEach(asiento => {
+
+    asiento.addEventListener("change", () => {
+        const asientoSeleccionado = document.querySelectorAll('input[name=asiento]:checked');
+        if(asientoSeleccionado.length > cantidadPasajeros){
+            asiento.checked = false;
+            errorAsiento.textContent = "Ya seleccionó la cantidad de asientos totales."
+        }
+
+    })
+
+});
+
+function cantidadCorrectaAsientos(){
+
+    let cantidadAsientos = 0;
+
+    asientos.forEach(asiento => {
+
+        if(asiento.checked){
+            cantidadAsientos ++;
+        }
+
+    });
+
+    return cantidadAsientos === cantidadPasajeros;
+}
+
+formulario.addEventListener("submit", (e) => {
+
+    if (!cantidadCorrectaAsientos()) {
         e.preventDefault();
-        alert("Debes seleccionar un asiento antes de continuar.");
-        return;
-    }
-
-    window.location.href = "./checkout-paquete.html";
+        errorAsiento.textContent = "Falta seleccionar asiento/s."
+    }   
+    
 });

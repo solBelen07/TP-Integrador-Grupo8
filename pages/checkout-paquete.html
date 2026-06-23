@@ -142,6 +142,9 @@
                     <div class="seccion-resumen-grid-descuento">
                             <input placeholder="Ingrese Cupon" id="cupon" type="text"><br>
                             <button type="button" class="boton-aplicar">Aplicar</button>
+                            <button type="button" class="boton-deshacer">Deshacer</button>
+                            <p id="error-cupon"></p>
+                            <p id="cupon-aplicado"></p>
                     </div>
                     <div class="seccion-resumen-grid-total">
                         <h2 id="seccion-resumen-grid-total"></h2>
@@ -152,7 +155,7 @@
                 <a href="./detalle-vuelo-paquete.html"><input class="boton-volver" value="Volver" type="button"></a>
                 <button type="submit" class="boton-continuar" id="boton-continuar">Continuar</button>
             </section>
-            <section id="section-popup">
+            <section id="popup-fin-compra">
                 <div class="popup">
                     <div class="popup-contenido">
                       <h2>¡Compra exitosa!</h2><br>
@@ -163,6 +166,15 @@
                     </div>
                 </div>
             </section>
+            <section id="popup-login">
+                <div class="popup">
+                    <div class="popup-contenido">
+                      <h2>¡Todavia no iniciaste sesión!</h2><br>
+                      <p>Inicia sesión o crea una cuenta para continuar</p><br>
+                      <a href="./registrarse.html" class="boton-cerrar">Registrate</a>
+                      <a href="./login.html" class="boton-cerrar">Iniciar Sesión</a>
+                    </div>
+                </div>
         </form>
     </main>
     <footer>    
