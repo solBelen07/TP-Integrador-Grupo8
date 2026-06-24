@@ -1,41 +1,14 @@
-import { InicioRegistro } from "./InicioRegistro.js";
-
-const botonesRegistro =
-    document.getElementById(
-        "botones-registro"
-    );
-
-const perfil =
-    document.querySelector(
-        ".div-perfil-header"
-    );
-
-const usuario =
-    InicioRegistro.usuarioLogueado();
-
-if(usuario){
-
-    botonesRegistro.style.display =
-        "none";
-
-    perfil.style.display =
-        "flex";
-
-}else{
-
-    botonesRegistro.style.display =
-        "flex";
-
-    perfil.style.display =
-        "none";
-
-}
-
 const formulario = document.getElementById("form-busqueda");
+const mensajeError = document.getElementById("seccion-busqueda-error");
 
-formulario?.addEventListener("submit", (e) => {
+formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
+
+    if (!validarBusqueda()) {
+        mensajeError.textContent = "Debe completar los campos para crear la busqueda.";
+        return;
+    }
 
     const busqueda = {
         origen: document.getElementById("origen").value,
@@ -56,4 +29,38 @@ formulario?.addEventListener("submit", (e) => {
     );
 
     window.location.href = "./pages/busqueda.html";
+
+    mensajeError.style.display = "none";
 });
+
+const origen = document.getElementById("origen");
+const destino = document.getElementById("destino");
+const fechaIda = document.getElementById("fecha-ida");
+const fechaVuelta = document.getElementById("fecha-vuelta");
+const pasajero = document.getElementById("pasajero");
+const clase = document.getElementById("clase");
+
+function validarBusqueda() {
+
+    if (origen.value.trim() === "") {
+        return false;
+    }
+
+    if (destino.value.trim() === "") {
+        return false;
+    }
+
+    if (fechaIda.value === "") {
+        return false;
+    }
+
+    if (fechaVuelta.value === "") {
+        return false;
+    }
+
+    if (pasajero.value === "" || pasajero.value <= 0) {
+        return false;
+    }
+
+    return true;
+}
