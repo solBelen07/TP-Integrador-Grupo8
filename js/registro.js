@@ -3,6 +3,13 @@ import { InicioRegistro } from "./InicioRegistro.js";
 
 const formulario = document.getElementById("registro-form");
 const mensajeError = document.getElementById("mensaje-error");
+const pais = document.getElementById("pais");
+const dni = document.getElementById("dni");
+const nombre = document.getElementById("nombre");
+const apellido = document.getElementById("apellido");
+const fechaNacimiento = document.getElementById("fecha-nacimiento");
+const email = document.getElementById("email");
+const contrasenia = document.getElementById("contrasenia");
 
 formulario.addEventListener("submit", (e) => {
 
