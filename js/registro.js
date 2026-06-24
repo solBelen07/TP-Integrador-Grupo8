@@ -55,7 +55,9 @@ formulario.addEventListener("submit", (e) => {
             apellido.value,
             fechaNacimiento.value,
             email.value,
-            contrasenia.value
+            contrasenia.value,
+            "", 
+            "",
         );
 
         InicioRegistro.guardarUsuario(usuario);
