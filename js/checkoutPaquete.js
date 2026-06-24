@@ -9,6 +9,36 @@ const precioOriginal = paquete.precio;
 let precioFinal = precioOriginal;
 const equipajeBodega = JSON.parse(localStorage.getItem("equipajeBodega"));
 
+const contenedor = document.getElementById("seccion-resumen");
+
+
+contenedor.innerHTML = `
+    <div class="div-resumen">
+        <h2>RESUMEN</h2>
+        <h3>${paquete.aerolinea}</h3>
+        <h3>Buenos Aires - ${paquete.destino}</h3>
+    </div>
+    <div class="seccion-resumen-grid-resumen-viaje">
+    <p>Dias: ${paquete.dias}</p>
+    <p>Noches: ${paquete.noches}</p>
+    <p>Cantidad de Pasajeros: ${paquete.pasajero}</p>
+    <p>Hotel: ${paquete.hotel}</p>
+    <p>Cod. Vuelo: FBK6778</p>
+    </div>
+    <div class="seccion-resumen-grid-descuento">
+        <input placeholder="Ingrese Cupon" id="cupon" type="text"><br>
+        <button type="button" class="boton-aplicar">Aplicar</button>
+        <button type="button" class="boton-deshacer">Deshacer</button>
+        <p id="error-cupon"></p>
+        <p id="cupon-aplicado"></p>
+    </div>
+    <div class="seccion-resumen-grid-total">
+        <h2>TOTAL: $${precioFinal.toLocaleString("es-AR")}</h2>
+    </div>
+`;
+
+
+
 function aplicaBodega(){
 
     if (equipajeBodega) {

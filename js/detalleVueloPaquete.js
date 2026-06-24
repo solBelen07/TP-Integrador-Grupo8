@@ -8,13 +8,18 @@ const equipajeBodega = JSON.parse(localStorage.getItem("equipajeBodega"));
 
 if (paquete) {
 
-    document.getElementById("div-resumen-destino").textContent =
-        paquete.destino;  
+    document.getElementById("div-resumen-destino").textContent = paquete.destino;  
+    
+    document.getElementById("div-resumen-dias").textContent = `Dias: ${paquete.dias}`; 
+
+    document.getElementById("div-resumen-noches").textContent = `Dias: ${paquete.noches}`; 
+
+    document.getElementById("div-resumen-hotel").textContent = `Hotel: ${paquete.hotel}`; 
 
     document.getElementById("div-pasajero-precio-final").textContent =
         `1 PASAJERO $${paquete.precio.toLocaleString("es-AR")}`;
 
-    let precioFinal = paquete.precio;
+    let precioFinal = paquete.precio; 
 
     const divImpuesto = document.getElementById("div-impuesto");
 

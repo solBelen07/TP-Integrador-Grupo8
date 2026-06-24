@@ -5,6 +5,8 @@ const usuario = InicioRegistro.usuarioLogueado();
 
 if(usuario){
 
+    document.getElementById("div-perfil-nombre-usuario").textContent = usuario.nombre; 
+
     document.getElementById("form-perfil-nombre").value = usuario.nombre;
 
     document.getElementById("form-perfil-apellido").value = usuario.apellido;
@@ -20,6 +22,8 @@ if(usuario){
     document.getElementById("form-perfil-telefono").value = usuario.telefono;
 
     document.getElementById("form-perfil-fechaNac").value = usuario.fechaNacimiento;
+
+
 }
 
 document.getElementById("form-perfil-email").readOnly = true;

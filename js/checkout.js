@@ -1,5 +1,5 @@
 import { InicioRegistro } from "./InicioRegistro.js";
-
+ 
 const vueloSeleccionado = JSON.parse(
     localStorage.getItem("vueloSeleccionado")
 );
