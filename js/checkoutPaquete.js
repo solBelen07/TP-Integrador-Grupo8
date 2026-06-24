@@ -76,6 +76,7 @@ formulario.addEventListener("submit", (e) => {
 
 const cupon = document.getElementById("cupon");
 const btnCupon = document.querySelector(".boton-aplicar");
+const mensajeCupon = document.getElementById("mensaje-cupon");
 
 btnCupon.addEventListener("click", () => {
 
@@ -90,9 +91,12 @@ btnCupon.addEventListener("click", () => {
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
-        alert("Cupón aplicado correctamente");
+        mensajeCupon.textContent =
+            "Cupón aplicado correctamente";
     }
     else {
-        alert("Cupón inválido");
+
+        mensajeCupon.textContent =
+            "Cupón inválido";
     }
 });
