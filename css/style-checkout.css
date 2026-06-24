@@ -263,6 +263,11 @@ main h1{
     margin: 0.5em;
 }
 
+#seccion-datos-personales-error{
+    color: red;
+    margin: 0.5em;
+}
+
 
 .div-metodos-de-pago-transferencia{
     display: flex;

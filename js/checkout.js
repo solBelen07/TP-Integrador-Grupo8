@@ -33,7 +33,8 @@ contenedor.innerHTML = `
         <p id="cupon-aplicado"></p>
     </div>
     <div class="seccion-resumen-grid-total">
-        <h2>TOTAL: $${precioFinal.toLocaleString("es-AR")}</h2>
+        <h2>TOTAL: $${precioFinal.toLocaleString("es-AR")}</h2><br>
+        <p id="seccion-datos-personales-error"></p>
     </div>
 `;
 
@@ -93,48 +94,108 @@ function deshacerCupon(){
     }
 }
 
+const errorCheckout = document.getElementById("seccion-datos-personales-error");
+
+const nombre = document.getElementById("nombre");
+const documentoPasajero = document.getElementById("documento-pasajero");
+const emailPasajero = document.getElementById("email-pasajero");
+const telefono = document.getElementById("telefono");
 
 const opcionTarjeta = document.getElementById("opcion-tarjeta");
 const opcionTransferencia = document.getElementById("opcion-transferencia");
+const opcionPaypal = document.getElementById("opcion-paypal");
 
-function actualizarRequired() {
+const tarjeta = document.getElementById("tarjeta");
+const nombreTarjeta = document.getElementById("nombre-tarjeta");
+const mes = document.getElementById("mes");
+const anio = document.getElementById("anio");
+const codigoSeguridad = document.getElementById("codigo-seguridad");
+const documentoTitular = document.getElementById("documento-titular");
 
+function validarCheckout() {
+
+    if (nombre.value.trim() === "") {
+        return false;
+    }
+
+    if (!documentoPasajero.validity.valid) {
+        return false;
+    }
+
+    if (!emailPasajero.validity.valid) {
+        return false;
+    }
+
+    if (telefono.value.trim() === "") {
+        return false;
+    }
+
+    if (
+        !opcionTarjeta.checked &&
+        !opcionTransferencia.checked &&
+        !opcionPaypal.checked
+    ) {
+        return false;
+    }
+
+    // Si eligió tarjeta
     if (opcionTarjeta.checked) {
-        document.getElementById("tarjeta").required = true;
-        document.getElementById("nombre-tarjeta").required = true;
-        document.getElementById("mes").required = true;
-        document.getElementById("anio").required = true;
-        document.getElementById("codigo-seguridad").required = true;
-        document.getElementById("documento-titular").required = true;
 
-        document.getElementById("email-transferencia").required = false;
-        document.getElementById("documento-transferencia").required = false;
+        if (!tarjeta.validity.valid) {
+            return false;
+        }
+
+        if (nombreTarjeta.value.trim() === "") {
+            return false;
+        }
+
+        if (!mes.validity.valid) {
+            return false;
+        }
+
+        if (!anio.validity.valid) {
+            return false;
+        }
+
+        if (!codigoSeguridad.validity.valid) {
+            return false;
+        }
+
+        if (!documentoTitular.validity.valid) {
+            return false;
+        }
     }
-
+    
     if (opcionTransferencia.checked) {
-        document.getElementById("email-transferencia").required = true;
-        document.getElementById("documento-transferencia").required = true;
 
-        document.getElementById("tarjeta").required = false;
-        document.getElementById("nombre-tarjeta").required = false;
-        document.getElementById("mes").required = false;
-        document.getElementById("anio").required = false;
-        document.getElementById("codigo-seguridad").required = false;
-        document.getElementById("documento-titular").required = false;
+        if (!emailTransferencia.validity.valid) {
+            return false;
+        }
+
+        if (!documentoTransferencia.validity.valid) {
+            return false;
+        }
     }
 
+
+    return true;
 }
 
-opcionTarjeta.addEventListener("change", actualizarRequired);
-opcionTransferencia.addEventListener("change", actualizarRequired);
+console.log(validarCheckout());
 
 const formulario = document.getElementById("form-checkout");
 const popupFin = document.getElementById("popup-fin-compra");
 const popupLogin = document.getElementById("popup-login");
 
+console.log(formulario);
+console.log(errorCheckout);
 
-formulario.addEventListener("submit", (e) => {  
-    if (!formulario.checkValidity()) {
+formulario.addEventListener("submit", (e) => {
+    debugger;
+    e.preventDefault(); 
+
+    if (!validarCheckout()) {
+        errorCheckout.textContent = "Complete todos los datos para continuar.";
         return;
     }
 
@@ -157,6 +218,6 @@ formulario.addEventListener("submit", (e) => {
         JSON.stringify(reservas)
     );
 
-    e.preventDefault();
+    
     popupFin.style.display = "flex";
 });

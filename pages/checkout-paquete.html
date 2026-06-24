@@ -36,31 +36,32 @@
                 <h2>Datos del Pasajero</h2>
                     <div class="seccion-datos-personales-grid">
                         <div>
-                        <label for="nombre">Nombre:</label><br>
-                        <input id="nombre" type="text" required><br>
+                            <label for="nombre">Nombre:</label><br>
+                            <input id="nombre" type="text"><br>
                         </div>
                         <div>
-                        <label for="documento-pasajero">Documento de Identidad:</label><br>
-                        <input id="documento-pasajero" type="text" pattern="[0-9]{8}" maxlength="8" required><br>
+                            <label for="documento-pasajero">Documento de Identidad:</label><br>
+                            <input id="documento-pasajero" type="text" pattern="[0-9]{8}" maxlength="8"><br>
                         </div>
                         <div>
-                        <label for="email-pasajero">Correo Electronico:</label><br>
-                        <input id="email-pasajero" type="email" required>                        </div>
+                            <label for="email-pasajero">Correo Electronico:</label><br>
+                            <input id="email-pasajero" type="email">                        
+                        </div>
                         <div>
-                        <label for="telefono">Telefono:</label><br>
-                        <input id="telefono" type="number" required><br>
+                            <label for="telefono">Telefono:</label><br>
+                            <input id="telefono" type="number"><br>
                         </div>
                     </div>
                 </div>
                 <div class="seccion-metodos-de-pago">
                 <h2>Metodos de Pago</h2>
-                    <input class="opcion-tarjeta" id="opcion-tarjeta" name="metodo-pago" type="radio" required>
+                    <input class="opcion-tarjeta" id="opcion-tarjeta" name="metodo-pago" type="radio">
                     <label for="opcion-tarjeta">Tarjeta de Crédito/Debito</label>
 
-                    <input class="opcion-transferencia" id="opcion-transferencia" name="metodo-pago" type="radio" required>
+                    <input class="opcion-transferencia" id="opcion-transferencia" name="metodo-pago" type="radio">
                     <label for="opcion-transferencia">Transferencia</label>
 
-                    <input class="opcion-paypal" id="opcion-paypal" name="metodo-pago" type="radio" required>
+                    <input class="opcion-paypal" id="opcion-paypal" name="metodo-pago" type="radio">
                     <label for="opcion-paypal">PayPal</label><br>
                     
                     <div class="seccion-metodos">
@@ -142,11 +143,11 @@
                     <div class="seccion-resumen-grid-descuento">
                             <input placeholder="Ingrese Cupon" id="cupon" type="text"><br>
                             <button type="button" class="boton-aplicar">Aplicar</button>
-<p id="mensaje-cupon"></p>
+                            <p id="mensaje-cupon"></p>
 
-<button type="button" class="boton-deshacer">Deshacer</button>
-<p id="error-cupon"></p>
-<p id="cupon-aplicado"></p>
+                            <button type="button" class="boton-deshacer">Deshacer</button>
+                            <p id="error-cupon"></p>
+                            <p id="cupon-aplicado"></p>
                     </div>
                     <div class="seccion-resumen-grid-total">
                         <h2 id="seccion-resumen-grid-total"></h2>
