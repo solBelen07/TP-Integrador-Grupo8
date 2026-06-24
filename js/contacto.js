@@ -3,11 +3,16 @@ const formulario =
 
 const mensaje =
     document.getElementById("mensaje-contacto");
-    const popup =
+
+const popup =
     document.getElementById("popup-contacto");
 
 const cerrarPopup =
     document.getElementById("cerrar-popup");
+
+
+popup.style.display = "none";
+
 
 formulario.addEventListener("submit", (e) => {
 
@@ -28,42 +33,40 @@ formulario.addEventListener("submit", (e) => {
     const mensajeTexto =
         document.getElementById("mensaje");
 
+
     mensaje.textContent = "";
 
     if (nombre.value.trim() === "") {
-        mensaje.textContent =
-            "Ingrese un nombre";
+        mensaje.textContent = "Ingrese un nombre";
         return;
     }
 
     if (apellido.value.trim() === "") {
-        mensaje.textContent =
-            "Ingrese un apellido";
+        mensaje.textContent = "Ingrese un apellido";
         return;
     }
 
     if (email.value.trim() === "") {
-        mensaje.textContent =
-            "Ingrese un email";
+        mensaje.textContent = "Ingrese un email";
         return;
     }
 
     if (telefono.value.trim() === "") {
-        mensaje.textContent =
-            "Ingrese un teléfono";
+        mensaje.textContent = "Ingrese un teléfono";
         return;
     }
 
     if (mensajeTexto.value.trim() === "") {
-        mensaje.textContent =
-            "Ingrese un mensaje";
+        mensaje.textContent = "Ingrese un mensaje";
         return;
     }
 
+
     popup.style.display = "flex";
 
-formulario.reset();
+    formulario.reset();
 });
+
 
 cerrarPopup.addEventListener("click", () => {
     popup.style.display = "none";

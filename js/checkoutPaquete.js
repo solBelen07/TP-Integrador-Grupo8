@@ -1,29 +1,41 @@
-const paquete = JSON.parse(
-    localStorage.getItem("paqueteSeleccionado")
-);
+import { InicioRegistro } from "./InicioRegistro.js";
 
-let precioFinal = paquete.precio;
-const equipajeBodega =
-    localStorage.getItem("equipajeBodega") === "true";
 
-if (paquete) {
+const paquete = JSON.parse(localStorage.getItem("paqueteSeleccionado"));
 
-    document.getElementById("seccion-resumen-destino").textContent =
-        paquete.destino;  
+const reservasPaquetes = JSON.parse(sessionStorage.getItem("reservasPaquetes")) || [];
 
-    
+const precioOriginal = paquete.precio;
+let precioFinal = precioOriginal;
+const equipajeBodega = JSON.parse(localStorage.getItem("equipajeBodega"));
 
-    const incluyeBodega = document.getElementById("seccion-resumen-bodega");
+function aplicaBodega(){
 
     if (equipajeBodega) {
-        precioFinal += 50000;
-        incluyeBodega.style.display = "block";
-    } else {
-        incluyeBodega.style.display = "none";
+
+        return true;
     }
 
+}
+
+function obtenerPrecioBase() {
+
+    let precioBase = precioOriginal;
+
+    if (equipajeBodega) {
+        precioBase += 50000;
+    }
+
+    return precioBase;
+}
+
+if(aplicaBodega()){
+
+    precioFinal = obtenerPrecioBase() ;
+
     document.getElementById("seccion-resumen-grid-total").textContent =
-        `TOTAL : $${precioFinal.toLocaleString("es-AR")}`;
+        `TOTAL: $${precioFinal.toLocaleString("es-AR")}`;
+
 }
 
 const opcionTarjeta = document.getElementById("opcion-tarjeta");
@@ -57,46 +69,99 @@ function actualizarRequired() {
 
 }
 
-opcionTarjeta.addEventListener("change", actualizarRequired);
-opcionTransferencia.addEventListener("change", actualizarRequired);
-
-const formulario = document.getElementById("form-checkout");
-const popup = document.getElementById("section-popup");
-
-formulario.addEventListener("submit", (e) => {
-
-    if (!formulario.checkValidity()) {
-        return;
-    }
-
-    e.preventDefault();
-    popup.style.display = "flex";
-});
-
-
 const cupon = document.getElementById("cupon");
 const btnCupon = document.querySelector(".boton-aplicar");
-const mensajeCupon = document.getElementById("mensaje-cupon");
+const btnDeshacer = document.querySelector(".boton-deshacer");
+const errorCupon = document.getElementById("error-cupon");
+const cuponAplicado = document.getElementById("cupon-aplicado");
 
 btnCupon.addEventListener("click", () => {
+    aplicarCupon();
+});
 
+btnDeshacer.addEventListener("click", () => {
+    deshacerCupon();
+});
+
+function aplicarCupon(){
     const codigo = cupon.value.trim();
 
     if (codigo === "123456") {
 
-        precioFinal = precioFinal * 0.90;
+        precioFinal = obtenerPrecioBase() * 0.90;
+
+        paquete.precio = precioFinal;
 
         document.querySelector(
             ".seccion-resumen-grid-total h2"
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
-        mensajeCupon.textContent =
-            "Cupón aplicado correctamente";
+cuponAplicado.style.display = "flex";
+cuponAplicado.textContent = "Cupón aplicado correctamente";
+errorCupon.style.display = "none";
+console.log(paquete);
     }
-    else {
 
-        mensajeCupon.textContent =
-            "Cupón inválido";
+    else {
+        errorCupon.style.display = "flex";
+errorCupon.textContent = "Cupón inválido";
+cuponAplicado.style.display = "none";
     }
+}
+
+function deshacerCupon(){
+    
+    precioFinal = obtenerPrecioBase();
+
+    paquete.precio = precioFinal;
+
+    cuponAplicado.style.display = "none";
+    errorCupon.style.display = "none";
+
+    document.querySelector(
+        ".seccion-resumen-grid-total h2"
+    ).textContent =
+        `TOTAL: $${precioFinal.toLocaleString("es-AR")}`;
+        
+}
+
+opcionTarjeta.addEventListener("change", actualizarRequired);
+opcionTransferencia.addEventListener("change", actualizarRequired);
+
+
+const formulario = document.getElementById("form-checkout-paquete");
+const popupFin = document.getElementById("popup-fin-compra");
+const popupLogin = document.getElementById("popup-login");
+
+console.log(paquete);
+
+formulario.addEventListener("submit", (e) => {  
+    if (!formulario.checkValidity()) {
+        return;
+    }
+
+    const usuarioLogueado = InicioRegistro.usuarioLogueado();
+
+    console.log(usuarioLogueado);
+
+    if(!usuarioLogueado){
+        popupLogin.style.display = "flex";
+        e.preventDefault();
+        return;
+    }
+
+    paquete.precio = precioFinal;
+
+    reservasPaquetes.push(paquete);
+
+    sessionStorage.setItem(
+        "reservasPaquetes",
+        JSON.stringify(reservasPaquetes)
+    );
+
+    console.log(reservasPaquetes);
+
+    e.preventDefault();
+    popupFin.style.display = "flex";
 });

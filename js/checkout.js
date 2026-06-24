@@ -33,7 +33,7 @@ contenedor.innerHTML = `
         <p id="cupon-aplicado"></p>
     </div>
     <div class="seccion-resumen-grid-total">
-        <h2>TOTAL $${precioFinal.toLocaleString("es-AR")}</h2>
+        <h2>TOTAL: $${precioFinal.toLocaleString("es-AR")}</h2>
     </div>
 `;
 
@@ -88,7 +88,7 @@ function deshacerCupon(){
         document.querySelector(
             ".seccion-resumen-grid-total h2"
         ).textContent =
-            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+            `TOTAL: $${precioFinal.toLocaleString("es-AR")}`;
         
     }
 }

@@ -22,20 +22,23 @@ if(paquete){
 
 const  bodega = document.getElementById("bodega");
 
-bodega.addEventListener(
-    "change", (funcion) =>  {
 
-        let precioFinal = paquete.precio;
+localStorage.setItem("equipajeBodega", JSON.stringify(false));
 
-        if(bodega.checked){
-            precioFinal+= 50000;
-        }
+bodega.addEventListener("change", () => {
 
-        localStorage.setItem("equipajeBodega", bodega.checked);
+    let precioFinal = paquete.precio;
 
-        console.log(JSON.parse(localStorage.getItem("equipajeBodega")));
-
-        document.getElementById("precio-final").textContent =
-        `$${precioFinal.toLocaleString("es-AR") } `;
+    if (bodega.checked) {
+        precioFinal += 50000;
     }
-)
+
+    localStorage.setItem(
+        "equipajeBodega",
+        JSON.stringify(bodega.checked)
+    );
+
+    document.getElementById("precio-final").textContent =
+        `$${precioFinal.toLocaleString("es-AR")}`;
+});
+
