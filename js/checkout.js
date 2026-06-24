@@ -112,6 +112,10 @@ const anio = document.getElementById("anio");
 const codigoSeguridad = document.getElementById("codigo-seguridad");
 const documentoTitular = document.getElementById("documento-titular");
 
+const documentoTransferencia = document.getElementById("documento-transferencia");
+const emailTransferencia = document.getElementById("email-transferencia");
+
+
 function validarCheckout() {
 
     if (nombre.value.trim() === "") {
@@ -138,7 +142,6 @@ function validarCheckout() {
         return false;
     }
 
-    // Si eligió tarjeta
     if (opcionTarjeta.checked) {
 
         if (!tarjeta.validity.valid) {
@@ -165,7 +168,7 @@ function validarCheckout() {
             return false;
         }
     }
-    
+
     if (opcionTransferencia.checked) {
 
         if (!emailTransferencia.validity.valid) {
@@ -181,7 +184,6 @@ function validarCheckout() {
     return true;
 }
 
-console.log(validarCheckout());
 
 const formulario = document.getElementById("form-checkout");
 const popupFin = document.getElementById("popup-fin-compra");
