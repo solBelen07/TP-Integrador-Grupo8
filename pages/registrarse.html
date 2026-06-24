@@ -22,7 +22,7 @@
                 <h1> Registrarse </h1>
                 <label for="pais">País:</label>
                 <!-- select hace que el usuario seleccione un país de una lista desplegable -->
-                <select id="pais" name="pais" required>
+                <select id="pais" name="pais" >
                     <!-- option son las opciones que el usuario puede elegir, value es el valor que se enviará 
                  al "servidor" cuando se seleccione esa opción -->
                     <option value="">Seleccioná un país</option>
@@ -36,7 +36,7 @@
                     <!-- agregamos mas paises -->
                 </select>
                 <label for="dni">DNI</label>
-                <input type="number" placeholder="12345678" id="dni" name="dni" required>
+                <input type="number" placeholder="12345678" id="dni" name="dni" >
 
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre">
@@ -45,13 +45,13 @@
                 <input type="text" id="apellido" name="apellido">
 
                 <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" >
 
                 <label for="email">E-mail</label>
-                <input type="email" placeholder="Ingresa tu email" id="email" name="email" autocomplete="email" required>
+                <input type="email" placeholder="Ingresa tu email" id="email" name="email" autocomplete="email" >
                 <!-- placeholder es para que el usuario sepa qué información debe ingresar -->
                 <label for="contrasenia">Contraseña</label>
-                <input type="password" placeholder="Ingresa tu contraseña" id="contrasenia" name="contrasenia" required>
+                <input type="password" placeholder="Ingresa tu contraseña" id="contrasenia" name="contrasenia" >
            
                 <p id="mensaje-error"></p>
             <button type="submit">Registrarse</button>
