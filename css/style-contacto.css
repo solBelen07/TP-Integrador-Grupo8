@@ -105,6 +105,10 @@ body{
     flex-direction: column;
 }
 
+.mensaje-contacto{
+    color: red;
+}
+
 .fila-formulario{
     display: flex;
     gap: 2em;

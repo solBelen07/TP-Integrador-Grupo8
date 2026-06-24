@@ -56,7 +56,7 @@ main h1{
 .seccion-resumen{
     display: grid;
     grid-template-columns: repeat(1, 1fr) ;
-    grid-template-rows: repeat(6, 1fr) ;
+    grid-template-rows: repeat(7, 1fr) ;
 }
 
 .seccion-resumen-grid-resumen-viaje{
@@ -79,6 +79,7 @@ main h1{
 .seccion-resumen-grid-total{
     display: flex;
     justify-content: center;
+    align-items: center;
     grid-column: 1/2;
     grid-row: 6/7;
 }

@@ -1,14 +1,10 @@
-const formulario =
-    document.getElementById("form-contacto");
+const formulario =document.getElementById("form-contacto");
 
-const mensaje =
-    document.getElementById("mensaje-contacto");
+const mensaje =document.querySelector(".mensaje-contacto");
 
-const popup =
-    document.getElementById("popup-contacto");
+const popup = document.getElementById("popup-contacto");
 
-const cerrarPopup =
-    document.getElementById("cerrar-popup");
+const cerrarPopup = document.getElementById("cerrar-popup");
 
 
 popup.style.display = "none";
