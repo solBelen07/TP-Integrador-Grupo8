@@ -33,7 +33,7 @@ if(usuario){
 
 const formulario = document.getElementById("form-busqueda");
 
-formulario.addEventListener("submit", (e) => {
+formulario?.addEventListener("submit", (e) => {
 
     e.preventDefault();
 

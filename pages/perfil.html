@@ -1,120 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Usuario</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/layout/header-footer.css">
-    <link rel="stylesheet" href="../css/style-perfil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Usuario</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/layout/header-footer.css">
+  <link rel="stylesheet" href="../css/style-perfil.css">
 </head>
+
 <body>
-  <header> 
-      <h1><a href="../index.html">TicketExpress</a></h1>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-hamburguesa">☰</label>
-      <ul class="header-ul">
-          <li class="header-li"><a href="../index.html">Inicio</a></li>
-          <li class="header-li"><a href="./vuelos.html">Vuelos</a></li>
-          <li class="header-li"><a href="./ofertas.html">Ofertas</a></li>
-          <li class="header-li"><a href="./contacto.html">Contacto</a></li>
-      </ul>
-      <div class="botones-inicio-registro" id="botones-registro">
-        <a href="./pages/login.html"><input class="boton-registro" value="Ingresar" type="button"></a>
-        <a href="./pages/registrarse.html"><input class="boton-registro" value="Registrarse" type="button"></a>
-      </div>
-      <div class="div-perfil-header">
-          <a href="./perfil.html" id="perfil-header" ><img src="../img/usuario.png" alt="usuario"></a>
-      </div>
-    </header>
-    <main>
-      <h1>Perfil de Usuario</h1>
-      <!--  PERFIL -->
-      <section class="seccion-contenido">
-        <div class="div-perfil" id="div-perfil">
-            <!-- hacer la imagen redondeada -->
-            <img src="../img/perfil.png" alt="Foto de perfil" width="100">
-            <h3>Nombre Cliente</h3>
-            <nav>
-              <ul>
-                <li><a href="./perfil.html">Información Personal</a></li>
-                <li><a href="./perfil-mis-vuelos.html">Mis Vuelos</a></li>
-              </ul>
-            </nav>
-            <button type="button" id="boton-logout">Cerrar Sesion</button>
-        </div>
-        <!-- Formulario para actualizar información personal seria ver si aca 
-        usamos br u otra cosa para el salto de linea-->
-        <div class="perfil-info">
-          <h2>Información Personal</h2>
-          <form> 
-          <div class="perfil-info-grid">
-             
-              <div class="caja1">
-                <label>Nombre</label>
-                <input type="text" required>
-              </div>
-              <div class="caja2">
-                <label>Apellido</label>
-                <input type="text" required>
-              </div>
-              <div class="caja3">
-                <label>Email</label>
-                <input type="email" required>
-              </div>
-              <div class="caja4">
-                <label>Dirección</label>
-                <input type="text" required>
-              </div>
-              <div class="caja5">
-                <label>Localidad</label>
-                <input type="text" required>
-              </div>
-              <div class="caja6">
-                <label>Código Postal</label>
-                <input type="text" required>
-              </div> 
-              <div class="caja7">
-                <label>Número de Teléfono</label>
-                <input type="tel" required>
-              </div>
-              <div class="caja8">
-                <label>Fecha de Nacimiento</label>
-                <input type="date"required>
-              </div>
-              <div class="caja9">
-              <button type="reset">Descartar cambios</button>
-              </div>
-              <div class="caja10">
-              <button type="submit">Guardar cambios</button>
-              </div>
-          </div>
-          </form>
-        </div>
-      </section>
-    </main>
-  <footer>    
-      <section class="footer-nosotros">
-          <h3>Nosotros</h3>
+  <header>
+    <h1><a href="../index.html">TicketExpress</a></h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-hamburguesa">☰</label>
+    <ul class="header-ul">
+      <li class="header-li"><a href="../index.html">Inicio</a></li>
+      <li class="header-li"><a href="./vuelos.html">Vuelos</a></li>
+      <li class="header-li"><a href="./ofertas.html">Ofertas</a></li>
+      <li class="header-li"><a href="./contacto.html">Contacto</a></li>
+    </ul>
+    <div class="botones-inicio-registro" id="botones-registro">
+      <a href="./pages/login.html"><input class="boton-registro" value="Ingresar" type="button"></a>
+      <a href="./pages/registrarse.html"><input class="boton-registro" value="Registrarse" type="button"></a>
+    </div>
+    <div class="div-perfil-header">
+      <a href="./perfil.html" id="perfil-header"><img src="../img/usuario.png" alt="usuario"></a>
+    </div>
+  </header>
+  <main>
+    <h1>Perfil de Usuario</h1>
+    <!--  PERFIL -->
+    <section class="seccion-contenido">
+      <div class="div-perfil" id="div-perfil">
+        <!-- hacer la imagen redondeada -->
+        <img src="../img/perfil.png" alt="Foto de perfil" width="100">
+        <h3>Nombre Cliente</h3>
+        <nav>
           <ul>
-            <li><a href="./nosotros.html">Sobre TicketExpress</a></li>
-            <li><a href="./preguntas-frecuentes.html">Preguntas</a></li>
+            <li><a href="./perfil.html">Información Personal</a></li>
+            <li><a href="./perfil-mis-vuelos.html">Mis Vuelos</a></li>
           </ul>
-      </section>
-      <section class="section-copyright">
-          <p>©2026 TicketExpress. Todos los derechos reservados</p>
-      </section>
-      <section>
-          <h3>Redes Sociales</h3>
-          <div class="footer-div-redes">
-              <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-              <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-              <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-              <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </nav>
+        <button type="button" id="boton-logout">Cerrar Sesion</button>
+      </div>
+      <!-- Formulario para actualizar información personal seria ver si aca 
+        usamos br u otra cosa para el salto de linea-->
+      <div class="perfil-info">
+        <h2>Información Personal</h2>
+        <form>
+          <div class="perfil-info-grid">
+
+            <div class="caja1">
+              <label for="perfil-nombre">Nombre</label>
+              <input type="text" id="perfil-nombre" name="nombre" required>
+            </div>
+
+            <div class="caja2">
+              <label for="perfil-apellido">Apellido</label>
+              <input type="text" id="perfil-apellido" name="apellido" required>
+            </div>
+
+            <div class="caja3">
+              <label for="perfil-email">Email</label>
+              <input type="email" id="perfil-email" name="email" required>
+            </div>
+
+            <div class="caja4">
+              <label for="perfil-direccion">Dirección</label>
+              <input type="text" id="perfil-direccion" name="direccion" required>
+            </div>
+
+            <div class="caja5">
+              <label for="perfil-localidad">Localidad</label>
+              <input type="text" id="perfil-localidad" name="localidad" required>
+            </div>
+
+            <div class="caja6">
+              <label for="perfil-codigoPostal">Código Postal</label>
+              <input type="text" id="perfil-codigoPostal" name="codigoPostal" required>
+            </div>
+
+            <div class="caja7">
+              <label for="perfil-telefono">Número de Teléfono</label>
+              <input type="tel" id="perfil-telefono" name="telefono" required>
+            </div>
+
+            <div class="caja8">
+              <label for="perfil-fechaNacimiento">Fecha de Nacimiento</label>
+              <input type="date" id="perfil-fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+
+            <div class="caja9">
+              <button type="reset">Descartar cambios</button>
+            </div>
+
+            <div class="caja10">
+              <button type="submit">Guardar cambios</button>
+            </div>
+
           </div>
-      </section>
+
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer-nosotros">
+      <h3>Nosotros</h3>
+      <ul>
+        <li><a href="./nosotros.html">Sobre TicketExpress</a></li>
+        <li><a href="./preguntas-frecuentes.html">Preguntas</a></li>
+      </ul>
+    </section>
+    <section class="section-copyright">
+      <p>©2026 TicketExpress. Todos los derechos reservados</p>
+    </section>
+    <section>
+      <h3>Redes Sociales</h3>
+      <div class="footer-div-redes">
+        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </section>
   </footer>
 </body>
 <script type="module" src="../js/logout.js"></script>
 <script type="module" src="../js/index.js"></script>
+
 </html>
