@@ -97,16 +97,16 @@ function aplicarCupon(){
         ).textContent =
             `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
-        cuponAplicado.style.display = "flex";
-        cuponAplicado.textContent = "Cupón aplicado correctamente";
-        errorCupon.style.display = "none";
-        console.log(paquete);
+cuponAplicado.style.display = "flex";
+cuponAplicado.textContent = "Cupón aplicado correctamente";
+errorCupon.style.display = "none";
+console.log(paquete);
     }
 
     else {
         errorCupon.style.display = "flex";
-        errorCupon.textContent = "Cupón inválido";
-        cuponAplicado.style.display = "none";
+errorCupon.textContent = "Cupón inválido";
+cuponAplicado.style.display = "none";
     }
 }
 

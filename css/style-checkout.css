@@ -388,3 +388,8 @@ main h1{
     }
 
 }
+#mensaje-cupon{
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}

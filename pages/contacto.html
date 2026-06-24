@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style-contacto.css">
     <link rel="stylesheet" href="../css/layout/header-footer.css">
+    <link rel="stylesheet" href="../css/style-popup.css">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
             <p class="texto-contacto">
                 Completá tu información
             </p>
-            <form class="seccion-form">
+            <form class="seccion-form" id="form-contacto">
                 <div class="seccion-form-grid">
                     <div class="caja1">
                         <label for="nombre">Nombre</label>
@@ -86,6 +87,7 @@
                         <textarea id="mensaje" placeholder="Escribí tu mensaje" required></textarea>
                     </div>
                     <div class="caja7">
+                        <p id="mensaje-contacto"></p>
                         <button type="submit">
                             Enviar
                         </button>
@@ -96,7 +98,19 @@
                 Gracias por contactarte con TicketExpress
             </p>
         </section>
-    </main>
+       <section id="popup-contacto">
+    <div class="popup">
+        <div class="popup-contenido">
+            <h2>¡Consulta enviada!</h2>
+            <p>Gracias por contactarte con TicketExpress.</p>
+            <button id="cerrar-popup" class="boton-cerrar">
+                Aceptar
+            </button>
+        </div>
+    </div>
+</section>
+
+</main>
     <footer>    
         <section class="footer-nosotros">
             <h3>Nosotros</h3>
@@ -118,6 +132,9 @@
             </div>
         </section>
     </footer>
+    <script type="module" src="../js/index.js"></script>
+<script src="../js/contacto.js"></script>
 </body>
-<script type="module" src="../js/index.js"></script>
+
+
 </html>
