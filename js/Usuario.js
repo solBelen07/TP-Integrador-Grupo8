@@ -6,7 +6,9 @@ export class Usuario {
         apellido,
         fechaNacimiento,
         email,
-        contrasenia
+        contrasenia, 
+        telefono, 
+        ciudad,
     ) {
         this.pais = pais;
         this.dni = dni;
@@ -15,5 +17,7 @@ export class Usuario {
         this.fechaNacimiento = fechaNacimiento;
         this.email = email;
         this.contrasenia = contrasenia;
+        this.telefono = telefono;
+        this.ciudad = ciudad;
     }
 }
