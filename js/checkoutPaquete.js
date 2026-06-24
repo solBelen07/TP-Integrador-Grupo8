@@ -9,6 +9,8 @@ const precioOriginal = paquete.precio;
 let precioFinal = precioOriginal;
 const equipajeBodega = JSON.parse(localStorage.getItem("equipajeBodega"));
 
+console.log(equipajeBodega);
+
 const contenedor = document.getElementById("seccion-resumen");
 
 
@@ -35,6 +37,7 @@ contenedor.innerHTML = `
     <div class="seccion-resumen-grid-total">
         <h2>TOTAL: $${precioFinal.toLocaleString("es-AR")}</h2>
     </div>
+    <p id="seccion-datos-personales-error"></p>
 `;
 
 
@@ -63,41 +66,100 @@ if(aplicaBodega()){
 
     precioFinal = obtenerPrecioBase() ;
 
-    document.getElementById("seccion-resumen-grid-total").textContent =
+    document.querySelector(".seccion-resumen-grid-total h2").textContent =
         `TOTAL: $${precioFinal.toLocaleString("es-AR")}`;
 
 }
 
+const errorCheckout = document.getElementById("seccion-datos-personales-error");
+
+const nombre = document.getElementById("nombre");
+const documentoPasajero = document.getElementById("documento-pasajero");
+const emailPasajero = document.getElementById("email-pasajero");
+const telefono = document.getElementById("telefono");
+
 const opcionTarjeta = document.getElementById("opcion-tarjeta");
 const opcionTransferencia = document.getElementById("opcion-transferencia");
+const opcionPaypal = document.getElementById("opcion-paypal");
 
-function actualizarRequired() {
+const tarjeta = document.getElementById("tarjeta");
+const nombreTarjeta = document.getElementById("nombre-tarjeta");
+const mes = document.getElementById("mes");
+const anio = document.getElementById("anio");
+const codigoSeguridad = document.getElementById("codigo-seguridad");
+const documentoTitular = document.getElementById("documento-titular");
+
+const documentoTransferencia = document.getElementById("documento-transferencia");
+const emailTransferencia = document.getElementById("email-transferencia");
+
+
+function validarCheckout() {
+
+    if (nombre.value.trim() === "") {
+        return false;
+    }
+
+    if (!documentoPasajero.validity.valid) {
+        return false;
+    }
+
+    if (!emailPasajero.validity.valid) {
+        return false;
+    }
+
+    if (telefono.value.trim() === "") {
+        return false;
+    }
+
+    if (
+        !opcionTarjeta.checked &&
+        !opcionTransferencia.checked &&
+        !opcionPaypal.checked
+    ) {
+        return false;
+    }
 
     if (opcionTarjeta.checked) {
-        document.getElementById("tarjeta").required = true;
-        document.getElementById("nombre-tarjeta").required = true;
-        document.getElementById("mes").required = true;
-        document.getElementById("anio").required = true;
-        document.getElementById("codigo-seguridad").required = true;
-        document.getElementById("documento-titular").required = true;
 
-        document.getElementById("email-transferencia").required = false;
-        document.getElementById("documento-transferencia").required = false;
+        if (!tarjeta.validity.valid) {
+            return false;
+        }
+
+        if (nombreTarjeta.value.trim() === "") {
+            return false;
+        }
+
+        if (!mes.validity.valid) {
+            return false;
+        }
+
+        if (!anio.validity.valid) {
+            return false;
+        }
+
+        if (!codigoSeguridad.validity.valid) {
+            return false;
+        }
+
+        if (!documentoTitular.validity.valid) {
+            return false;
+        }
     }
 
     if (opcionTransferencia.checked) {
-        document.getElementById("email-transferencia").required = true;
-        document.getElementById("documento-transferencia").required = true;
 
-        document.getElementById("tarjeta").required = false;
-        document.getElementById("nombre-tarjeta").required = false;
-        document.getElementById("mes").required = false;
-        document.getElementById("anio").required = false;
-        document.getElementById("codigo-seguridad").required = false;
-        document.getElementById("documento-titular").required = false;
+        if (emailTransferencia.value.trim() === "") {
+            return false;
+        }
+
+        if (documentoTransferencia.value.trim() === "") {
+            return false;
+        }
     }
 
+    return true;
 }
+
 
 const cupon = document.getElementById("cupon");
 const btnCupon = document.querySelector(".boton-aplicar");
@@ -122,21 +184,18 @@ function aplicarCupon(){
 
         paquete.precio = precioFinal;
 
-        document.querySelector(
-            ".seccion-resumen-grid-total h2"
-        ).textContent =
-            `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
+        document.querySelector(".seccion-resumen-grid-total h2").textContent = `TOTAL $${precioFinal.toLocaleString("es-AR")}`;
 
-cuponAplicado.style.display = "flex";
-cuponAplicado.textContent = "Cupón aplicado correctamente";
-errorCupon.style.display = "none";
-console.log(paquete);
+        cuponAplicado.style.display = "flex";
+        cuponAplicado.textContent = "Cupón aplicado correctamente";
+        errorCupon.style.display = "none";
+        console.log(paquete);
     }
 
     else {
         errorCupon.style.display = "flex";
-errorCupon.textContent = "Cupón inválido";
-cuponAplicado.style.display = "none";
+        errorCupon.textContent = "Cupón inválido";
+        cuponAplicado.style.display = "none";
     }
 }
 
@@ -156,10 +215,6 @@ function deshacerCupon(){
         
 }
 
-opcionTarjeta.addEventListener("change", actualizarRequired);
-opcionTransferencia.addEventListener("change", actualizarRequired);
-
-
 const formulario = document.getElementById("form-checkout-paquete");
 const popupFin = document.getElementById("popup-fin-compra");
 const popupLogin = document.getElementById("popup-login");
@@ -167,7 +222,11 @@ const popupLogin = document.getElementById("popup-login");
 console.log(paquete);
 
 formulario.addEventListener("submit", (e) => {  
-    if (!formulario.checkValidity()) {
+
+    e.preventDefault(); 
+
+    if (!validarCheckout()) {
+        errorCheckout.textContent = "Complete todos los datos para continuar.";
         return;
     }
 
@@ -191,7 +250,5 @@ formulario.addEventListener("submit", (e) => {
     );
 
     console.log(reservasPaquetes);
-
-    e.preventDefault();
     popupFin.style.display = "flex";
 });

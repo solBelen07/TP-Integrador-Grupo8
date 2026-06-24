@@ -34,8 +34,8 @@ contenedor.innerHTML = `
     </div>
     <div class="seccion-resumen-grid-total">
         <h2>TOTAL: $${precioFinal.toLocaleString("es-AR")}</h2><br>
-        <p id="seccion-datos-personales-error"></p>
     </div>
+    <p id="seccion-datos-personales-error"></p>
 `;
 
 const cupon = document.getElementById("cupon");
@@ -171,15 +171,14 @@ function validarCheckout() {
 
     if (opcionTransferencia.checked) {
 
-        if (!emailTransferencia.validity.valid) {
+        if (emailTransferencia.value.trim() === "") {
             return false;
         }
 
-        if (!documentoTransferencia.validity.valid) {
+        if (documentoTransferencia.value.trim() === "") {
             return false;
         }
     }
-
 
     return true;
 }
