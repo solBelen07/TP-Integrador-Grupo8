@@ -1,5 +1,4 @@
-const vuelos =
-    JSON.parse(sessionStorage.getItem("reservas")) || [];
+const vuelos = JSON.parse(sessionStorage.getItem("reservas")) || [];
 
 const paquetes = JSON.parse(sessionStorage.getItem("reservasPaquetes")) || [];
 
