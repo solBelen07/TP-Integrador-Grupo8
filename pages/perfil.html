@@ -1,13 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Usuario</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/layout/header-footer.css">
-    <link rel="stylesheet" href="../css/style-perfil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Usuario</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/layout/header-footer.css">
+  <link rel="stylesheet" href="../css/style-perfil.css">
 </head>
+
 <body>
   <header> 
       <h1><a href="../index.html">TicketExpress</a></h1>
@@ -47,79 +50,82 @@
         usamos br u otra cosa para el salto de linea-->
         <div class="perfil-info">
           <h2>Información Personal</h2>
-          <form id="form-perfil-info"> 
+          <form> 
           <div class="perfil-info-grid">
              
               <div class="caja1">
                 <label>Nombre</label>
-                <input id="form-perfil-nombre" type="text" >
+                <input type="text" required>
               </div>
               <div class="caja2">
                 <label>Apellido</label>
-                <input id="form-perfil-apellido" type="text">
+                <input type="text" required>
               </div>
               <div class="caja3">
                 <label>Email</label>
-                <input id="form-perfil-email" type="email">
+                <input type="email" required>
               </div>
               <div class="caja4">
-                <label>País</label>
-                <input id="form-perfil-pais" type="text">
+                <label>Dirección</label>
+                <input type="text" required>
               </div>
               <div class="caja5">
-                <label>Ciudad</label>
-                <input id="form-perfil-ciudad" type="text">
+                <label>Localidad</label>
+                <input type="text" required>
               </div>
               <div class="caja6">
-                <label>DNI</label>
-                <input id="form-perfil-dni" type="number">
+                <label>Código Postal</label>
+                <input type="text" required>
               </div> 
               <div class="caja7">
                 <label>Número de Teléfono</label>
-                <input id="form-perfil-telefono" type="tel">
-                
+                <input type="tel" required>
               </div>
               <div class="caja8">
                 <label>Fecha de Nacimiento</label>
-                <input id="form-perfil-fechaNac" type="date">
+                <input type="date"required>
               </div>
               <div class="caja9">
-                <p id="error-form"></p>
-              </div>
-              <div class="caja10">
               <button type="reset">Descartar cambios</button>
               </div>
-              <div class="caja11">
+              <div class="caja10">
               <button type="submit">Guardar cambios</button>
-              </div>
+            </div>
+
           </div>
-          </form>
-        </div>
-      </section>
-    </main>
-  <footer>    
-      <section class="footer-nosotros">
-          <h3>Nosotros</h3>
-          <ul>
-            <li><a href="./nosotros.html">Sobre TicketExpress</a></li>
-            <li><a href="./preguntas-frecuentes.html">Preguntas</a></li>
-          </ul>
-      </section>
-      <section class="section-copyright">
-          <p>©2026 TicketExpress. Todos los derechos reservados.</p>
-      </section>
-      <section>
-          <h3>Redes Sociales</h3>
-          <div class="footer-div-redes">
-              <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-              <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-              <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-              <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-      </section>
+
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer-nosotros">
+      <h3>Nosotros</h3>
+      <ul>
+        <li><a href="./nosotros.html">Sobre TicketExpress</a></li>
+        <li><a href="./preguntas-frecuentes.html">Preguntas</a></li>
+      </ul>
+    </section>
+    <section class="section-copyright">
+      <p>©2026 TicketExpress. Todos los derechos reservados</p>
+    </section>
+    <section>
+      <h3>Redes Sociales</h3>
+      <div class="footer-div-redes">
+        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="https://www.instagram.com/unlamoficial/?hl=es" target="_blank"><i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/@UnlamOficial/?locale=es_LA" target="_blank"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.linkedin.com/school/unlamoficial/posts/?feedView=all" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </section>
   </footer>
   <script type="module" src="../js/logout.js"></script>
   <script type="module" src="../js/sesionIniciada.js"></script>
   <script type="module" src="../js/perfil.js"></script>
 </body>
+<script type="module" src="../js/logout.js"></script>
+<script type="module" src="../js/index.js"></script>
 </html>
