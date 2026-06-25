@@ -261,12 +261,10 @@ main h1{
 #error-cupon{
     display: none;
     color: red;
-    margin: 0.5em;
 }
 
 #seccion-datos-personales-error{
     color: red;
-    margin: 0.5em;
 }
 
 
