@@ -50,47 +50,50 @@
         usamos br u otra cosa para el salto de linea-->
         <div class="perfil-info">
           <h2>Información Personal</h2>
-          <form> 
+          <form id="form-perfil-info"> 
           <div class="perfil-info-grid">
              
               <div class="caja1">
                 <label>Nombre</label>
-                <input type="text" required>
+                <input  id="form-perfil-nombre" type="text">
               </div>
               <div class="caja2">
                 <label>Apellido</label>
-                <input type="text" required>
+                <input id="form-perfil-apellido" type="text">
               </div>
               <div class="caja3">
                 <label>Email</label>
-                <input type="email" required>
+                <input id="form-perfil-email" type="email">
               </div>
               <div class="caja4">
-                <label>Dirección</label>
-                <input type="text" required>
+                <label>Pais</label>
+                <input id="form-perfil-pais" type="text">
               </div>
               <div class="caja5">
-                <label>Localidad</label>
-                <input type="text" required>
+                <label>Cuidad</label>
+                <input  id="form-perfil-ciudad" type="text">
               </div>
               <div class="caja6">
-                <label>Código Postal</label>
-                <input type="text" required>
+                <label>DNI</label>
+                <input id="form-perfil-dni" type="text">
               </div> 
               <div class="caja7">
                 <label>Número de Teléfono</label>
-                <input type="tel" required>
+                <input id="form-perfil-telefono" type="tel">
               </div>
               <div class="caja8">
                 <label>Fecha de Nacimiento</label>
-                <input type="date"required>
+                <input id="form-perfil-fechaNac" type="date">
               </div>
               <div class="caja9">
-              <button type="reset">Descartar cambios</button>
+                <p id="error-form"></p>
               </div>
               <div class="caja10">
-              <button type="submit">Guardar cambios</button>
-            </div>
+                <button type="reset">Descartar cambios</button>
+              </div>
+              <div class="caja11">
+                <button type="submit">Guardar cambios</button>
+              </div>
 
           </div>
 

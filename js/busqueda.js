@@ -213,7 +213,7 @@ function aplicarFiltros() {
 }
 
 
-
+const errorBusqueda = document.getElementById("error-busqueda");
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -288,8 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             e.preventDefault();
 
-            alert("Seleccione un vuelo");
-
+            errorBusqueda.textContent = "Seleccione un vuelo para continuar."
             return;
 
         }

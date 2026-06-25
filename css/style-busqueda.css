@@ -153,6 +153,11 @@ input[type="range"]{
     line-height: 1.5;
 }
 
+#error-busqueda{
+    color: red;
+    margin-top: 1em ;
+}
+
 
 input[type="checkbox"],
 input[type="radio"]{

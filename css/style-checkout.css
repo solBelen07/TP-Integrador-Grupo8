@@ -260,7 +260,7 @@ main h1{
 
 #error-cupon{
     display: none;
-    color: red;
+    color: red; 
 }
 
 #seccion-datos-personales-error{
