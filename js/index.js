@@ -1,7 +1,7 @@
 const formulario = document.getElementById("form-busqueda");
 const mensajeError = document.getElementById("seccion-busqueda-error");
 
-formulario.addEventListener("submit", (e) => {
+formulario?.addEventListener("submit", (e) => {
 
     e.preventDefault();
 

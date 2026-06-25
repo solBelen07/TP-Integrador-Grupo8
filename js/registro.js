@@ -11,6 +11,8 @@ const fechaNacimiento = document.getElementById("fecha-nacimiento");
 const email = document.getElementById("email");
 const contrasenia = document.getElementById("contrasenia");
 
+
+
 formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
