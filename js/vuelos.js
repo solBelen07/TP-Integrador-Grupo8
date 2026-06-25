@@ -10,7 +10,7 @@ cards.forEach(card => {
 
         const paquete = paquetes.find(
             paquete => paquete.id === id
-        );
+        ); 
 
         localStorage.setItem(
             "paqueteSeleccionado",

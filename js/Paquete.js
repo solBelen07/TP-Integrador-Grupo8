@@ -9,4 +9,4 @@ export class Paquete {
         this.precio = precio;
         this.pasajero = pasajero;
     }
-}
+} 
